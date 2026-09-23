@@ -420,7 +420,7 @@ export function App() {
           </div>
           <div className="day-grid">
             <article>
-              <span className="chapter-number">01</span>
+              <BotanicalIcon variant={3} />
               <h3>Ankommen & dazugehören</h3>
               <p>
                 Vertraute Menschen und ein wertschätzendes Miteinander geben
@@ -428,7 +428,7 @@ export function App() {
               </p>
             </article>
             <article>
-              <span className="chapter-number">02</span>
+              <BotanicalIcon variant={4} />
               <h3>Entdecken & ausprobieren</h3>
               <p>
                 Der Wald lädt zum Spielen, Beobachten und Bewegen ein. Wir
@@ -436,7 +436,7 @@ export function App() {
               </p>
             </article>
             <article>
-              <span className="chapter-number">03</span>
+              <BotanicalIcon variant={5} />
               <h3>Gemeinsam wachsen</h3>
               <p>
                 Zuhören, miteinander Lösungen finden und aufeinander achten:

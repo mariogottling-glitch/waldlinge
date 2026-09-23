@@ -99,6 +99,64 @@ export function BotanicalIcon({ variant }) {
             />
           </>
         )}
+        {variant === 3 && (
+          <>
+            <path
+              d="M24 44L50 23L77 44L76 79Q51 84 25 79Z"
+              fill={wash}
+              strokeOpacity=".55"
+            />
+            <path
+              d="M15 45L49 16Q50 15 52 17L85 45"
+              fill="none"
+              strokeWidth="2"
+            />
+            <path
+              d="M49 67L37 55C28 45 41 36 50 46C59 36 72 45 63 55Z"
+              fill="#d8c28a"
+              fillOpacity=".45"
+              stroke="#b3a278"
+            />
+            <path d="M35 83Q50 86 65 83" fill="none" strokeOpacity=".5" />
+          </>
+        )}
+        {variant === 4 && (
+          <>
+            <path
+              d="M16 32Q45 24 82 29M25 30Q26 22 23 17"
+              fill="none"
+              strokeWidth="2"
+            />
+            <path d="M65 27C61 15 71 11 82 12C77 18 78 27 65 27Z" fill={wash} />
+            <path d="M26 26C13 26 12 17 13 11C18 15 28 15 26 26Z" fill={wash} />
+            <path d="M66 26L76 17M37 28L36 68M66 28L65 68" fill="none" />
+            <path d="M29 69Q50 66 73 69L72 76Q52 79 30 76Z" fill={wash} />
+            <path
+              d="M15 56Q10 66 17 77M84 53Q90 66 84 77"
+              fill="none"
+              strokeOpacity=".4"
+            />
+          </>
+        )}
+        {variant === 5 && (
+          <>
+            <path
+              d="M18 85Q48 79 82 85M38 81Q41 63 36 48M61 81Q56 52 64 29"
+              fill="none"
+            />
+            <path d="M38 65C22 66 20 54 20 47C29 50 39 49 38 65Z" fill={wash} />
+            <path d="M37 54C34 42 41 35 51 35C47 43 49 52 37 54Z" fill={wash} />
+            <path d="M59 59C46 57 45 46 46 39C52 44 63 45 59 59Z" fill={wash} />
+            <path d="M61 45C60 31 73 30 82 30C77 36 76 48 61 45Z" fill={wash} />
+            <path d="M64 31C58 22 64 14 69 10C69 17 77 24 64 31Z" fill={wash} />
+            <path
+              d="M38 65L25 54M38 53L46 41M59 58L50 46M62 44L76 35M64 30L67 18"
+              fill="none"
+              strokeWidth=".7"
+              strokeOpacity=".6"
+            />
+          </>
+        )}
       </g>
     </svg>
   );

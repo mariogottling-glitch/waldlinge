@@ -1364,3 +1364,7 @@ footer a:hover {
     align-items: flex-end;
   }
 }
+
+.day-grid .value-botanical {
+  margin: 0 0 18px;
+}
