@@ -394,6 +394,7 @@ footer {
   margin-top: 55px;
 }
 .day-grid article {
+  text-align: center;
   border-top: 1px solid var(--line);
   padding-top: 20px;
 }
