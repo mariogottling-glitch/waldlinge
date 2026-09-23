@@ -50,3 +50,11 @@ final result: passed
 - [x] Erkannte P2-Probleme behoben und erneut erfasst.
 - [x] Wesentliche Interaktionen und schmale Darstellung geprüft.
 - [x] Keine offenen P0/P1/P2-Befunde im geprüften Umfang.
+
+## Ergänzung: Vereinsfilm (23.09.2026)
+
+- Offizieller Film nach dem Wertebereich, lokales Vorschaubild und ausdrückliche Aktivierung vor dem YouTube-iframe.
+- Aktivieren, Schließen und Fokus-Rückgabe im Browser geprüft. Vor Aktivierung ist kein iframe vorhanden.
+- Breiten 320, 390, 768 und 1440 px: kein horizontaler Überlauf. Mobile Videokarte visuell geprüft.
+- Einschränkung: YouTube-nocookie liefert HTTP 200, der iframe bleibt im integrierten Browser jedoch leer. Tatsächliche eingebettete Wiedergabe muss in einem normalen Browser bzw. auf dem Zielhosting geprüft werden. Direkter YouTube-Link bleibt verfügbar.
+- Produktionsbuild und alle vier Sites-Tests erfolgreich.

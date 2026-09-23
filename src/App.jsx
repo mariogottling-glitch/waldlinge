@@ -6,6 +6,7 @@ import {
   X,
   Plus,
   Minus,
+  Play,
 } from "@phosphor-icons/react";
 
 const nav = [
@@ -79,6 +80,92 @@ function TextLink({ href, children, ...props }) {
       {children}
       <ArrowRight aria-hidden="true" size={23} weight="light" />
     </a>
+  );
+}
+
+function WaldlingeFilm() {
+  const [active, setActive] = useState(false);
+  const playButton = useRef(null);
+  const closeButton = useRef(null);
+  const wasActive = useRef(false);
+  useEffect(() => {
+    if (active) closeButton.current?.focus();
+    else if (wasActive.current) playButton.current?.focus();
+    wasActive.current = active;
+  }, [active]);
+  return (
+    <section
+      className="film section-shell"
+      id="film"
+      aria-labelledby="film-title"
+    >
+      <div className="film-heading">
+        <p className="eyebrow">Ein kleiner Einblick. Ein großes Gefühl.</p>
+        <h2 id="film-title">Kommt mit in unseren Wald.</h2>
+        <p className="section-intro">
+          Begegnungen, Entdeckungen und ganz viel Draußensein: Unser Film nimmt
+          euch mit zu den Waldlingen.
+        </p>
+      </div>
+      <div className="film-frame">
+        {active ? (
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/9mYhH0tuum4?autoplay=1&playsinline=1&rel=0&hl=de"
+            title="Waldlinge Bornheim e.V. – unser Waldkindergarten im Film"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        ) : (
+          <button
+            ref={playButton}
+            className="film-poster"
+            onClick={() => setActive(true)}
+            aria-describedby="film-privacy"
+          >
+            <img
+              src="/images/waldlinge-film.jpg"
+              alt=""
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <span className="film-play">
+              <Play size={30} weight="fill" aria-hidden="true" />
+            </span>
+            <span className="film-caption">
+              Film laden &amp; abspielen{" "}
+              <span>2 Minuten bei den Waldlingen</span>
+            </span>
+          </button>
+        )}
+      </div>
+      <div className="film-details">
+        <p id="film-privacy">
+          Erst beim Abspielen wird eine Verbindung zu YouTube hergestellt. Dabei
+          werden Daten, etwa eure IP-Adresse, an YouTube übermittelt.
+        </p>
+        <div className="film-actions">
+          {active && (
+            <button
+              ref={closeButton}
+              className="film-close"
+              onClick={() => setActive(false)}
+            >
+              Video schließen
+            </button>
+          )}
+          <a
+            href="https://www.youtube.com/watch?v=9mYhH0tuum4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Auf YouTube ansehen <ArrowUpRight size={17} aria-hidden="true" />
+            <span className="sr-only"> (öffnet einen neuen Tab)</span>
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -246,6 +333,7 @@ export function App() {
             ))}
           </div>
         </section>
+        <WaldlingeFilm />
         <section
           className="discovery"
           id="alltag"

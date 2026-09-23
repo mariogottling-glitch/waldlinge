@@ -33,7 +33,7 @@ Inhalte stehen in `src/App.jsx`, Gestaltung und Bildschirmgrößen in `src/style
 3. Impressum und Datenschutz für den konkreten Betreiber und das gewählte Hosting übernehmen/aktualisieren. Derzeit führen die Links auf die bestehende Website. Diese Seiten und die Geschichte müssen bei einem Austausch der bestehenden Domain erhalten bleiben, damit keine Links ins Leere führen.
 4. Alte URLs sichern, passende Weiterleitungen anlegen, Sicherung und Rückkehrmöglichkeit vorbereiten.
 
-Es gibt keine Formulare mit vorgetäuschtem Versand, keine Analyse- oder Drittanbieter-Embeds und keine Behauptungen zu ungeprüften Betreuungszeiten, Kosten, freien Plätzen oder Teamgrößen. Kontakt funktioniert über E-Mail-Links, Anmeldung über den externen Kita-Navigator.
+Es gibt keine Formulare mit vorgetäuschtem Versand, keine Analyse-Tools und keine Behauptungen zu ungeprüften Betreuungszeiten, Kosten, freien Plätzen oder Teamgrößen. Kontakt funktioniert über E-Mail-Links, Anmeldung über den externen Kita-Navigator.
 
 ## Assets und Quellen
 
@@ -42,3 +42,5 @@ Siehe `public/images/ASSETS.md`. Schriften: Fontsource / SIL Open Font License. 
 Repository: https://github.com/mariogottling-glitch/waldlinge
 
 Der GitHub-Stand wird mit abgeschlossenen Änderungen synchronisiert. Eine Veröffentlichung auf `waldlinge.org` ist ein eigener Schritt und bisher nicht erfolgt.
+
+Der offizielle Waldlinge-Film lädt YouTube erst nach ausdrücklichem Anklicken. Das Vorschaubild wird lokal ausgeliefert. Vor dem Livegang die Datenschutzhinweise um den aktivierbaren YouTube-Player ergänzen.
