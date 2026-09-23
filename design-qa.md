@@ -58,3 +58,8 @@ final result: passed
 - Breiten 320, 390, 768 und 1440 px: kein horizontaler Überlauf. Mobile Videokarte visuell geprüft.
 - Einschränkung: YouTube-nocookie liefert HTTP 200, der iframe bleibt im integrierten Browser jedoch leer. Tatsächliche eingebettete Wiedergabe muss in einem normalen Browser bzw. auf dem Zielhosting geprüft werden. Direkter YouTube-Link bleibt verfügbar.
 - Produktionsbuild und alle vier Sites-Tests erfolgreich.
+
+## Verfeinerung der Video-Zustimmung
+- Dauerhaften Absatz entfernt; integrierte Zustimmungsansicht nach Klick auf Film ansehen.
+- Bei 320 px visuell geprüft, kein Überlauf. Escape gibt Fokus zurück. Vor Zustimmung 0 iframes, danach 1; Schließen entfernt den Player.
+

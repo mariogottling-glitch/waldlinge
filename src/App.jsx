@@ -86,14 +86,17 @@ function TextLink({ href, children, ...props }) {
 
 function WaldlingeFilm() {
   const [active, setActive] = useState(false);
+  const [confirming, setConfirming] = useState(false);
+  const confirmButton = useRef(null);
   const playButton = useRef(null);
   const closeButton = useRef(null);
   const wasActive = useRef(false);
   useEffect(() => {
-    if (active) closeButton.current?.focus();
+    if (confirming) confirmButton.current?.focus();
+    else if (active) closeButton.current?.focus();
     else if (wasActive.current) playButton.current?.focus();
-    wasActive.current = active;
-  }, [active]);
+    wasActive.current = active || confirming;
+  }, [active, confirming]);
   return (
     <section
       className="film section-shell"
@@ -108,7 +111,7 @@ function WaldlingeFilm() {
           euch mit zu den Waldlingen.
         </p>
       </div>
-      <div className="film-frame">
+      <div className={`film-frame${confirming ? " film-confirming" : ""}`}>
         {active ? (
           <iframe
             src="https://www.youtube-nocookie.com/embed/9mYhH0tuum4?autoplay=1&playsinline=1&rel=0&hl=de"
@@ -117,12 +120,45 @@ function WaldlingeFilm() {
             allowFullScreen
             referrerPolicy="strict-origin-when-cross-origin"
           />
+        ) : confirming ? (
+          <div
+            className="film-consent"
+            role="group"
+            aria-labelledby="film-consent-title"
+            onKeyDown={(event) => {
+              if (event.key === "Escape") setConfirming(false);
+            }}
+          >
+            <h3 id="film-consent-title">Video von YouTube laden?</h3>
+            <p id="film-privacy">
+              Mit eurer Zustimmung laden wir den Film von YouTube. Dabei wird
+              unter anderem eure IP-Adresse an YouTube übermittelt.
+            </p>
+            <div className="film-consent-actions">
+              <button
+                ref={confirmButton}
+                className="button button-gold"
+                aria-describedby="film-privacy"
+                onClick={() => {
+                  setConfirming(false);
+                  setActive(true);
+                }}
+              >
+                Zustimmen &amp; abspielen
+              </button>
+              <button
+                className="film-cancel"
+                onClick={() => setConfirming(false)}
+              >
+                Zurück
+              </button>
+            </div>
+          </div>
         ) : (
           <button
             ref={playButton}
             className="film-poster"
-            onClick={() => setActive(true)}
-            aria-describedby="film-privacy"
+            onClick={() => setConfirming(true)}
           >
             <img
               src="/images/waldlinge-film.jpg"
@@ -135,17 +171,12 @@ function WaldlingeFilm() {
               <Play size={30} weight="fill" aria-hidden="true" />
             </span>
             <span className="film-caption">
-              Film laden &amp; abspielen{" "}
-              <span>2 Minuten bei den Waldlingen</span>
+              Film ansehen <span>2 Minuten bei den Waldlingen · YouTube</span>
             </span>
           </button>
         )}
       </div>
       <div className="film-details">
-        <p id="film-privacy">
-          Erst beim Abspielen wird eine Verbindung zu YouTube hergestellt. Dabei
-          werden Daten, etwa eure IP-Adresse, an YouTube übermittelt.
-        </p>
         <div className="film-actions">
           {active && (
             <button

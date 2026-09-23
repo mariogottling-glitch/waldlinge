@@ -1301,3 +1301,66 @@ footer a:hover {
     margin: 0 0 10px;
   }
 }
+
+.film-details {
+  justify-content: flex-end;
+}
+.film-consent {
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  text-align: center;
+  background: var(--sage);
+}
+.film-consent h3 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+.film-consent p {
+  max-width: 470px;
+  color: var(--body);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.film-consent-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.film-consent .button {
+  border: 0;
+  cursor: pointer;
+  font-size: 17px;
+}
+.film-cancel {
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .film-confirming {
+    aspect-ratio: auto;
+  }
+  .film-consent {
+    padding: 28px 20px;
+    gap: 16px;
+  }
+  .film-consent-actions {
+    gap: 6px;
+    flex-direction: column;
+  }
+  .film-details {
+    align-items: flex-end;
+  }
+}
