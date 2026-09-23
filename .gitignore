@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.starter/
+.vite/
+*.log
+.env
+.env.*
+!.env.example
+design/source-home.html
+public/images/*.png
+design/source-assets/
