@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { BotanicalIcon } from "./BotanicalIcon";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -325,8 +326,9 @@ export function App() {
             <br className="desktop-break" /> Das prägt – heute und morgen.
           </p>
           <div className="values-grid">
-            {values.map(([title, text]) => (
+            {values.map(([title, text], index) => (
               <article key={title}>
+                <BotanicalIcon variant={index} />
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>

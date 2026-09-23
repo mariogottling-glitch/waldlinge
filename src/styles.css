@@ -1287,3 +1287,17 @@ footer a:hover {
 .film-frame {
   width: 100%;
 }
+
+.value-botanical {
+  display: block;
+  width: 94px;
+  height: 94px;
+  margin: 0 auto 14px;
+}
+@media (max-width: 700px) {
+  .value-botanical {
+    width: 76px;
+    height: 76px;
+    margin: 0 0 10px;
+  }
+}
