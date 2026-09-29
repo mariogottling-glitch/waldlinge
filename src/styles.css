@@ -1461,3 +1461,47 @@ footer a:hover {
     height: 72px;
   }
 }
+
+/* The mobile layout consistently centers copy and supporting elements. */
+@media (max-width: 700px) {
+  main,
+  footer,
+  .navigation,
+  .values h2,
+  .values-grid,
+  .section-intro,
+  .section-heading,
+  .join-inner,
+  .film-caption,
+  .film-close {
+    text-align: center;
+  }
+  .hero p,
+  .discovery-copy > p:not(.eyebrow),
+  .value-botanical,
+  .discovery-photo {
+    margin-inline: auto;
+  }
+  .navigation .nav-contact {
+    align-self: center;
+  }
+  .film-details,
+  .film-actions,
+  .footer-bottom {
+    align-items: center;
+  }
+  .film-actions a,
+  .footer-bottom > div {
+    justify-content: center;
+  }
+  .faq button {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-inline: 30px;
+  }
+  .faq button svg {
+    position: absolute;
+    right: 0;
+  }
+}
