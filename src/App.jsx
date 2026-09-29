@@ -342,6 +342,29 @@ export function App() {
           </div>
         </section>
         <section
+          className="partners section-shell"
+          aria-label="Zusammenarbeit und pädagogische Impulse"
+        >
+          <div>
+            <p>Wir arbeiten zusammen mit</p>
+            <img
+              src="/images/wildnisschule-logo.webp"
+              alt="Natur- und Wildnisschule Teutoburger Wald"
+              width="700"
+              height="237"
+            />
+          </div>
+          <div>
+            <p>Geschult von Nicola Schmidt vom</p>
+            <img
+              src="/images/artgerecht-logo.webp"
+              alt="artgerecht-Projekt"
+              width="800"
+              height="179"
+            />
+          </div>
+        </section>
+        <section
           className="values section-shell"
           id="kindergarten"
           tabIndex="-1"
@@ -375,10 +398,10 @@ export function App() {
         >
           <img
             className="discovery-photo"
-            src="/images/forest-discovery.webp"
-            alt="Eine Kinderhand entdeckt einen Tannenzapfen im Moos"
-            width="1200"
-            height="1000"
+            src="/images/waldlinge-baumwurzel.webp"
+            alt="Ein Kind mit roter Mütze erkundet eine große Baumwurzel im Wald"
+            width="1400"
+            height="1050"
             loading="lazy"
           />
           <div className="discovery-copy">
@@ -443,6 +466,37 @@ export function App() {
                 Gemeinschaft wird in den kleinen Momenten des Alltags lebendig.
               </p>
             </article>
+          </div>
+        </section>
+        <section
+          className="original-moments section-shell"
+          aria-labelledby="moments-title"
+        >
+          <div className="section-heading">
+            <p className="eyebrow">Einblicke bei den Waldlingen</p>
+            <h2 id="moments-title">Mitten im echten Waldleben.</h2>
+          </div>
+          <div className="moments-grid">
+            <figure>
+              <img
+                src="/images/waldlinge-werkeln.webp"
+                alt="Zwei Kinder probieren kleine Sägen an einem Baumstamm aus"
+                width="800"
+                height="1200"
+                loading="lazy"
+              />
+              <figcaption>Mit den eigenen Händen entdecken.</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/images/waldlinge-bollerwagen.webp"
+                alt="Eine Erwachsene und Kinder mit einem Bollerwagen auf einem grünen Waldweg"
+                width="1200"
+                height="800"
+                loading="lazy"
+              />
+              <figcaption>Zusammen draußen unterwegs.</figcaption>
+            </figure>
           </div>
         </section>
         <section

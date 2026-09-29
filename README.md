@@ -29,7 +29,7 @@ Inhalte stehen in `src/App.jsx`, Gestaltung und Bildschirmgrößen in `src/style
 ## Vor der Veröffentlichung auf der Vereinsdomain
 
 1. Texte und aktuelle Aufnahmeinformationen mit dem Verein bestätigen.
-2. Generierte Fotomotive durch freigegebene tatsächliche Kindergartenfotos ersetzen oder ihren illustrativen Einsatz redaktionell ausdrücklich festlegen. Die aktuellen Bilder dokumentieren nicht den realen Betrieb.
+2. Generierte Fotomotive durch freigegebene tatsächliche Kindergartenfotos ersetzen oder ihren illustrativen Einsatz redaktionell ausdrücklich festlegen. Das Hero-Bild bleibt vorerst ein Konzeptmotiv. Die Originalaufnahmen im Inhaltsbereich stammen von der bestehenden Vereinswebsite (siehe Bildnachweise).
 3. Impressum und Datenschutz für den konkreten Betreiber und das gewählte Hosting übernehmen/aktualisieren. Derzeit führen die Links auf die bestehende Website. Diese Seiten und die Geschichte müssen bei einem Austausch der bestehenden Domain erhalten bleiben, damit keine Links ins Leere führen.
 4. Alte URLs sichern, passende Weiterleitungen anlegen, Sicherung und Rückkehrmöglichkeit vorbereiten.
 

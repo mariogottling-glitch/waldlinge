@@ -63,3 +63,9 @@ final result: passed
 - Dauerhaften Absatz entfernt; integrierte Zustimmungsansicht nach Klick auf Film ansehen.
 - Bei 320 px visuell geprüft, kein Überlauf. Escape gibt Fokus zurück. Vor Zustimmung 0 iframes, danach 1; Schließen entfernt den Player.
 
+
+## Originalfotos und Logos (29.09.2026)
+- Hero unverändert. Originalfotos: Baumwurzel im Entdeckerbereich; Werkeln und Bollerwagen als ruhige Fotostrecke ohne Bildbeschnitt.
+- Original-Partnerlogos direkt unter dem Hero. Auf kleinen Smartphones untereinander für lesbare Wortmarken.
+- Desktop-Fotostrecke und mobile Logos visuell geprüft. Produktionsbuild und vier Sites-Tests erfolgreich.
+
