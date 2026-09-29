@@ -321,9 +321,9 @@ export function App() {
                 Waldkindergarten in Bornheim
               </span>
               <h1 id="hero-title">
-                Draußen wachsen.
+                Kind sein.
                 <br />
-                Gemeinsam geborgen.
+                Mit dem Wald wachsen.
               </h1>
               <p>
                 Raum zum Entdecken. Zeit zum Wachsen.
