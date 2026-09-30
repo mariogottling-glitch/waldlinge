@@ -21,11 +21,11 @@ export function WaldlingeFilm() {
       aria-labelledby="film-title"
     >
       <div className="film-heading">
-        <p className="eyebrow">Ein kleiner Einblick. Ein großes Gefühl.</p>
+        <p className="eyebrow">Die Waldlinge im Film</p>
         <h2 id="film-title">Kommt mit in unseren Wald.</h2>
         <p className="section-intro">
-          Begegnungen, Entdeckungen und ganz viel Draußensein: Unser Film nimmt
-          euch mit zu den Waldlingen.
+          Entdecken, spielen, zusammen sein. Ein Einblick in unseren
+          Kindergarten.
         </p>
       </div>
       <div className={`film-frame${confirming ? " film-confirming" : ""}`}>

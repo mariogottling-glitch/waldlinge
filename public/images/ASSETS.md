@@ -69,3 +69,17 @@ Vier neue Motive, jeweils eine Firefly-Generierung, keine Variantenserien. Alle 
   | `adobe-oaks/bird.png` | 480 × 373 | Adobe Firefly, Adobe-Freistellung, Adobe-Verkleinerung. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:048760f0-3fec-4d5e-827d-81ac8f54aed8 |
 
 Die neuen Illustrationen zeigen keine tatsächlichen Waldlinge-Orte oder Kinder. Alle finalen Adobe-Ausgaben wurden visuell überprüft. Webseitenbetrieb ausschließlich mit lokalen Dateien; keine externen Adobe-Aufrufe.
+# Zusätzliche Waldbewegung, 1. Oktober 2026
+
+Alle vier folgenden PNG-Dateien wurden ausschließlich mit Adobe erstellt bzw. bearbeitet. Firefly-Ausgabe, Adobe-Freistellung und Adobe-Zuschnitt/Verkleinerung; keine lokale Bildbearbeitung. Die Website lädt lokale Dateien und benötigt dafür keine Adobe-Verbindung.
+
+| Datei | Größe | Herkunft und Einsatz |
+| --- | --- | --- |
+| `adobe-life/bird-body.png` | 400 × 239, 85.102 Bytes | Adobe Instruct Edit des bestehenden Vogels: angehobene Flügel entfernt, Körper und Schwanz erhalten; freigestellt, auf das Motiv zugeschnitten. Stabile Körperlage im Flug. |
+| `adobe-life/bird-wing.png` | 300 × 267, 84.840 Bytes | Adobe Instruct Edit desselben Vogels: einzelner vollständiger Vorderflügel isoliert; freigestellt und zugeschnitten. Zwei Schultergelenke bewegen Vorder- und Hinterflügel. |
+| `adobe-life/oak-twig.png` | 600 × 600, 211.990 Bytes | Neue Adobe-Firefly-Illustration, gedämpftes sommerliches Salbeigrün, Eichenzweig; freigestellt und verkleinert. Zwei seitliche Winddetails. |
+| `adobe-life/butterfly.png` | 260 × 260, 56.680 Bytes | Neue Adobe-Firefly-Illustration, salbei- und elfenbeinfarbener Waldschmetterling; freigestellt und verkleinert. Kleine flatternde Begegnungen. |
+
+Vogelreferenz: [bestehender Adobe-Vogel](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:048760f0-3fec-4d5e-827d-81ac8f54aed8).
+
+Finale Adobe-Ausgaben: [Körper](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:59b36218-25b9-46da-9ee0-ac6bf5d91eff), [Flügel](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:dc3ff74d-99f9-4575-bb77-cdc3bc6d164a), [Eichenzweig](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:dd2a4d11-1d45-4c08-8928-63a0ea722069), [Schmetterling](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:43f14ce7-4f3a-4b97-a2e4-812dfccd0fc2).

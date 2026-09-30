@@ -28,13 +28,15 @@ Die fremden Beispiele wurden als Gestaltungshinweise betrachtet. Ihre konkrete I
 6. **Für Eltern:** sechs aufklappbare Antworten; Waldspielgruppe direkt daneben statt eines eigenen langen Kapitels.
 7. **Kennenlernen und Ankommen:** Kontakt, Kita-Navigator und vollständige Footerinformationen. Wurzeln als Ende der Reise, mit Freiraum für lesbare Kontaktdaten.
 
-Die Desktopseite umfasst bei 1440 × 900 etwa 5.4 Tausend Pixel und zeigt im Hauptinhalt zunächst rund 370 Wörter. Aufgeklappte Details verlängern sie nach Bedarf. Keine künstlich verlängerten Pin-Strecken, kein Scrollzwang, keine Vollbildhöhe für jeden Abschnitt.
+Die Desktopseite umfasst bei 1440 × 900 etwa 5.6 Tausend Pixel und zeigt im Hauptinhalt zunächst rund 320 Wörter. Aufgeklappte Details verlängern sie nach Bedarf. Keine künstlich verlängerten Pin-Strecken, kein Scrollzwang, keine Vollbildhöhe für jeden Abschnitt.
 
 ## Bewegung
 
 - Der natürliche Dokumentfluss ist der Kamerapfad. Kronen, Stamm und Wurzeln haben zusammenhängende tatsächliche Seitenpositionen.
 - Die Kronen bewegen sich leicht nach außen und oben, wenn der Einstieg verlassen wird.
-- Ein einzelner Vogel gleitet über den Übergang zur Kindergartenvorstellung. Seine Bewegung folgt dem Scrollfortschritt und lässt sich zurückscrollen.
+- Ein einzelner Vogel fliegt über den Übergang zur Kindergartenvorstellung. Seine Route folgt dem Scrollfortschritt und lässt sich zurückscrollen. Sein Körper und zwei getrennte Flügelebenen stammen aus Adobe; ein eigener Zyklus von 0,64 Sekunden animiert den echten Flügelschlag auch bei stillstehender Seite.
+- Kronen und Eichenzweige bewegen sich unabhängig von der Scrollroute im Wind. Farne reagieren mit langsamem Wiegen. Kleine Schmetterlinge flattern bei der Entdeckungsszene und kurz vor dem Waldboden.
+- Diese kontinuierlichen Bewegungen laufen nur im zugehörigen sichtbaren Abschnitt. Ein verborgener Browser-Tab pausiert alle laufenden Naturzyklen. Der dokumentgebundene Kamerapfad bleibt davon unabhängig.
 - Die Werteillustrationen erscheinen gestaffelt; eine Lupe und Farne verändern beim Alltag sanft ihre Position und Drehung.
 - Originalfotos und kurze Inhaltsgruppen werden zurückhaltend eingeblendet. Die Elterninformationen bleiben ruhig.
 - Native Browsernavigation und scrollbar; keine Übernahme des Mausrads. Der Bewegungsbutton und `prefers-reduced-motion` schalten Animationen ab, erhalten aber den statischen Baumrahmen und sämtliche Inhalte.
@@ -46,3 +48,11 @@ Die Baumrinde besteht aus Adobe-Passagen mit spiegelgleichen Übergängen. Keine
 Zeitgemäße hochwertige botanische Gouacheillustration für einen einladenden Waldkindergarten in Bornheim. Ein lichter europäischer Sommerwald mit Eichen, natürlichen grau-braunen Stämmen, gedämpftem Salbei-, Moos- und tiefem Waldgrün. Feine organische Konturen, zurückhaltende trockene Pinseltextur, weiches Tageslicht, eigenständiger redaktioneller Stil. Ruhig und familienfreundlich, mit Raum für Neugier, Erforschen und Geborgenheit. Kein nostalgisches Kinderbuch, keine Herbstfarben, kein Neon, keine Schrift. Kinder nur sparsam, von hinten und ohne sichtbare Gesichter. Ein klar definiertes Motiv pro Ausgabe. Freigestellte Einzelmotive mit Abstand zu den Rändern; zusammengehörige Baumteile dürfen an den technisch benötigten Anschlusskanten enden. Die seitlichen Website-Bäume werden bewusst angeschnitten, der zentrale Textraum bleibt frei.
 
 Die vier konkret verwendeten Adobe-Motive und ihre finalen Ausgaben sind in `public/images/ASSETS.md` dokumentiert.
+
+## Überarbeitung vom 1. Oktober: Leben und Leseführung
+
+Die Kindergartenbeschreibung und geprüfte Fakten stehen zusammen auf einer zurückhaltenden Fläche. Drei kurze Werte bilden eine gemeinsame Inhaltsgruppe. Gemeinschaft, Waldspielgruppe und FAQ erhalten klare Grenzen statt verstreuter Zusatzzeilen. Überschriften bleiben als Orientierung; dekorative Slogans werden durch kurze Abschnittsbezeichnungen ersetzt. Ortsbezug ist am Originalfoto befestigt. Film, Anmeldung, Kontakte und wesentliche aufklappbare Originalinformationen bleiben erhalten.
+
+Zusätzliche Naturgrafiken: Adobe-Firefly-Körper- und Flügellayer aus dem bisherigen Vogel sowie ein neuer Eichenzweig und Schmetterling. Das freigestellte Flügelmotiv wird als Vorder- und Hinterflügel an zwei Schulterpunkten bewegt. Nur die Flügel drehen im Flügelschlag, der Körper bleibt als eigene Ebene stabil. Kronen und Farne haben getrennte Ebenen für Scrollbewegung und Wind, um konkurrierende Transformationen zu vermeiden.
+
+Responsive Bewegungslogik gilt ausdrücklich auch unter 960px. Eine stets aktive Basisbedingung verhindert, dass GSAP bei gleichzeitig falscher Desktop- und Reduced-Motion-Bedingung die mobile Animation überspringt. Die ruhige Ansicht erhält alle Grafiken und Inhalte.

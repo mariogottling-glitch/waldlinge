@@ -21,16 +21,13 @@ const navigation = [
 const values = [
   [
     "Natur entdecken",
-    "Ein Käfer. Ein Blatt. Tausend Fragen. Die Natur mit allen Sinnen erleben.",
+    "Mit allen Sinnen staunen, fragen und die Natur verstehen.",
   ],
   [
     "Im eigenen Tempo",
-    "Mutig voran oder erst mal beobachten: Jedes Kind geht seinen eigenen Weg.",
+    "Ausprobieren oder erst beobachten. Jedes Kind findet seinen Weg.",
   ],
-  [
-    "Gemeinschaft leben",
-    "Sich gesehen fühlen. Zusammen Neues wagen. Und einfach dazugehören.",
-  ],
+  ["Gemeinschaft leben", "Sich gesehen fühlen, Neues wagen und dazugehören."],
 ];
 const steps = [
   [
@@ -104,14 +101,16 @@ function ForestWorld() {
               />
             ))}
           </div>
-          <img
-            className="tree-crown"
-            src="/images/adobe-oaks/canopy.png"
-            width="1100"
-            height="1414"
-            alt=""
-            fetchPriority="high"
-          />
+          <div className="tree-canopy">
+            <img
+              className="tree-crown"
+              src="/images/adobe-oaks/canopy.png"
+              width="1100"
+              height="1414"
+              alt=""
+              fetchPriority="high"
+            />
+          </div>
           <img
             className="tree-roots"
             src="/images/adobe-oaks/roots.png"
@@ -122,6 +121,77 @@ function ForestWorld() {
           />
         </div>
       ))}
+      <div className="forest-twig forest-twig--left" data-ambient>
+        <img
+          src="/images/adobe-life/oak-twig.png"
+          width="600"
+          height="600"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div className="forest-twig forest-twig--right" data-ambient>
+        <img
+          src="/images/adobe-life/oak-twig.png"
+          width="600"
+          height="600"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div className="ground-fern" data-ambient>
+        <img
+          src="/images/adobe-forest/ferns.png"
+          width="1152"
+          height="896"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </div>
+  );
+}
+
+function LivingBird() {
+  return (
+    <div className="journey-bird" aria-hidden="true">
+      <div className="bird-anatomy">
+        <img
+          className="bird-wing bird-wing--far"
+          src="/images/adobe-life/bird-wing.png"
+          width="300"
+          height="267"
+          alt=""
+        />
+        <img
+          className="bird-body"
+          src="/images/adobe-life/bird-body.png"
+          width="400"
+          height="239"
+          alt=""
+        />
+        <img
+          className="bird-wing bird-wing--near"
+          src="/images/adobe-life/bird-wing.png"
+          width="300"
+          height="267"
+          alt=""
+        />
+      </div>
+    </div>
+  );
+}
+
+function Butterfly({ className = "" }) {
+  return (
+    <div className={`forest-butterfly ${className}`} aria-hidden="true">
+      <img
+        src="/images/adobe-life/butterfly.png"
+        width="260"
+        height="260"
+        alt=""
+        loading="lazy"
+      />
     </div>
   );
 }
@@ -236,7 +306,8 @@ function Parents() {
           <em>Ein offenes Ohr.</em>
         </h2>
         <p>
-          Was ihr wissen möchtet. Und was wir am liebsten persönlich besprechen.
+          Hier findet ihr erste Antworten. Für alles Weitere sind wir persönlich
+          da.
         </p>
         <Link href="mailto:info@waldlinge.org">Fragt uns einfach</Link>
         <aside className="playgroup-note">
@@ -397,10 +468,9 @@ export function ForestHome() {
                 <a href="#eltern">Eure Fragen</a>
               </div>
             </div>
-            <p className="hero-bottom">
-              <span>Neugier im Kopf. Wald unter den Füßen.</span>
+            <div className="hero-bottom" aria-hidden="true">
               <ArrowDown size={18} aria-hidden="true" />
-            </p>
+            </div>
           </section>
 
           <section
@@ -409,48 +479,44 @@ export function ForestHome() {
             tabIndex="-1"
             aria-labelledby="welcome-title"
           >
-            <img
-              className="journey-bird"
-              src="/images/adobe-oaks/bird.png"
-              width="480"
-              height="373"
-              alt=""
-              aria-hidden="true"
-            />
+            <LivingBird />
             <div className="section-heading" data-reveal>
-              <p className="eyebrow">Hier darf dein Kind wachsen</p>
+              <p className="eyebrow">Unser Kindergarten</p>
               <h2 id="welcome-title">
                 Weniger vorgeben.
                 <br />
                 <em>Mehr entdecken.</em>
               </h2>
+            </div>
+            <div className="welcome-note">
               <p>
                 Wir sind die Waldlinge: ein bedürfnisorientierter
-                Waldkindergarten
-                <br className="desktop-break" /> aus Elterninitiative. Jeden Tag
-                draußen. Und immer auf Augenhöhe.
+                Waldkindergarten aus Elterninitiative. Jeden Tag draußen. Immer
+                auf Augenhöhe.
               </p>
+              <div
+                className="forest-facts"
+                aria-label="Die Waldlinge auf einen Blick"
+              >
+                <span>3 Jahre bis Schuleintritt</span>
+                <span>Seit Januar 2020</span>
+                <span>Bornheim-Merten</span>
+              </div>
             </div>
-            <div
-              className="forest-facts"
-              aria-label="Die Waldlinge auf einen Blick"
-            >
-              <span>Ab 3 Jahren bis zum Schuleintritt</span>
-              <span>Seit Januar 2020</span>
-              <span>Bornheim-Merten</span>
+            <div className="values-panel">
+              <div className="values-grid" id="entdeckungen">
+                {values.map(([title, text], index) => (
+                  <article key={title} data-value>
+                    <BotanicalIcon variant={index} />
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </article>
+                ))}
+              </div>
+              <Link href="https://waldlinge.org/wer-wir-sind/">
+                Mehr über unsere Haltung
+              </Link>
             </div>
-            <div className="values-grid" id="entdeckungen">
-              {values.map(([title, text], index) => (
-                <article key={title} data-value>
-                  <BotanicalIcon variant={index} />
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-            <Link href="https://waldlinge.org/wer-wir-sind/">
-              Mehr über unsere Haltung
-            </Link>
             <div
               className="partners"
               aria-label="Zusammenarbeit und pädagogische Impulse"
@@ -493,7 +559,9 @@ export function ForestHome() {
                   alt="Ein Waldlinge-Kind erkundet eine große Baumwurzel im Wald"
                   loading="lazy"
                 />
-                <figcaption>Ein echter Einblick in unser Waldleben.</figcaption>
+                <figcaption>
+                  Vom Bauwagen am SSV Merten geht es hinaus in den Wald.
+                </figcaption>
               </figure>
               <img
                 className="photo-fern"
@@ -514,9 +582,10 @@ export function ForestHome() {
                 aria-hidden="true"
                 loading="lazy"
               />
+              <Butterfly className="butterfly--clearing" />
             </div>
             <div className="chapter-copy" data-reveal>
-              <p className="eyebrow">Ein Stock. Tausend Möglichkeiten.</p>
+              <p className="eyebrow">Unser Waldalltag</p>
               <h2 id="adventure-title">
                 „Ich kann das.“
                 <br />
@@ -538,10 +607,6 @@ export function ForestHome() {
                   </details>
                 ))}
               </div>
-              <p className="place-note">
-                Unser Bauwagen am SSV Merten ist der vertraute Ausgangspunkt.
-                Dahinter wartet der Wald.
-              </p>
             </div>
           </section>
 
@@ -552,7 +617,7 @@ export function ForestHome() {
             aria-labelledby="together-title"
           >
             <div className="together-copy" data-reveal>
-              <p className="eyebrow">Mit Herz. Mit Händen. Miteinander.</p>
+              <p className="eyebrow">Unsere Elterninitiative</p>
               <h2 id="together-title">
                 Es braucht ein Dorf.
                 <br />
@@ -587,9 +652,7 @@ export function ForestHome() {
                 height="1200"
                 loading="lazy"
               />
-              <figcaption>
-                Mit den eigenen Händen die Welt entdecken.
-              </figcaption>
+              <figcaption>Gemeinsam anpacken, gemeinsam wachsen.</figcaption>
             </figure>
           </section>
 
@@ -603,7 +666,7 @@ export function ForestHome() {
             aria-labelledby="join-title"
           >
             <div className="join-inner" data-reveal>
-              <p className="eyebrow">Vielleicht beginnt euer Weg hier</p>
+              <p className="eyebrow">Kennenlernen</p>
               <h2 id="join-title">
                 Ein kleiner Schritt.
                 <br />
@@ -623,11 +686,10 @@ export function ForestHome() {
                 </Link>
               </div>
               <p className="small-note" id="anmeldung" tabIndex="-1">
-                Anmeldung über den Kita-Navigator Bornheim.
-                <br />
-                Eine Vormerkung ist noch keine Platzzusage.
+                Vormerkung im Kita-Navigator Bornheim – noch keine Platzzusage.
               </p>
             </div>
+            <Butterfly className="butterfly--ground" />
           </section>
         </main>
         <Footer

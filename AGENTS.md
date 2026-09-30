@@ -65,3 +65,9 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Für diese seitlichen Rahmenbäume sind angeschnittene Außenkanten ausdrücklich gewünscht; dies ersetzt die frühere Vorgabe vollständiger Freistellung für diese Motive. Einzelne Entdeckungsmotive bleiben vollständige freigestellte Adobe-Grafiken.
 - Zusätzlich motionsites.ai ansehen: Inspiration für räumliche Bildrahmen und hochwertige Bewegung, keine fremden Assets oder kostenpflichtigen Vorlagen übernehmen.
 - Der erste Neustart war zu clean, langweilig und textlastig. Inhalte zusammenführen, redundante Absätze streichen und leere Scrollstrecken vermeiden. Wesentliche Originalinformationen, Filmzustimmung, FAQ, Kontakt und Anmeldung erhalten; Details können aufgeklappt werden.
+
+## Lebendiger Wald und geordnete Inhalte
+
+- Der Nutzer wünscht beim Vogel einen echten Flügelschlag, nicht nur ein verschobenes Standbild. Der Vogel besteht aus eigenen Adobe-Körper- und Flügelebenen; Flügelbewegung läuft unabhängig vom Scrollfortschritt.
+- Die Waldwelt soll entlang der Reise sichtbar leben: sanft bewegte Eichenzweige und Farne, kleine flatternde Schmetterlinge. Lesetexte bleiben ruhig. Bewegungen pausieren außerhalb ihres sichtbaren Abschnitts und bei verborgenem Browser-Tab; Bewegungsreduktion erhält die vollständige statische Gestaltung.
+- Frei stehende Zusatztexte aufräumen: kurze inhaltliche Abschnittsbezeichnungen, gebündelte Kindergarteninfos und Werte, zusammengehörige Gemeinschafts- und Elterninformationen. Wichtige Originalinhalte erhalten, poetische Wiederholungen reduzieren.

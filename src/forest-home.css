@@ -310,7 +310,7 @@ p + p {
 .edge-tree--right {
   transform: scaleX(-1);
 }
-.tree-crown {
+.tree-canopy {
   position: absolute;
   top: -140px;
   left: calc(var(--crown-width) * -0.47);
@@ -318,6 +318,10 @@ p + p {
   max-width: none;
   transform-origin: 48% 88%;
   mask-image: linear-gradient(#000 0% 82%, transparent 100%);
+}
+.tree-crown {
+  width: 100%;
+  transform-origin: 48% 88%;
 }
 .tree-trunk {
   position: absolute;
@@ -351,7 +355,7 @@ p + p {
   left: calc(var(--roots-width) * -0.49);
   mask-image: linear-gradient(transparent, #000 24%);
 }
-.edge-tree--right .tree-crown {
+.edge-tree--right .tree-canopy {
   top: -185px;
 }
 .edge-tree--right .tree-trunk {
@@ -506,10 +510,116 @@ p {
 }
 .journey-bird {
   position: absolute;
-  width: 150px;
-  top: -10px;
-  left: 15%;
+  width: 125px;
+  top: 30px;
+  left: 10%;
   pointer-events: none;
+  z-index: 2;
+}
+.bird-anatomy {
+  position: relative;
+  perspective: 450px;
+}
+.bird-body {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.bird-wing {
+  position: absolute;
+  max-width: none;
+  transform-origin: 94% 74%;
+  backface-visibility: visible;
+}
+.bird-wing--near {
+  width: 80%;
+  left: -11%;
+  top: -58%;
+  z-index: 2;
+  transform: rotate(-5deg) rotateX(-12deg);
+}
+.bird-wing--far {
+  width: 70%;
+  left: -4%;
+  top: -53%;
+  opacity: 0.85;
+  transform: rotate(-14deg) rotateX(15deg);
+}
+.forest-twig {
+  position: absolute;
+  width: clamp(190px, 20vw, 285px);
+}
+.forest-twig img {
+  width: 100%;
+  transform-origin: 12% 88%;
+}
+.forest-twig--left {
+  left: -80px;
+  top: 25%;
+}
+.forest-twig--right {
+  right: -80px;
+  top: 57%;
+  transform: scaleX(-1);
+}
+.ground-fern {
+  position: absolute;
+  width: 220px;
+  bottom: -24px;
+  left: calc(50% - 110px);
+}
+.ground-fern img {
+  transform-origin: 50% 85%;
+}
+.forest-butterfly {
+  position: absolute;
+  width: 65px;
+  perspective: 220px;
+  pointer-events: none;
+  z-index: 2;
+}
+.forest-butterfly img {
+  width: 100%;
+  transform-origin: center;
+}
+.butterfly--clearing {
+  right: -6%;
+  bottom: 15%;
+}
+.butterfly--ground {
+  left: 4%;
+  bottom: 35px;
+  width: 52px;
+}
+.welcome-note {
+  width: min(740px, 100%);
+  padding: 18px 28px;
+  text-align: center;
+  background: #dbe3d544;
+  border: 1px solid #cbd5c280;
+  border-radius: 24px;
+}
+.welcome-note > p {
+  max-width: 650px;
+  margin-inline: auto;
+  font-size: 17px;
+}
+.welcome-note .forest-facts {
+  margin-top: 16px;
+  padding-top: 15px;
+  border-top: 1px solid #cbd5c280;
+}
+.values-panel {
+  width: 100%;
+  padding: 22px 28px 27px;
+  border: 1px solid #d8dfcf;
+  border-radius: 32px;
+  background: #ffffff45;
+  text-align: center;
+}
+.values-panel > .text-link {
+  margin-top: 24px;
+  font-size: 14px;
 }
 .chapter--adventure {
   display: grid;
@@ -543,6 +653,7 @@ figcaption {
   right: -17%;
   bottom: -7px;
   pointer-events: none;
+  transform-origin: 50% 85%;
 }
 .journey-loupe {
   position: absolute;
@@ -601,11 +712,16 @@ details[open] > summary > svg {
   line-height: 1.6;
 }
 .together {
+  position: relative;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 85px;
   align-items: center;
-  padding-block: 40px 65px;
+  padding: 32px 38px;
+  margin-block: 10px 30px;
+  border: 1px solid #d8dfcf;
+  border-radius: 32px;
+  background: #ffffff40;
 }
 .together-copy > p:not(.eyebrow) {
   margin-top: 24px;
@@ -782,8 +898,9 @@ details[open] > summary > svg {
 }
 .playgroup-note {
   margin-top: 35px;
-  padding-top: 22px;
-  border-top: 1px solid #c8d2be;
+  padding: 22px;
+  border-radius: 20px;
+  background: #d6e0cb66;
 }
 .playgroup-note h3 {
   font-size: 21px;
@@ -801,6 +918,11 @@ details[open] > summary > svg {
 }
 .faq:first-child {
   border-top: 1px solid #bac9ac;
+}
+.faq-list {
+  padding: 7px 22px;
+  border-radius: 24px;
+  background: #ffffff55;
 }
 .faq h3 {
   font-family: var(--sans);
@@ -854,7 +976,7 @@ details[open] > summary > svg {
 }
 footer {
   position: relative;
-  padding-block: 40px 30px;
+  padding-block: 40px 150px;
   color: var(--forest);
 }
 footer > .section-shell {
@@ -1037,11 +1159,11 @@ summary:focus-visible {
   footer > .section-shell {
     width: calc(100% - 180px);
   }
-  .tree-crown {
+  .tree-canopy {
     top: -125px;
     left: calc(var(--crown-width) * -0.48);
   }
-  .edge-tree--right .tree-crown {
+  .edge-tree--right .tree-canopy {
     top: -165px;
   }
   .section-shell {
@@ -1105,6 +1227,50 @@ summary:focus-visible {
   }
 }
 @media (max-width: 700px) {
+  .forest-twig {
+    width: 140px;
+  }
+  .forest-twig--left {
+    left: -73px;
+  }
+  .forest-twig--right {
+    right: -73px;
+  }
+  .ground-fern {
+    width: 140px;
+    left: calc(50% - 70px);
+  }
+  .forest-butterfly {
+    width: 45px;
+  }
+  .butterfly--ground {
+    left: -8px;
+    bottom: 0;
+  }
+  .welcome-note {
+    padding: 18px 15px;
+  }
+  .welcome-note > p {
+    font-size: 16px;
+  }
+  .welcome-note .forest-facts {
+    gap: 7px;
+    flex-direction: column;
+  }
+  .welcome-note .forest-facts span + span {
+    padding-left: 0;
+    border: 0;
+  }
+  .values-panel {
+    padding: 16px 18px 24px;
+    border-radius: 24px;
+  }
+  .together {
+    padding: 25px 20px;
+  }
+  .faq-list {
+    padding-inline: 14px;
+  }
   html {
     scroll-padding-top: 92px;
   }
@@ -1178,11 +1344,11 @@ summary:focus-visible {
     --bark-width: 115px;
     --roots-width: 280px;
   }
-  .tree-crown {
+  .tree-canopy {
     top: -200px;
     left: -203px;
   }
-  .edge-tree--right .tree-crown {
+  .edge-tree--right .tree-canopy {
     top: -225px;
     left: -193px;
   }
