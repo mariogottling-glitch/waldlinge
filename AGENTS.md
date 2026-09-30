@@ -23,3 +23,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Auch im Waldalltag-Bereich statt Nummern passende Illustrationen derselben Icon-Familie einsetzen: Geborgenheit (Dach mit Herz), spielerisches Entdecken (Ast mit Schaukel), gemeinsames Wachsen (zwei Pflanzen).
 - Originalfotos der bestehenden Waldlinge-Website im Inhaltsbereich verwenden. Hero-Bild vorerst ausdrücklich unverändert lassen. Natur- und Wildnisschule sowie artgerecht als separate, gut lesbare Originallogos direkt unter dem Einstieg zeigen.
 - Mobile Ansicht bis 700px durchgehend mittig ausrichten: Überschriften, Fließtexte, Icons, Bildunterschriften, CTA-Bereiche, FAQ-Texte, Menüeinträge und Footer. FAQ-Schaltsymbole bleiben am rechten Rand bedienbar.
+
+## Neue Konzeptphase vom 30. September 2026
+
+- Zunächst Master-Prompt und Konzept ausarbeiten, bevor ein neuer visueller Entwurf beginnt. Das Konzept ist eine Erweiterungsrichtung, keine Freigabe zum Ersetzen des bisher genehmigten Layouts oder Hero-Bildes.
+- Gewünschte Wirkung: hochwertige, einladende Homepage mit sanften Naturfarben, Vertrauen und einer beim Scrollen zunehmend entstehenden Waldwelt. Themen: Kinder, Entdeckung, Entwicklung, Abenteuer und Geborgenheit.
+- Neue Grafiken und Bilder in diesem Projekt ausschließlich mit dem Adobe-Plugin erstellen oder bearbeiten. Keine andere Bildgenerierung als Ersatz. Bestehende Originalfotos und Originallogos bleiben gültige Quellen.
+- Behance und Dribbble als Webdesign-Referenzen, Pinterest als Illustrationsreferenz recherchieren. Fremde Werke dienen als Inspiration und werden nicht als Website-Assets übernommen.
+- Die zehn mitgelieferten Bilder sind Stilreferenzen, keine Layoutfreigabe: Aquarell, lichte Baumkronen, Mischwald, Pflanzen und neugierige Kinder. Bilder 7 und 8 zeigen dasselbe Motiv. Neue Richtung und Master-Prompt stehen in design/Waldreise-Konzept.md.
