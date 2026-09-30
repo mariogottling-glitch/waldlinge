@@ -12,6 +12,7 @@ Die KI-Assets wurden mit dem integrierten ImageGen-Werkzeug für dieses Projekt 
 ## Originalmaterial, ergänzt am 29.09.2026
 
 Die folgenden Originalfotos stammen aus der Galerie auf https://waldlinge.org/wer-wir-sind/ und werden auf ausdrücklichen Nutzerwunsch übernommen. WebP-Ableitungen sind nur verkleinert/komprimiert, nicht generativ verändert.
+
 - `waldlinge-baumwurzel.webp`: https://waldlinge.org/wp-content/gallery/impressionen/Kind-auf-Baumwurzel-web.jpg
 - `waldlinge-werkeln.webp`: https://waldlinge.org/wp-content/gallery/impressionen/Kinder-mit-Werkzeug-web.jpg
 - `waldlinge-bollerwagen.webp`: https://waldlinge.org/wp-content/gallery/impressionen/Bollerwagen-im-Wald-web.jpg
@@ -43,12 +44,28 @@ Die vorstehenden Hero- und Konzeptfotografie-Einträge dokumentieren frühere En
 
 Alle neuen Illustrationen sind mit Adobe Firefly erzeugt, mit Adobe freigestellt und lokal gespeichert. Keine externen Adobe-Aufrufe im Websitebetrieb. Vollständig sichtbare eigene Konzeptmotive; sie bilden keinen konkreten Wald oder tatsächliche Kinder des Kindergartens ab.
 
-| Lokale Datei | Abmessungen | Herkunft und Bearbeitung |
-| --- | --- | --- |
-| `adobe-forest/forest.png` | 1111 × 1082 | Neue lichte Waldkomposition mit zwei kleinen Rückenfiguren. Firefly-Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:3f7f9c23-f061-4e2a-81ba-f0e189b424fa. Adobe-Freistellung und Entfernung überschüssigen transparenten Außenraums mit Abstand zum vollständigen Motiv. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:1934d565-38b2-40de-96fd-1f0ea77beb35. |
-| `adobe-forest/birches.png` | 896 × 1168 | Drei vollständige Birken. Generierung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:f5f068a6-67bc-490d-a3eb-9ac11a2ca432. Die zunächst gelblichen Kronen wurden ausschließlich mit Adobe ins Sommergrün korrigiert, anschließend freigestellt. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d98c8f23-e6ef-4099-858b-6e8da376336c. |
-| `adobe-forest/ferns.png` | 1152 × 896 | Vollständiges Farn- und Moosmotiv mit zwei Steinen. Generierung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d9ffecf3-6ba0-4d2f-9fb2-d6f937b06b34. Adobe-Freistellung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:12ff71e9-a215-48e5-89ec-35c442a55ea5. |
+| Lokale Datei               | Abmessungen | Herkunft und Bearbeitung                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `adobe-forest/forest.png`  | 1111 × 1082 | Neue lichte Waldkomposition mit zwei kleinen Rückenfiguren. Firefly-Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:3f7f9c23-f061-4e2a-81ba-f0e189b424fa. Adobe-Freistellung und Entfernung überschüssigen transparenten Außenraums mit Abstand zum vollständigen Motiv. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:1934d565-38b2-40de-96fd-1f0ea77beb35. |
+| `adobe-forest/birches.png` | 896 × 1168  | Drei vollständige Birken. Generierung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:f5f068a6-67bc-490d-a3eb-9ac11a2ca432. Die zunächst gelblichen Kronen wurden ausschließlich mit Adobe ins Sommergrün korrigiert, anschließend freigestellt. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d98c8f23-e6ef-4099-858b-6e8da376336c.                                 |
+| `adobe-forest/ferns.png`   | 1152 × 896  | Vollständiges Farn- und Moosmotiv mit zwei Steinen. Generierung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d9ffecf3-6ba0-4d2f-9fb2-d6f937b06b34. Adobe-Freistellung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:12ff71e9-a215-48e5-89ec-35c442a55ea5.                                                                                                                        |
 
 Die drei neuen PNGs zusammen belegen 2.64 MB (dezimal). Die vorhandenen sechs Adobe-Icons werden wiederverwendet. Es wurden drei neue Motive generiert und eine generative Farbkorrektur vorgenommen; keine zusätzlichen Varianten oder KI-Fotos für diesen Entwurf. Alle finalen Motive wurden über Adobe-Vorschauen visuell auf vollständige Figuren, Pflanzen und Baumkronen kontrolliert.
 
 Die Filmvorschau verwendet lokal das hochauflösende Originalfoto `waldlinge-bollerwagen.webp` als Titelbild. Es ist kein Filmstandbild. Das frühere 480-Pixel-YouTube-Vorschaubild bleibt gespeichert; ein höher aufgelöstes originales YouTube-Vorschaubild war nicht verfügbar. Der Film selbst und die Zustimmungslogik bleiben unverändert.
+
+## Aktive Fassung: von den Kronen zu den Wurzeln
+
+Die Waldinsel `adobe-forest/forest.png` und die Birken `adobe-forest/birches.png` sind auf Nutzerwunsch vollständig aus der aktiven Homepage entfernt. Sie bleiben als historische Assets gespeichert. Farne und die Adobe-Iconfamilie werden wiederverwendet. Die drei Originalfotos, Originallogos und der Vereinsfilm ergänzen den neuen Baumrahmen.
+
+Vier neue Motive, jeweils eine Firefly-Generierung, keine Variantenserien. Alle Bildbearbeitung ausschließlich Adobe. Die Eichenkrone, Rinde und Wurzeln werden als zusammenhängende seitliche Bäume zusammengesetzt und auf ausdrücklichen Nutzerwunsch am äußeren Seitenrand angeschnitten. Die Rinde wurde nach Freistellung geometrisch oben und unten um je 12% beschnitten, damit weder Stammende noch Schnittfläche als Kachelkante sichtbar sind. Auf der Website treffen abwechselnd gespiegelte vertikale Rindenpassagen mit gleichen Kanten aufeinander. Es wird keine vollständige Waldszene wiederholt. Die PNGs zusammen umfassen 2.38 MB; ihre Adobe-Verkleinerung behält Transparenz bei.
+
+| Lokale Datei | Abmessungen | Herkunft und Bearbeitung |
+| ------------ | ----------- | ------------------------ |
+
+- | `adobe-oaks/canopy.png` | 1100 × 1414 | Adobe Firefly, Adobe-Freistellung, Adobe-Verkleinerung. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:7489bbf8-f21f-4518-9b23-d9a56475a6b6 |
+  | `adobe-oaks/trunk.png` | 384 × 523 | Adobe Firefly, Adobe-Freistellung, Adobe-Verkleinerung. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:f94b53d0-647e-4e60-afe0-5f997847cab5 |
+  | `adobe-oaks/roots.png` | 1100 × 856 | Adobe Firefly, Adobe-Freistellung, Adobe-Verkleinerung. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:fa7f4d5f-b878-4e27-b815-8b69b49d259b |
+  | `adobe-oaks/bird.png` | 480 × 373 | Adobe Firefly, Adobe-Freistellung, Adobe-Verkleinerung. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:048760f0-3fec-4d5e-827d-81ac8f54aed8 |
+
+Die neuen Illustrationen zeigen keine tatsächlichen Waldlinge-Orte oder Kinder. Alle finalen Adobe-Ausgaben wurden visuell überprüft. Webseitenbetrieb ausschließlich mit lokalen Dateien; keine externen Adobe-Aufrufe.

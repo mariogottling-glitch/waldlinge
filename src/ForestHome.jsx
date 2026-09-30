@@ -21,15 +21,15 @@ const navigation = [
 const values = [
   [
     "Natur entdecken",
-    "Ein Käfer. Ein Blatt. Tausend Fragen. Wir geben der Neugier Raum und erleben die Natur mit allen Sinnen.",
+    "Ein Käfer. Ein Blatt. Tausend Fragen. Die Natur mit allen Sinnen erleben.",
   ],
   [
     "Im eigenen Tempo",
-    "Mutig voran oder erst einmal beobachten: Jedes Kind darf seinen Weg gehen. Wir begleiten es aufmerksam.",
+    "Mutig voran oder erst mal beobachten: Jedes Kind geht seinen eigenen Weg.",
   ],
   [
     "Gemeinschaft leben",
-    "Sich gesehen fühlen. Zusammen Neues wagen. Kinder, Familien und unser Team gehören hier zusammen.",
+    "Sich gesehen fühlen. Zusammen Neues wagen. Und einfach dazugehören.",
   ],
 ];
 const steps = [
@@ -69,59 +69,59 @@ function Link({ href, children, external = false, ...props }) {
   );
 }
 
-function MobileArt({ variant = "forest" }) {
-  const [width, height] = {
-    forest: [1111, 1082],
-    birches: [896, 1168],
-    ferns: [1152, 896],
-  }[variant];
-  return (
-    <img
-      className={`mobile-art mobile-art--${variant}`}
-      src={`/images/adobe-forest/${variant}.png`}
-      width={width}
-      height={height}
-      alt=""
-      aria-hidden="true"
-      loading={variant === "forest" ? "eager" : "lazy"}
-    />
-  );
-}
-
 function ForestWorld() {
+  const frame = useRef(null);
+  const [segments, setSegments] = useState(24);
+  useEffect(() => {
+    const node = frame.current;
+    if (!node) return;
+    // Alternate the same Adobe bark passage vertically so every joint meets
+    // its matching edge. The scene itself never repeats.
+    const measure = () => {
+      const trunk = node.querySelector(".tree-trunk");
+      const tile = node.querySelector(".trunk-segment");
+      if (!trunk || !tile) return;
+      const height = tile.getBoundingClientRect().height;
+      if (height) setSegments(Math.ceil(trunk.clientHeight / height) + 1);
+    };
+    const resize = new ResizeObserver(measure);
+    resize.observe(node);
+    return () => resize.disconnect();
+  }, []);
   return (
-    <div className="world-layer" aria-hidden="true">
-      <div className="world-canvas">
-        <img
-          className="world-forest"
-          src="/images/adobe-forest/forest.png"
-          width="1111"
-          height="1082"
-          alt=""
-          fetchPriority="high"
-        />
-        <img
-          className="world-birches"
-          src="/images/adobe-forest/birches.png"
-          width="896"
-          height="1168"
-          alt=""
-        />
-        <img
-          className="world-ferns"
-          src="/images/adobe-forest/ferns.png"
-          width="1152"
-          height="896"
-          alt=""
-        />
-        <img
-          className="world-swing"
-          src="/images/adobe-values/discovery.png"
-          width="1024"
-          height="1024"
-          alt=""
-        />
-      </div>
+    <div ref={frame} className="forest-frame" aria-hidden="true">
+      {["left", "right"].map((side) => (
+        <div key={side} className={`edge-tree edge-tree--${side}`}>
+          <div className="tree-trunk">
+            {Array.from({ length: segments }, (_, index) => (
+              <img
+                key={index}
+                className="trunk-segment"
+                src="/images/adobe-oaks/trunk.png"
+                width="384"
+                height="523"
+                alt=""
+              />
+            ))}
+          </div>
+          <img
+            className="tree-crown"
+            src="/images/adobe-oaks/canopy.png"
+            width="1100"
+            height="1414"
+            alt=""
+            fetchPriority="high"
+          />
+          <img
+            className="tree-roots"
+            src="/images/adobe-oaks/roots.png"
+            width="1100"
+            height="856"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      ))}
     </div>
   );
 }
@@ -211,7 +211,7 @@ function Header() {
             href="#kontakt"
             onClick={closeMenu}
           >
-            Kommt uns kennenlernen <ArrowUpRight size={18} aria-hidden="true" />
+            Waldluft schnuppern <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </nav>
       </div>
@@ -229,27 +229,24 @@ function Parents() {
       aria-labelledby="parents-title"
     >
       <div className="parents-intro" data-reveal>
-        <p className="eyebrow">06 / Gut zu wissen</p>
+        <p className="eyebrow">Für euch als Familie</p>
         <h2 id="parents-title">
           Große Fragen.
           <br />
           <em>Ein offenes Ohr.</em>
         </h2>
         <p>
-          Ein neuer Lebensabschnitt bringt viele Fragen mit sich. Hier findet
-          ihr erste Antworten. Und wir sind gerne persönlich für euch da.
+          Was ihr wissen möchtet. Und was wir am liebsten persönlich besprechen.
         </p>
         <Link href="mailto:info@waldlinge.org">Fragt uns einfach</Link>
-        <img
-          className="parents-fern"
-          src="/images/adobe-forest/ferns.png"
-          width="1152"
-          height="896"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          data-drift
-        />
+        <aside className="playgroup-note">
+          <h3>Erst mal Waldluft schnuppern?</h3>
+          <p>
+            Jenni organisiert unsere Eltern-Kind-Waldspielgruppe. Fragt sie nach
+            aktuellen Treffen.
+          </p>
+          <Link href="mailto:jenni@waldlinge.org">Zur Waldspielgruppe</Link>
+        </aside>
       </div>
       <div className="faq-list">
         {questions.map(([question, answer], index) => (
@@ -370,18 +367,16 @@ export function ForestHome() {
         Zum Inhalt springen
       </a>
       <Header />
-      <main id="inhalt" tabIndex="-1">
-        <div className="forest-journey">
-          <ForestWorld />
+      <div className="forest-journey">
+        <ForestWorld />
+        <main id="inhalt" tabIndex="-1">
           <section
             className="chapter chapter--hero section-shell"
             id="start"
             aria-labelledby="hero-title"
           >
             <div className="hero-copy">
-              <p className="eyebrow">
-                Waldkindergarten in Bornheim · Seit 2020
-              </p>
+              <p className="eyebrow">Waldkindergarten · Bornheim-Merten</p>
               <h1 id="hero-title">
                 Kleine Schritte.
                 <br />
@@ -390,219 +385,201 @@ export function ForestHome() {
               <p className="hero-intro">
                 Ein Wald voller Möglichkeiten.
                 <br />
-                Und ein Ort, an dem dein Kind
-                <br className="desktop-break" /> ganz es selbst sein darf.
+                Ein Ort, an dem dein Kind es selbst sein darf.
               </p>
               <a className="button button-green" href="#kindergarten">
-                Entdeckt die Waldlinge{" "}
-                <ArrowRight size={20} aria-hidden="true" />
+                Kommt mit in unseren Wald{" "}
+                <ArrowDown size={19} aria-hidden="true" />
               </a>
+              <div className="hero-shortcuts">
+                <a href="#alltag">Unser Waldalltag</a>
+                <span aria-hidden="true">·</span>
+                <a href="#eltern">Eure Fragen</a>
+              </div>
             </div>
-            <MobileArt />
-            <div className="hero-bottom">
-              <a className="scroll-invitation" href="#kindergarten">
-                <ArrowDown size={21} weight="light" aria-hidden="true" />
-                <span>Ein Stück Wald. Ein großes Abenteuer.</span>
-              </a>
-              <span className="hero-location">
-                Draußen wachsen. Gemeinsam geborgen.
-              </span>
-            </div>
+            <p className="hero-bottom">
+              <span>Neugier im Kopf. Wald unter den Füßen.</span>
+              <ArrowDown size={18} aria-hidden="true" />
+            </p>
           </section>
+
           <section
             className="chapter chapter--welcome section-shell"
             id="kindergarten"
             tabIndex="-1"
             aria-labelledby="welcome-title"
           >
-            <div className="chapter-copy chapter-copy--right">
-              <p className="eyebrow">01 / Dem Weg folgen</p>
+            <img
+              className="journey-bird"
+              src="/images/adobe-oaks/bird.png"
+              width="480"
+              height="373"
+              alt=""
+              aria-hidden="true"
+            />
+            <div className="section-heading" data-reveal>
+              <p className="eyebrow">Hier darf dein Kind wachsen</p>
               <h2 id="welcome-title">
-                Hier beginnt
+                Weniger vorgeben.
                 <br />
-                <em>das große Staunen.</em>
+                <em>Mehr entdecken.</em>
               </h2>
               <p>
-                Ein Rascheln im Laub. Eine Wurzel, die zum Kletterberg wird. Im
-                Wald braucht es oft nur einen kleinen Moment, um eine ganze Welt
-                zu entdecken.
-              </p>
-              <p>
-                Wir sind die Waldlinge: ein aus Elterninitiative gegründeter
-                Waldkindergarten für Kinder ab drei Jahren bis zum
-                Schuleintritt. Bedürfnisorientiert, auf Augenhöhe – und jeden
-                Tag draußen.
-              </p>
-              <Link href="https://waldlinge.org/wer-wir-sind/">
-                Lernt uns näher kennen
-              </Link>
-            </div>
-            <MobileArt variant="birches" />
-          </section>
-          <section
-            className="chapter chapter--values section-shell"
-            id="entdeckungen"
-            tabIndex="-1"
-            aria-labelledby="values-title"
-          >
-            <div className="section-heading">
-              <p className="eyebrow">02 / Kleine Wunder, großes Wachsen</p>
-              <h2 id="values-title">
-                Alles beginnt
-                <br />
-                <em>mit Neugier.</em>
-              </h2>
-              <p>
-                Für die Lauten und die Leisen. Die Wilden und die Vorsichtigen.
-                <br className="desktop-break" /> Für jedes Kind und seinen ganz
-                eigenen Weg.
+                Wir sind die Waldlinge: ein bedürfnisorientierter
+                Waldkindergarten
+                <br className="desktop-break" /> aus Elterninitiative. Jeden Tag
+                draußen. Und immer auf Augenhöhe.
               </p>
             </div>
-            <div className="values-grid">
+            <div
+              className="forest-facts"
+              aria-label="Die Waldlinge auf einen Blick"
+            >
+              <span>Ab 3 Jahren bis zum Schuleintritt</span>
+              <span>Seit Januar 2020</span>
+              <span>Bornheim-Merten</span>
+            </div>
+            <div className="values-grid" id="entdeckungen">
               {values.map(([title, text], index) => (
                 <article key={title} data-value>
                   <BotanicalIcon variant={index} />
-                  <span className="value-number">0{index + 1}</span>
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </article>
               ))}
             </div>
+            <Link href="https://waldlinge.org/wer-wir-sind/">
+              Mehr über unsere Haltung
+            </Link>
+            <div
+              className="partners"
+              aria-label="Zusammenarbeit und pädagogische Impulse"
+            >
+              <div>
+                <p>Wir arbeiten zusammen mit</p>
+                <img
+                  src="/images/wildnisschule-logo.webp"
+                  alt="Natur- und Wildnisschule Teutoburger Wald"
+                  width="700"
+                  height="237"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <p>Geschult von Nicola Schmidt vom</p>
+                <img
+                  src="/images/artgerecht-logo.webp"
+                  alt="artgerecht-Projekt"
+                  width="800"
+                  height="179"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </section>
+
           <section
             className="chapter chapter--adventure section-shell"
             id="alltag"
             tabIndex="-1"
             aria-labelledby="adventure-title"
           >
-            <div className="chapter-copy">
-              <p className="eyebrow">03 / Jeden Tag ein kleines Abenteuer</p>
+            <div className="clearing-visual" data-photo-reveal>
+              <figure>
+                <img
+                  src="/images/waldlinge-baumwurzel.webp"
+                  width="1400"
+                  height="1050"
+                  alt="Ein Waldlinge-Kind erkundet eine große Baumwurzel im Wald"
+                  loading="lazy"
+                />
+                <figcaption>Ein echter Einblick in unser Waldleben.</figcaption>
+              </figure>
+              <img
+                className="photo-fern"
+                src="/images/adobe-forest/ferns.png"
+                width="1152"
+                height="896"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                data-drift
+              />
+              <img
+                className="journey-loupe"
+                src="/images/adobe-values/nature.png"
+                width="1024"
+                height="1024"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            </div>
+            <div className="chapter-copy" data-reveal>
+              <p className="eyebrow">Ein Stock. Tausend Möglichkeiten.</p>
               <h2 id="adventure-title">
                 „Ich kann das.“
                 <br />
                 <em>Auf meine Weise.</em>
               </h2>
               <p>
-                Ein Stock wird zur Angel. Eine Pfütze zum Ozean. Und aus einer
-                Frage wird eine Entdeckungsreise. Im freien Spiel erleben
-                Kinder, was in ihnen steckt.
+                Balancieren, bauen, matschen. Im freien Spiel entdecken Kinder
+                die Welt – und was in ihnen steckt.
               </p>
               <div className="day-list">
                 {steps.map(([icon, title, text]) => (
-                  <article key={title} data-reveal>
-                    <BotanicalIcon variant={icon} />
-                    <div>
-                      <h3>{title}</h3>
-                      <p>{text}</p>
-                    </div>
-                  </article>
+                  <details key={title}>
+                    <summary>
+                      <BotanicalIcon variant={icon} />
+                      <span>{title}</span>
+                      <Plus size={17} aria-hidden="true" />
+                    </summary>
+                    <p>{text}</p>
+                  </details>
                 ))}
               </div>
-            </div>
-            <MobileArt variant="ferns" />
-          </section>
-        </div>
-        <section
-          className="clearing section-shell"
-          id="gemeinschaft"
-          tabIndex="-1"
-          aria-labelledby="clearing-title"
-        >
-          <div className="clearing-visual" data-photo-reveal>
-            <figure>
-              <img
-                src="/images/waldlinge-baumwurzel.webp"
-                width="1400"
-                height="1050"
-                alt="Ein Waldlinge-Kind erkundet eine große Baumwurzel im Wald"
-                loading="lazy"
-              />
-              <figcaption>Ein echter Einblick in unser Waldleben.</figcaption>
-            </figure>
-            <img
-              className="photo-fern"
-              src="/images/adobe-forest/ferns.png"
-              width="1152"
-              height="896"
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              data-drift
-            />
-          </div>
-          <div className="clearing-copy" data-reveal>
-            <p className="eyebrow">04 / Mitten im Wald. Mitten im Leben.</p>
-            <h2 id="clearing-title">
-              Frei entdecken.
-              <br />
-              <em>Geborgen sein.</em>
-            </h2>
-            <p>
-              Wer sich sicher fühlt, kann Neues wagen. Unser pädagogisches Team
-              begleitet die Kinder individuell, achtsam und mit einem offenen
-              Blick für ihre Bedürfnisse.
-            </p>
-            <p>
-              Unser Gruppenbauwagen steht auf dem Gelände des SSV Merten. Von
-              hier geht es in den angrenzenden Wald: unser Lern- und Lebensraum
-              voller Möglichkeiten.
-            </p>
-            <div className="place-note">
-              <span>Unser Ort</span>
-              <p>
-                Bornheim-Merten
-                <br />
-                Wald. Bauwagen. Ganz viel Freiraum.
+              <p className="place-note">
+                Unser Bauwagen am SSV Merten ist der vertraute Ausgangspunkt.
+                Dahinter wartet der Wald.
               </p>
             </div>
-          </div>
-        </section>
-        <section
-          className="partners section-shell"
-          aria-label="Zusammenarbeit und pädagogische Impulse"
-        >
-          <div>
-            <p>Wir arbeiten zusammen mit</p>
-            <img
-              src="/images/wildnisschule-logo.webp"
-              alt="Natur- und Wildnisschule Teutoburger Wald"
-              width="700"
-              height="237"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <p>Geschult von Nicola Schmidt vom</p>
-            <img
-              src="/images/artgerecht-logo.webp"
-              alt="artgerecht-Projekt"
-              width="800"
-              height="179"
-              loading="lazy"
-            />
-          </div>
-        </section>
-        <WaldlingeFilm />
-        <section
-          className="together section-shell"
-          aria-labelledby="together-title"
-        >
-          <div className="section-heading" data-reveal>
-            <p className="eyebrow">05 / Mit Herz. Mit Händen. Miteinander.</p>
-            <h2 id="together-title">
-              Es braucht ein Dorf.
-              <br />
-              <em>Und manchmal einen Wald.</em>
-            </h2>
-            <p>
-              Die Waldlinge sind ein Gemeinschaftsprojekt. Eltern, Kinder und
-              unser
-              <br className="desktop-break" /> pädagogisches Team gestalten
-              diesen Ort gemeinsam.
-            </p>
-          </div>
-          <div className="together-grid">
-            <figure className="moment moment--tall" data-photo-reveal>
+          </section>
+
+          <section
+            className="together section-shell"
+            id="gemeinschaft"
+            tabIndex="-1"
+            aria-labelledby="together-title"
+          >
+            <div className="together-copy" data-reveal>
+              <p className="eyebrow">Mit Herz. Mit Händen. Miteinander.</p>
+              <h2 id="together-title">
+                Es braucht ein Dorf.
+                <br />
+                <em>Und einen Wald.</em>
+              </h2>
+              <p>
+                Kinder, Familien und unser pädagogisches Team gestalten diesen
+                Ort gemeinsam. Achtsam, wertschätzend und mit Raum für jeden.
+              </p>
+              <details className="community-detail">
+                <summary>
+                  Wie wir diesen Ort gemeinsam gestalten{" "}
+                  <Plus size={17} aria-hidden="true" />
+                </summary>
+                <p>
+                  Eltern bringen ihre Stärken beim Gärtnern, Werkeln und
+                  Organisieren ein und sind auch im pädagogischen Alltag
+                  willkommen. Gewaltfreie Kommunikation prägt unser Miteinander.
+                  Aus einer Idee von Jenni Klein und weiteren Familien wurde im
+                  Januar 2020 unser Kindergarten.
+                </p>
+                <Link href="https://waldlinge.org/die-geschichte-der-waldlinge/">
+                  Unsere Geschichte
+                </Link>
+              </details>
+            </div>
+            <figure className="moment" data-photo-reveal>
               <img
                 src="/images/waldlinge-werkeln.webp"
                 alt="Zwei Kinder probieren kleine Sägen an einem Baumstamm aus"
@@ -614,122 +591,50 @@ export function ForestHome() {
                 Mit den eigenen Händen die Welt entdecken.
               </figcaption>
             </figure>
-            <div className="together-middle" data-reveal>
-              <BotanicalIcon variant={2} />
-              <h3>
-                Hier gehören
+          </section>
+
+          <WaldlingeFilm />
+          <Parents />
+
+          <section
+            className="join section-shell"
+            id="kontakt"
+            tabIndex="-1"
+            aria-labelledby="join-title"
+          >
+            <div className="join-inner" data-reveal>
+              <p className="eyebrow">Vielleicht beginnt euer Weg hier</p>
+              <h2 id="join-title">
+                Ein kleiner Schritt.
                 <br />
-                wir zusammen.
-              </h3>
-              <p>
-                Gärtnern, Werkeln, Organisieren: Familien bringen ihre Stärken
-                ein. Wertschätzung und gewaltfreie Kommunikation prägen unser
-                Miteinander. Eltern sind auch im pädagogischen Alltag
-                willkommen.
+                <em>Ein gutes Gefühl.</em>
+              </h2>
+              <p>Ihr möchtet uns kennenlernen? Wir freuen uns auf euch.</p>
+              <div className="join-actions">
+                <a
+                  className="button button-green"
+                  href="mailto:info@waldlinge.org"
+                >
+                  Hallo, Waldlinge!{" "}
+                  <ArrowUpRight size={20} aria-hidden="true" />
+                </a>
+                <Link href="https://bornheim.kita-navigator.org/" external>
+                  Zur Anmeldung
+                </Link>
+              </div>
+              <p className="small-note" id="anmeldung" tabIndex="-1">
+                Anmeldung über den Kita-Navigator Bornheim.
+                <br />
+                Eine Vormerkung ist noch keine Platzzusage.
               </p>
-              <Link href="https://waldlinge.org/die-geschichte-der-waldlinge/">
-                Unsere Geschichte
-              </Link>
             </div>
-            <figure className="moment moment--wide" data-photo-reveal>
-              <img
-                src="/images/waldlinge-bollerwagen.webp"
-                alt="Eine Erwachsene und Kinder sind mit einem Bollerwagen auf einem grünen Waldweg unterwegs"
-                width="1200"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Zusammen draußen unterwegs.</figcaption>
-            </figure>
-          </div>
-          <p className="story-note">
-            Aus einer Idee von Jenni Klein und weiteren Familien ist ein Ort zum
-            Wachsen geworden. Seit Januar 2020.
-          </p>
-        </section>
-        <Parents />
-        <section
-          className="playgroup section-shell"
-          aria-labelledby="playgroup-title"
-        >
-          <div data-reveal>
-            <p className="eyebrow">Für kleine und große Waldneugierige</p>
-            <h2 id="playgroup-title">
-              Erst mal
-              <br />
-              <em>Waldluft schnuppern.</em>
-            </h2>
-            <p>
-              Gemeinsam draußen sein und die Natur entdecken: Jenni organisiert
-              eine Eltern-Kind-Waldspielgruppe. Aktuelle Treffen und weitere
-              Informationen bekommt ihr direkt bei ihr.
-            </p>
-            <Link href="mailto:jenni@waldlinge.org">
-              Zur Waldspielgruppe anfragen
-            </Link>
-          </div>
-          <img
-            src="/images/adobe-forest/birches.png"
-            className="playgroup-art"
-            width="896"
-            height="1168"
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            data-drift
-          />
-        </section>
-        <section
-          className="join"
-          id="kontakt"
-          tabIndex="-1"
-          aria-labelledby="join-title"
-        >
-          <div className="join-forest" aria-hidden="true">
-            <img
-              src="/images/adobe-forest/forest.png"
-              width="1111"
-              height="1082"
-              alt=""
-              loading="lazy"
-              data-join-art
-            />
-          </div>
-          <div className="join-inner section-shell">
-            <p className="eyebrow">07 / Vielleicht beginnt euer Weg hier</p>
-            <h2 id="join-title">
-              Ein kleiner Schritt.
-              <br />
-              <em>Ein gutes Gefühl.</em>
-            </h2>
-            <p>
-              Ihr möchtet die Waldlinge kennenlernen?
-              <br />
-              Erzählt uns von euch. Wir freuen uns auf euch.
-            </p>
-            <div className="join-actions">
-              <a
-                className="button button-green"
-                href="mailto:info@waldlinge.org"
-              >
-                Hallo, Waldlinge! <ArrowUpRight size={20} aria-hidden="true" />
-              </a>
-              <Link href="https://bornheim.kita-navigator.org/" external>
-                Zur Anmeldung
-              </Link>
-            </div>
-            <p className="small-note" id="anmeldung" tabIndex="-1">
-              Die Anmeldung erfolgt über den Kita-Navigator der Stadt Bornheim.
-              <br />
-              Eine Vormerkung ist noch keine Platzzusage.
-            </p>
-          </div>
-        </section>
-      </main>
-      <Footer
-        reduceMotion={reduceMotion}
-        onMotionChange={() => setReduceMotion(!reduceMotion)}
-      />
+          </section>
+        </main>
+        <Footer
+          reduceMotion={reduceMotion}
+          onMotionChange={() => setReduceMotion(!reduceMotion)}
+        />
+      </div>
     </div>
   );
 }

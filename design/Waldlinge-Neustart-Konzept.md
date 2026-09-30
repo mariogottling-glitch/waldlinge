@@ -1,5 +1,7 @@
 # Waldlinge Konzept für eine illustrierte Homepage mit Scrollanimationen
 
+**Aktueller Stand:** Die spätere Nutzerkorrektur ersetzt die Waldinsel durch zwei durchgehende Eichen und verdichtet die Inhalte. Die aktive Richtung und Umsetzung stehen in [Waldlinge-Baumreise.md](Waldlinge-Baumreise.md). Das folgende Dokument bleibt als ursprüngliches Neustart-Konzept erhalten.
+
 Stand 30. September 2026. Dieses Konzept beschreibt den vollständigen Neustart mit neuem Raster und einer überwiegend illustrierten Waldwelt. Es basiert auf der aktuellen Browseranalyse von Mind Robotics und Numa sowie der vom Nutzer bestätigten szenischen Richtung von Every Last Drop. Der vorhandene Homepageentwurf bleibt archiviert. In diesem Schritt entstehen weder neue generierte Bilder noch Änderungen am Websitecode.
 
 ## Leitidee
@@ -18,11 +20,11 @@ Beide Seiten wurden im Codex In-app Browser aufgerufen und tatsächlich gescroll
 
 [Originalseite](https://www.mindrobotics.com/)
 
-| Schritt | Beobachtung und Zustand | Folgerung für Waldlinge |
-| --- | --- | --- |
-| 1 Einstieg | Großer illustrierter Roboterarm, sehr große Wortmarke, wenige Farben und viel freie Fläche. Starkes Anfangsbild, bewusster Beschnitt am Viewportrand. | Wenige große Hauptmotive und klare Typografie. Figuren und zentrale Waldlinge-Grafiken bleiben vollständig komponiert. |
-| 2 Aussage | Die Hand begleitet den Übergang zur Aussage. Wörter und farbige Kapseln erscheinen versetzt. Visuell zusammenhängend; im Aufbau vorübergehend noch nicht vollständig lesbar. | Bild und Text gemeinsam inszenieren, danach einen ausreichend langen ruhigen Lesebereich anbieten. |
-| 3 Spätere Welt | Eine illustrierte Fabrik füllt den Bildschirm. Eine kompakte Erklärung liegt auf der Szene. Gleiche Bildsprache wie im Einstieg. | Inhalte innerhalb einer zusammenhängenden Waldwelt platzieren. |
+| Schritt        | Beobachtung und Zustand                                                                                                                                                      | Folgerung für Waldlinge                                                                                                |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 1 Einstieg     | Großer illustrierter Roboterarm, sehr große Wortmarke, wenige Farben und viel freie Fläche. Starkes Anfangsbild, bewusster Beschnitt am Viewportrand.                        | Wenige große Hauptmotive und klare Typografie. Figuren und zentrale Waldlinge-Grafiken bleiben vollständig komponiert. |
+| 2 Aussage      | Die Hand begleitet den Übergang zur Aussage. Wörter und farbige Kapseln erscheinen versetzt. Visuell zusammenhängend; im Aufbau vorübergehend noch nicht vollständig lesbar. | Bild und Text gemeinsam inszenieren, danach einen ausreichend langen ruhigen Lesebereich anbieten.                     |
+| 3 Spätere Welt | Eine illustrierte Fabrik füllt den Bildschirm. Eine kompakte Erklärung liegt auf der Szene. Gleiche Bildsprache wie im Einstieg.                                             | Inhalte innerhalb einer zusammenhängenden Waldwelt platzieren.                                                         |
 
 ![Mind Schritt 1 Einstieg](D:/Arbeit/Codeyx/Waldlinge/design/scroll-references/mind-01-start.jpg)
 
@@ -36,11 +38,11 @@ Direkt beobachtete Technik: drei Canvas-Elemente, Next-Static-Skriptdateien und 
 
 [Originalseite](https://numa.uprock.pro/)
 
-| Schritt | Beobachtung und Zustand | Folgerung für Waldlinge |
-| --- | --- | --- |
-| 4 Bildübergang | Das große Einstiegsbild verändert beim Scrollen Form und Größe. Text wird im Übergang unscharf. Das Hauptbild wird Teil einer größeren Gruppe runder Bildmotive. Flüssiger Wechsel von einem Motiv zur Bildwelt. | Ein Motiv über mehrere Zustände weiterführen. Waldlinge verwendet Form- und Ebenenübergänge mit scharfen Lesetexten. |
-| 5 Produkt und Merkmale | Ein freigestelltes Produkt steht auf viel Weißraum. Danach bewegen sich Überschrift und Merkmalskarten horizontal. Zwischenzustände zeigen angeschnittene Inhalte. | Naturfundstücke führen zu pädagogischen Aussagen. Wesentliche Texte bleiben vollständig ohne horizontales Freiscrollen lesbar. |
-| 6 Mobil | Hauptmotiv, mittige Texte und CTA stehen in einem hohen Bildrahmen. Hauptaktion klar erreichbar; Text liegt teilweise über detailreichem Foto. | Eigenständige mobile Komposition, ruhige Cremefläche hinter Text und klare Aktion. |
+| Schritt                | Beobachtung und Zustand                                                                                                                                                                                          | Folgerung für Waldlinge                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 4 Bildübergang         | Das große Einstiegsbild verändert beim Scrollen Form und Größe. Text wird im Übergang unscharf. Das Hauptbild wird Teil einer größeren Gruppe runder Bildmotive. Flüssiger Wechsel von einem Motiv zur Bildwelt. | Ein Motiv über mehrere Zustände weiterführen. Waldlinge verwendet Form- und Ebenenübergänge mit scharfen Lesetexten.           |
+| 5 Produkt und Merkmale | Ein freigestelltes Produkt steht auf viel Weißraum. Danach bewegen sich Überschrift und Merkmalskarten horizontal. Zwischenzustände zeigen angeschnittene Inhalte.                                               | Naturfundstücke führen zu pädagogischen Aussagen. Wesentliche Texte bleiben vollständig ohne horizontales Freiscrollen lesbar. |
+| 6 Mobil                | Hauptmotiv, mittige Texte und CTA stehen in einem hohen Bildrahmen. Hauptaktion klar erreichbar; Text liegt teilweise über detailreichem Foto.                                                                   | Eigenständige mobile Komposition, ruhige Cremefläche hinter Text und klare Aktion.                                             |
 
 ![Numa Schritt 4 Einstieg](D:/Arbeit/Codeyx/Waldlinge/design/scroll-references/numa-01-start.jpg)
 
@@ -62,16 +64,16 @@ Sichtbare Risiken sind vorübergehend angeschnittene Texte, Unschärfe beim Lese
 
 Zeitgemäße botanische Illustration mit sanften transparenten Farbflächen, dezenter Gouache- und Aquarelltextur und wenigen präzisen Konturen. Keine Sepiawirkung oder alte Papierpatina. Sommerlicher Mischwald mit Birken, weichen Baumkronen, Farn, Moos und einem hellen Weg. Licht, räumliche Staffelung und gut erkennbare Formen geben Tiefe.
 
-| Gestaltung | Vorgesehene Richtung |
-| --- | --- |
-| Hintergrund | Papiercreme `#F5F2E9`, deckend hinter Lesetexten |
-| Hauptfarbe | Waldgrün `#274536` für Orientierung und Schrift |
-| Pflanzen | Moos `#849B78`, Salbei `#CED9C4` |
-| Akzent | Lichtgold `#D4BC82`, sparsame lehmfarbene Details |
-| Typografie | Vorhandene lokale Lora für warme große Überschriften, Source Sans 3 für klare Navigation und Lesetext |
-| Komposition | Große offene Landschaft, wechselnde ruhige Textinseln, wenige Entdeckungsdetails |
-| Menschen | Kleine Rückenfiguren, gedeckte Kleidung, vollständig sichtbare Körper; keine frontalen gesichtslosen Menschen |
-| Fotografie | Wenige authentische Einblicke und Film, Illustration bleibt Hauptsprache |
+| Gestaltung  | Vorgesehene Richtung                                                                                          |
+| ----------- | ------------------------------------------------------------------------------------------------------------- |
+| Hintergrund | Papiercreme `#F5F2E9`, deckend hinter Lesetexten                                                              |
+| Hauptfarbe  | Waldgrün `#274536` für Orientierung und Schrift                                                               |
+| Pflanzen    | Moos `#849B78`, Salbei `#CED9C4`                                                                              |
+| Akzent      | Lichtgold `#D4BC82`, sparsame lehmfarbene Details                                                             |
+| Typografie  | Vorhandene lokale Lora für warme große Überschriften, Source Sans 3 für klare Navigation und Lesetext         |
+| Komposition | Große offene Landschaft, wechselnde ruhige Textinseln, wenige Entdeckungsdetails                              |
+| Menschen    | Kleine Rückenfiguren, gedeckte Kleidung, vollständig sichtbare Körper; keine frontalen gesichtslosen Menschen |
+| Fotografie  | Wenige authentische Einblicke und Film, Illustration bleibt Hauptsprache                                      |
 
 Desktop bekommt ein neues 12-Spalten-Raster mit maximal etwa 1280 Pixeln Inhaltsbreite und 64–96 Pixeln Außenabstand bei 1440 Pixeln. Landschaften nutzen den verfügbaren Bildschirmraum. Textinseln belegen vier bis fünf Spalten und ungefähr 55–65 Zeichen je Zeile. Ihre Position wechselt gezielt zwischen links, rechts und Mitte. Pro Zustand bestimmen ein Textmotiv und ein Bilddetail den Fokus.
 
@@ -83,15 +85,15 @@ Mobil gilt eine Spalte mit 20–24 Pixeln Rand und mittigen Texten. Die Bildwelt
 
 Die Scrollanteile sind Planungsannahmen. Die tatsächliche Strecke wird am ersten Bewegungsprototyp abgestimmt.
 
-| Kapitel | Bild und Aussage | Bewegung | Zweck |
-| --- | --- | --- | --- |
-| 1 Ankommen 0–12 % | Lichter Waldrand mit Birken und Farn. „Kleine Schritte. Große Welt.“ Kennenlernen-CTA. | Ferne Bäume erscheinen zuerst, Pflanzen folgen, ein heller Weg entsteht. | Sofort verstehen, wer die Waldlinge sind. |
-| 2 Dem Weg folgen 12–25 % | Blick in die Tiefe, eine kleine Rückenfigur. „Draußen wird Neugier groß.“ | Pflanzen verschieben sich, Bäume öffnen den Weg zur Lichtung. | Natur als Lernraum vermitteln. |
-| 3 Kleine Wunder 25–40 % | Blatt, Farn und Fundstück. Natur entdecken, Im eigenen Tempo, Gemeinschaft leben. | Ein Fundstück bewegt sich in die freie Fläche und wird Kapitelmotiv. Werte erscheinen nacheinander und ruhen danach. | Pädagogische Haltung verstehen. |
-| 4 Abenteuer im Alltag 40–56 % | Ast mit Schaukel, Wurzel, Balancierstamm. „Ich kann das. Auf meine Weise.“ | Wenige Elemente kommen versetzt hinzu. Höchstens zwei Kinder von hinten geben Maßstab. | Spielerisches Lernen zeigen. |
-| 5 Gemeinsam geborgen 56–70 % | Offene Lichtung mit angedeutetem Bauwagen. „Ein Ort, an dem wir dazugehören.“ | Bäume bilden einen ruhigen Rahmen. Eine kurze reale Foto- und Filmphase entsteht innerhalb der Reise. | Vertrauen in den tatsächlichen Kindergarten aufbauen. |
-| 6 Gut begleitet 70–88 % | Viel Creme, wenige Pflanzen, klare Elterninformationen. | Bewegung wird ruhig. FAQ, Waldspielgruppe und Anmeldung stehen im normalen Seitenfluss. | Praktische Fragen beantworten. |
-| 7 Willkommen 88–100 % | Weite Schlusslichtung. „Vielleicht beginnt euer Weg hier.“ Kontakt, Navigator und Footer. | Landschaft ergibt ein vollständiges ruhiges Schlussbild. | Einen klaren nächsten Schritt ermöglichen. |
+| Kapitel                       | Bild und Aussage                                                                          | Bewegung                                                                                                             | Zweck                                                 |
+| ----------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| 1 Ankommen 0–12 %             | Lichter Waldrand mit Birken und Farn. „Kleine Schritte. Große Welt.“ Kennenlernen-CTA.    | Ferne Bäume erscheinen zuerst, Pflanzen folgen, ein heller Weg entsteht.                                             | Sofort verstehen, wer die Waldlinge sind.             |
+| 2 Dem Weg folgen 12–25 %      | Blick in die Tiefe, eine kleine Rückenfigur. „Draußen wird Neugier groß.“                 | Pflanzen verschieben sich, Bäume öffnen den Weg zur Lichtung.                                                        | Natur als Lernraum vermitteln.                        |
+| 3 Kleine Wunder 25–40 %       | Blatt, Farn und Fundstück. Natur entdecken, Im eigenen Tempo, Gemeinschaft leben.         | Ein Fundstück bewegt sich in die freie Fläche und wird Kapitelmotiv. Werte erscheinen nacheinander und ruhen danach. | Pädagogische Haltung verstehen.                       |
+| 4 Abenteuer im Alltag 40–56 % | Ast mit Schaukel, Wurzel, Balancierstamm. „Ich kann das. Auf meine Weise.“                | Wenige Elemente kommen versetzt hinzu. Höchstens zwei Kinder von hinten geben Maßstab.                               | Spielerisches Lernen zeigen.                          |
+| 5 Gemeinsam geborgen 56–70 %  | Offene Lichtung mit angedeutetem Bauwagen. „Ein Ort, an dem wir dazugehören.“             | Bäume bilden einen ruhigen Rahmen. Eine kurze reale Foto- und Filmphase entsteht innerhalb der Reise.                | Vertrauen in den tatsächlichen Kindergarten aufbauen. |
+| 6 Gut begleitet 70–88 %       | Viel Creme, wenige Pflanzen, klare Elterninformationen.                                   | Bewegung wird ruhig. FAQ, Waldspielgruppe und Anmeldung stehen im normalen Seitenfluss.                              | Praktische Fragen beantworten.                        |
+| 7 Willkommen 88–100 %         | Weite Schlusslichtung. „Vielleicht beginnt euer Weg hier.“ Kontakt, Navigator und Footer. | Landschaft ergibt ein vollständiges ruhiges Schlussbild.                                                             | Einen klaren nächsten Schritt ermöglichen.            |
 
 Anfang und Ende benachbarter Kapitel passen räumlich zusammen. Weg, Pflanzen und Baumgruppen bleiben wiedererkennbar. Die Welt beginnt nicht nach jeder Sektion neu. Ruhige Informationsbereiche gehören zur Reise.
 
@@ -117,7 +119,7 @@ Mobil werden die gehaltenen Strecken verkürzt oder durch normalen Seitenfluss e
 
 Für diese Waldwelt reicht zunächst React mit echten HTML-Inhalten und separat positionierten Bildlagen. Eine vollständig in WebGL gerenderte Homepage ist dafür keine Voraussetzung. Komplexere Darstellung kommt erst hinzu, wenn der Pilot einen konkreten sichtbaren Vorteil zeigt.
 
-**GSAP mit ScrollTrigger** ist die empfohlene Steuerung für scrollgebundene Timelines, kurze gehaltene Szenen und Kapitelübergänge. `gsap.matchMedia()` unterstützt unterschiedliche Setups nach Bildschirmgröße und Bewegungspräferenz. Dies ist eine Empfehlung für Waldlinge und keine Behauptung über den vollständigen Stack der Referenzen. [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/), [matchMedia](https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/).
+**GSAP mit ScrollTrigger** ist die empfohlene Steuerung für scrollgebundene Timelines, kurze gehaltene Szenen und Kapitelübergänge. `gsap.matchMedia()` unterstützt unterschiedliche Setups nach Bildschirmgröße und Bewegungspräferenz. Dies ist eine Empfehlung für Waldlinge und keine Behauptung über den vollständigen Stack der Referenzen. [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/), [matchMedia](<https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/>).
 
 Jedes Kapitel erhält eine eigene Timeline; ein gemeinsamer Szenenrahmen hält Palette, Ebenenordnung und Wegführung zusammen. Änderungen der Fenstergröße, Ankersprünge und nachgeladene Bilder müssen passende Zustände behalten. Aufbau vor allem über `transform` und `opacity`; Adobe-Pfadassets können durch Masken schrittweise sichtbar werden. Es werden keine dekorativen Ersatzillustrationen aus Code gezeichnet. Text bleibt außerhalb von Canvas und Bilddateien.
 
@@ -129,16 +131,16 @@ Performanceplanung: nahe benötigte Szenen vorladen, feste Bildabmessungen gegen
 
 Alle neuen Bilder, Grafiken, Freistellungen und Bearbeitungen ausschließlich mit Adobe. Jede Motivgruppe wird vollständig ausgearbeitet und mit 8–12 % Abstand zu allen Dateirändern geliefert. Transparenz wird geprüft. Referenzwerke werden nicht übernommen.
 
-| Assetfamilie | Einsatz |
-| --- | --- |
-| Ferne Bäume | Zwei bis drei weiche Tiefenlagen mit gleicher Perspektive |
-| Birken und Baumkronen | Zwei bis drei vollständige mittlere Gruppen mit offenen Textflächen |
-| Farn, Moos und Gräser | Drei wiederverwendbare Vordergrundgruppen |
-| Waldweg | Verbindendes helles Adobe-Asset mit abgestimmten Übergängen |
-| Rückenfiguren | Zwei bis drei kleine Figuren, sparsam verwendet |
-| Fundstücke | Blatt, Farn und ein kleines Naturdetail |
-| Spiel- und Schutzort | Schaukel-/Stammgruppe und Bauwagenlichtung als Konzeptillustration, keine behauptete genaue Ortsabbildung |
-| Pädagogische Icons | Lupe mit Blatt, Schnecke, zugewandte Figuren, Dach mit Herz, Ast mit Schaukel, zwei Pflanzen; bestehende Adobe-Icons prüfen und nötige Anpassungen nur mit Adobe |
+| Assetfamilie          | Einsatz                                                                                                                                                          |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ferne Bäume           | Zwei bis drei weiche Tiefenlagen mit gleicher Perspektive                                                                                                        |
+| Birken und Baumkronen | Zwei bis drei vollständige mittlere Gruppen mit offenen Textflächen                                                                                              |
+| Farn, Moos und Gräser | Drei wiederverwendbare Vordergrundgruppen                                                                                                                        |
+| Waldweg               | Verbindendes helles Adobe-Asset mit abgestimmten Übergängen                                                                                                      |
+| Rückenfiguren         | Zwei bis drei kleine Figuren, sparsam verwendet                                                                                                                  |
+| Fundstücke            | Blatt, Farn und ein kleines Naturdetail                                                                                                                          |
+| Spiel- und Schutzort  | Schaukel-/Stammgruppe und Bauwagenlichtung als Konzeptillustration, keine behauptete genaue Ortsabbildung                                                        |
+| Pädagogische Icons    | Lupe mit Blatt, Schnecke, zugewandte Figuren, Dach mit Herz, Ast mit Schaukel, zwei Pflanzen; bestehende Adobe-Icons prüfen und nötige Anpassungen nur mit Adobe |
 
 Zuerst entsteht **eine Leitkomposition**: Waldrand, Weg, Pflanzen und freie Textfläche. Sie legt Palette, Dichte und Perspektive fest. Danach werden passende getrennte Ebenen für den ersten kurzen Scrollprototyp produziert. Eine Masterkomposition garantiert keine perfekten Einzellagen; Freistellung und Ergänzungen werden in Adobe geprüft. Die übrigen Kapitel folgen erst nach dem Stil- und Bewegungstest. Im aktuellen Konzeptschritt werden keine Bildcredits eingesetzt.
 

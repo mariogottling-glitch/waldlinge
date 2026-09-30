@@ -57,3 +57,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Nutzer beauftragt nun ausdrücklich die Umsetzung des bestätigten Neustart-Konzepts. Die Beschränkung auf Analyse und Konzept ist damit aufgehoben. Einen vollständig neuen ersten funktionierenden Entwurf bauen und lokal zeigen; den Archivstand erhalten.
 - Neue Bildproduktion bleibt ausschließlich Adobe. Erster Entwurf nutzt drei eigene freigestellte Adobe-Motive (lichter Wald mit zwei Rückenfiguren, Birken, Farne) und die vorhandene Adobe-Iconfamilie. Originalfotos, Originallogos und der offizielle Vereinsfilm ergänzen die Illustrationen.
+
+## Korrektur: Baumkrone bis Waldboden
+
+- Die wiederholte Hauptgrafik des ersten Neustart-Entwurfs ist ausdrücklich abgelehnt. Im aktiven Entwurf weder die Waldinsel noch die Birken weiter einsetzen.
+- Zwei große, natürliche Waldbäume (Eichen statt Birken) rahmen die gesamte Homepage links und rechts. Oben ragen ihre Kronen in den Hero; die Mitte bleibt für Text frei. Beim Scrollen folgt man den Stämmen bis zu Wurzeln und Waldboden im Footer. Kleine Entdeckungen wie ein Vogel oder eine Lupe begleiten die Reise.
+- Für diese seitlichen Rahmenbäume sind angeschnittene Außenkanten ausdrücklich gewünscht; dies ersetzt die frühere Vorgabe vollständiger Freistellung für diese Motive. Einzelne Entdeckungsmotive bleiben vollständige freigestellte Adobe-Grafiken.
+- Zusätzlich motionsites.ai ansehen: Inspiration für räumliche Bildrahmen und hochwertige Bewegung, keine fremden Assets oder kostenpflichtigen Vorlagen übernehmen.
+- Der erste Neustart war zu clean, langweilig und textlastig. Inhalte zusammenführen, redundante Absätze streichen und leere Scrollstrecken vermeiden. Wesentliche Originalinformationen, Filmzustimmung, FAQ, Kontakt und Anmeldung erhalten; Details können aufgeklappt werden.
