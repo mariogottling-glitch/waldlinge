@@ -168,6 +168,91 @@ export function useForestMotion(root, reduceMotion = false) {
           },
           0,
         );
+        const squirrelTrack = scope(".squirrel-track")[0];
+        const squirrel = scope(".squirrel-companion")[0];
+        // A real articulated gait: opposite paws alternate their reach.
+        // Its phase comes from document distance, so stopping holds a grip
+        // and reverse scrolling retraces the exact same climbing steps.
+        const climb = gsap.timeline({ paused: true });
+        const limb = (selector, from, to) => {
+          climb
+            .fromTo(
+              scope(selector),
+              from,
+              { ...to, duration: 0.5, ease: "sine.inOut" },
+              0,
+            )
+            .to(
+              scope(selector),
+              { ...from, duration: 0.5, ease: "sine.inOut" },
+              0.5,
+            );
+        };
+        limb(
+          ".squirrel-foreleg--near",
+          { rotation: -18, y: 1 },
+          { rotation: -42, y: -4 },
+        );
+        limb(
+          ".squirrel-foreleg--far",
+          { rotation: -43, y: -4 },
+          { rotation: -23, y: 1 },
+        );
+        limb(
+          ".squirrel-hindleg--near",
+          { rotation: -13, y: -2 },
+          { rotation: 12, y: 3 },
+        );
+        limb(
+          ".squirrel-hindleg--far",
+          { rotation: 14, y: 3 },
+          { rotation: -12, y: -2 },
+        );
+        limb(".squirrel-tail", { rotation: -5 }, { rotation: 5 });
+        limb(
+          ".squirrel-anatomy",
+          { rotation: -0.8, y: 0 },
+          { rotation: 0.8, y: 2 },
+        );
+        const followClimb = (self) => {
+          const distance = Math.max(
+            0,
+            Math.min(self.scroll(), self.end) - self.start,
+          );
+          const stride = window.matchMedia("(max-width: 700px)").matches
+            ? 60
+            : 90;
+          climb.progress((distance / stride) % 1);
+        };
+        ScrollTrigger.create({
+          trigger: squirrelTrack,
+          start: () => `top ${parseFloat(getComputedStyle(squirrel).top)}px`,
+          end: () =>
+            `bottom ${parseFloat(getComputedStyle(squirrel).top) + squirrel.clientHeight}px`,
+          onUpdate: followClimb,
+          onRefresh: followClimb,
+          invalidateOnRefresh: true,
+        });
+        // As the roots enter, let the companion leave its reading-height
+        // perch and complete the descent beside the forest floor.
+        gsap.to(squirrel, {
+          y: () =>
+            Math.max(
+              0,
+              window.innerHeight -
+                parseFloat(getComputedStyle(squirrel).top) -
+                squirrel.clientHeight -
+                45,
+            ),
+          ease: "none",
+          scrollTrigger: {
+            trigger: scope("footer")[0],
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
         scope("[data-cloud]").forEach((cloud, index) => {
           const drift = gsap.fromTo(
             cloud.querySelector("img"),

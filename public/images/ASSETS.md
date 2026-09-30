@@ -88,3 +88,16 @@ Finale Adobe-Ausgaben: [Körper](https://photoshop-api.adobe.io/v2/short-url/urn
 
 - `adobe-life/clouds.png`: neue Adobe-Firefly-Wolkengruppe, 1000 × 571px. Vollständiges freigestelltes Sommermotiv mit weichen creme-, perlgrauen und salbeifarbenen Schatten. Ausschließlich mit Adobe generiert, freigestellt und verkleinert. Die vorhandene Waldgestaltung erhält drei sparsame Hintergrundlagen mit unterschiedlicher Größe und geringer Deckkraft.
 - [Firefly-Ausgabe](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:71837472-59a9-46fc-8580-ab6ff246e4c1), [Adobe-Freistellung](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:db3bcbe5-19e9-479e-a886-a62d9bda1b0f), [finale Website-Ausgabe](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:a8f0b059-8645-4cf2-93f2-19008f87f6e6).
+
+## Animierter Eichhörnchen-Begleiter, 1. Oktober 2026
+
+Vier lokale transparente PNG-Lagen, ausschließlich Adobe Firefly und Adobe-Bearbeitung. Kopf und kompakter Rumpf wurden als eigenständige Figur erzeugt; der Schwanz sowie Vorder- und Hinterbein wurden aus einer weiteren eigenen Adobe-Squirrel-Illustration abgeleitet. Die Beine werden für zwei getrennte Gelenkpaare wiederverwendet, nicht als unveränderte Gesamtfigur verschoben. Adobe übernimmt Freistellung, motivgerechten Zuschnitt und proportionale Verkleinerung. Die Website animiert die fertigen Lagen und lädt keine externen Adobe-Dienste.
+
+| Datei | Größe | Finale Adobe-Ausgabe |
+| --- | --- | --- |
+| `adobe-squirrel/body.png` | 320 × 421px | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:3e34a1fb-65ac-457f-8d02-0b3fbb0b7373 |
+| `adobe-squirrel/tail.png` | 320 × 480px | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:e80b5612-4e29-431b-ba25-df7ae715aa65 |
+| `adobe-squirrel/foreleg.png` | 220 × 201px | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:fa5e5cda-fd64-432d-942c-f1a1e9bc459a |
+| `adobe-squirrel/hindleg.png` | 220 × 201px | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:8be09653-f7fc-4a82-afee-950aaccf3a48 |
+
+Körper-Generierung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:95634a89-a2b8-4ef2-b5a0-f9bc96eaf284. Adobe-Tail-Entfernung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:2d9a1c32-0639-462b-96e9-16ae7afe02e9. Grundlage für die weiteren Lagen: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:f2f9a6a9-e591-4657-bf32-b66120d16f00. Fehlgeschlagene Isolationsversuche und zu schlanke Körpervarianten wurden geprüft und verworfen; sie werden nicht in die Homepage eingebunden. Alle vier finalen Lagen wurden visuell geprüft.

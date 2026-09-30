@@ -1,0 +1,106 @@
+[
+  {
+    "parts": [
+      {
+        "part": "squirrel-tail",
+        "transform": "matrix(0.999958, 0.00912096, -0.00912096, 0.999958, 0, 0)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--far",
+        "transform": "matrix(0.99998, -0.00626395, 0.00626395, 0.99998, 0, 0.2387)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--far",
+        "transform": "matrix(0.848467, -0.529249, 0.529249, 0.848467, 0, -1.2387)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--near",
+        "transform": "matrix(0.999901, 0.0140774, -0.0140774, 0.999901, 0, 0.7613)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--near",
+        "transform": "matrix(0.854873, -0.518837, 0.518837, 0.854873, 0, -1.7613)"
+      }
+    ],
+    "scroll": 540,
+    "top": 270
+  },
+  {
+    "parts": [
+      {
+        "part": "squirrel-tail",
+        "transform": "matrix(0.996213, -0.0869436, 0.0869436, 0.996213, 0, 0)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--far",
+        "transform": "matrix(0.970429, 0.241385, -0.241385, 0.970429, 0, 2.9939)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--far",
+        "transform": "matrix(0.731644, -0.681687, 0.681687, 0.731644, 0, -3.9939)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--near",
+        "transform": "matrix(0.974489, -0.224434, 0.224434, 0.974489, 0, -1.9939)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--near",
+        "transform": "matrix(0.950899, -0.309502, 0.309502, 0.950899, 0, 0.9939)"
+      }
+    ],
+    "scroll": 563,
+    "top": 270
+  },
+  {
+    "parts": [
+      {
+        "part": "squirrel-tail",
+        "transform": "matrix(0.996213, -0.0869436, 0.0869436, 0.996213, 0, 0)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--far",
+        "transform": "matrix(0.970429, 0.241385, -0.241385, 0.970429, 0, 2.9939)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--far",
+        "transform": "matrix(0.731644, -0.681687, 0.681687, 0.731644, 0, -3.9939)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--near",
+        "transform": "matrix(0.974489, -0.224434, 0.224434, 0.974489, 0, -1.9939)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--near",
+        "transform": "matrix(0.950899, -0.309502, 0.309502, 0.950899, 0, 0.9939)"
+      }
+    ],
+    "scroll": 563,
+    "top": 270
+  },
+  {
+    "parts": [
+      {
+        "part": "squirrel-tail",
+        "transform": "matrix(0.999958, 0.00912096, -0.00912096, 0.999958, 0, 0)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--far",
+        "transform": "matrix(0.99998, -0.00626395, 0.00626395, 0.99998, 0, 0.2387)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--far",
+        "transform": "matrix(0.848467, -0.529249, 0.529249, 0.848467, 0, -1.2387)"
+      },
+      {
+        "part": "squirrel-leg squirrel-hindleg squirrel-hindleg--near",
+        "transform": "matrix(0.999901, 0.0140774, -0.0140774, 0.999901, 0, 0.7613)"
+      },
+      {
+        "part": "squirrel-leg squirrel-foreleg squirrel-foreleg--near",
+        "transform": "matrix(0.854873, -0.518837, 0.518837, 0.854873, 0, -1.7613)"
+      }
+    ],
+    "scroll": 540,
+    "top": 270
+  }
+]

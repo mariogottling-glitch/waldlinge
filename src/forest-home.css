@@ -300,6 +300,74 @@ p + p {
   overflow: clip;
   pointer-events: none;
 }
+.squirrel-track {
+  position: absolute;
+  top: 480px;
+  bottom: 170px;
+  right: 4px;
+  width: 140px;
+  z-index: 4;
+}
+.squirrel-companion {
+  position: sticky;
+  top: clamp(180px, 30svh, 280px);
+  width: 100%;
+  aspect-ratio: 160 / 265;
+}
+.squirrel-anatomy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: 65% 62%;
+}
+.squirrel-anatomy > img {
+  position: absolute;
+  max-width: none;
+}
+.squirrel-tail {
+  width: 56.25%;
+  left: 47.5%;
+  top: 20%;
+  transform-origin: 10% 93%;
+}
+.squirrel-body {
+  width: 55%;
+  left: 5%;
+  top: 56%;
+  transform: rotate(-95deg);
+  z-index: 2;
+}
+.squirrel-leg {
+  z-index: 3;
+}
+.squirrel-hindleg {
+  width: 32.5%;
+  left: 47%;
+  top: 63%;
+  transform-origin: 22% 25%;
+}
+.squirrel-foreleg {
+  width: 35%;
+  left: 35%;
+  top: 78%;
+  transform-origin: 8% 7%;
+  transform: rotate(-25deg);
+}
+.squirrel-hindleg--far {
+  top: 60%;
+  left: 49%;
+  z-index: 1;
+}
+.squirrel-foreleg--far {
+  top: 75.5%;
+  left: 37%;
+  z-index: 1;
+  transform: rotate(-35deg);
+}
+.motion-reduced .squirrel-companion {
+  position: relative;
+  top: 0;
+}
 .edge-tree {
   position: absolute;
   inset: 0;
@@ -1100,6 +1168,9 @@ summary:focus-visible {
   outline-offset: 5px;
 }
 @media (max-width: 1100px) {
+  .squirrel-track {
+    width: 115px;
+  }
   .navigation {
     gap: 20px;
   }
@@ -1138,6 +1209,11 @@ summary:focus-visible {
   }
 }
 @media (max-width: 959px) {
+  .squirrel-track {
+    top: 410px;
+    width: 95px;
+    right: 0;
+  }
   .site-header {
     height: 76px;
   }
@@ -1261,6 +1337,15 @@ summary:focus-visible {
   }
 }
 @media (max-width: 700px) {
+  .squirrel-track {
+    top: 405px;
+    bottom: 105px;
+    width: 65px;
+    right: -3px;
+  }
+  .squirrel-companion {
+    top: clamp(165px, 30svh, 240px);
+  }
   .forest-cloud {
     width: 420px;
     opacity: 0.34;
@@ -1714,6 +1799,10 @@ summary:focus-visible {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .squirrel-companion {
+    position: relative;
+    top: 0;
+  }
   *,
   *::before,
   *::after {

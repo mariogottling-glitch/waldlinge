@@ -153,6 +153,7 @@ function ForestWorld() {
           />
         </div>
       ))}
+      <SquirrelCompanion />
       <div className="forest-twig forest-twig--left" data-ambient>
         <img
           src="/images/adobe-life/oak-twig.png"
@@ -179,6 +180,51 @@ function ForestWorld() {
           alt=""
           loading="lazy"
         />
+      </div>
+    </div>
+  );
+}
+
+function SquirrelCompanion() {
+  return (
+    <div className="squirrel-track">
+      <div className="squirrel-companion">
+        <div className="squirrel-anatomy">
+          <img
+            className="squirrel-tail"
+            src="/images/adobe-squirrel/tail.png"
+            width="320"
+            height="480"
+            alt=""
+          />
+          {["hind", "fore"].map((limb) => (
+            <img
+              key={limb}
+              className={`squirrel-leg squirrel-${limb}leg squirrel-${limb}leg--far`}
+              src={`/images/adobe-squirrel/${limb}leg.png`}
+              width="220"
+              height="201"
+              alt=""
+            />
+          ))}
+          <img
+            className="squirrel-body"
+            src="/images/adobe-squirrel/body.png"
+            width="320"
+            height="421"
+            alt=""
+          />
+          {["hind", "fore"].map((limb) => (
+            <img
+              key={limb}
+              className={`squirrel-leg squirrel-${limb}leg squirrel-${limb}leg--near`}
+              src={`/images/adobe-squirrel/${limb}leg.png`}
+              width="220"
+              height="201"
+              alt=""
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

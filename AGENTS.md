@@ -78,3 +78,9 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Die gelegentlich eingeblendeten bzw. bewegten Eichenzweige deutlich größer zeigen. Sie rahmen die Inhaltsgruppen ein; Text und Bedienelemente bleiben lesbar.
 - Hier und da ganz zarte Wolken im Hintergrund ergänzen, um den freien Flächen mehr Tiefe zu geben. Adobe-Illustration mit weichen creme- und salbeifarbenen Schatten, sparsame Platzierung und langsame Bewegung.
 - Bestehende Gestaltung weiter verfeinern; kein erneuter Layoutwechsel und keine zusätzlichen Textsektionen.
+
+## Eichhörnchen als Scrollbegleiter
+
+- Nutzer wünscht ein Eichhörnchen, das mit dem Scrollen den Baumstamm hinunterklettert und die Reise begleitet. Ein verschobenes Standbild ist ausdrücklich nicht ausreichend.
+- Am rechten Stamm eine eigene Adobe-Illustration aus Körper, Schwanz und vier getrennt beweglichen Pfoten einsetzen. Gegenläufiges Nachgreifen, leichte Körperbewegung und Schwanzbalance ergeben den Kletterrhythmus. Die Griffphase folgt der Scrollstrecke; Anhalten hält die Pose, Zurückscrollen kehrt die Bewegung um. Beim Footer erreicht es die Wurzeln.
+- Als zurückhaltendes, nicht bedienbares Naturdetail außerhalb des Lesebereichs umsetzen. Mobile Größe anpassen; reduzierte Bewegung erhält eine vollständige statische Figur am oberen Stamm. Bestehendes Layout und Inhalte bleiben erhalten.
