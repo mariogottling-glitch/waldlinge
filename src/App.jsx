@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BotanicalIcon } from "./BotanicalIcon";
+import { Waldreise, usePageMotion } from "./Waldreise";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -202,6 +203,7 @@ function WaldlingeFilm() {
 }
 
 export function App() {
+  usePageMotion();
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
   const menuButton = useRef(null);
@@ -246,6 +248,7 @@ export function App() {
         Zum Inhalt springen
       </a>
       <header className="site-header">
+        <div className="reading-progress" aria-hidden="true" />
         <div className="header-inner">
           <a
             className="brand"
@@ -321,9 +324,9 @@ export function App() {
                 Waldkindergarten in Bornheim
               </span>
               <h1 id="hero-title">
-                Kind sein.
+                Draußen wachsen.
                 <br />
-                Mit dem Wald wachsen.
+                Gemeinsam geborgen.
               </h1>
               <p>
                 Raum zum Entdecken. Zeit zum Wachsen.
@@ -340,6 +343,9 @@ export function App() {
               </div>
             </div>
           </div>
+          <a className="hero-scroll" href="#waldreise">
+            Unseren Wald entdecken <ArrowRight size={18} aria-hidden="true" />
+          </a>
         </section>
         <section
           className="partners section-shell"
@@ -364,6 +370,7 @@ export function App() {
             />
           </div>
         </section>
+        <Waldreise />
         <section
           className="values section-shell"
           id="kindergarten"
@@ -375,13 +382,17 @@ export function App() {
           </p>
           <h2 id="values-title">Kleine Entdeckungen. Großes Wachsen.</h2>
           <p className="section-intro">
-            In der Natur finden Kinder Freiraum, echte Erfahrungen und ein
-            starkes Miteinander.
-            <br className="desktop-break" /> Das prägt – heute und morgen.
+            Die Lauten und die Leisen. Die Wilden und die Schüchternen.
+            <br className="desktop-break" /> Bei uns darf jedes Kind ganz es
+            selbst sein.
           </p>
           <div className="values-grid">
             {values.map(([title, text], index) => (
-              <article key={title}>
+              <article
+                key={title}
+                data-reveal
+                style={{ "--reveal-delay": `${index * 100}ms` }}
+              >
                 <BotanicalIcon variant={index} />
                 <h3>{title}</h3>
                 <p>{text}</p>
@@ -389,7 +400,36 @@ export function App() {
             ))}
           </div>
         </section>
-        <WaldlingeFilm />
+        <section
+          className="about-kindergarten section-shell"
+          aria-labelledby="about-title"
+          data-reveal
+        >
+          <div>
+            <p className="eyebrow">Waldlinge Bornheim e.V.</p>
+            <h2 id="about-title">
+              Draußen zu Hause.
+              <br />
+              Mitten in Bornheim.
+            </h2>
+          </div>
+          <div>
+            <p>
+              Seit Januar 2020 gibt es die Waldlinge: einen aus Elterninitiative
+              gegründeten Waldkindergarten für Kinder ab drei Jahren bis zum
+              Schuleintritt.
+            </p>
+            <p>
+              Unser Gruppenbauwagen steht auf dem Gelände des SSV Merten. Von
+              dort geht es in den angrenzenden Wald – zum Spielen, Forschen und
+              Erleben. Unser pädagogisches Team begleitet die Kinder
+              bedürfnisorientiert, individuell und auf Augenhöhe.
+            </p>
+            <TextLink href="https://waldlinge.org/wer-wir-sind/">
+              Mehr über die Waldlinge
+            </TextLink>
+          </div>
+        </section>
         <section
           className="discovery"
           id="alltag"
@@ -404,7 +444,7 @@ export function App() {
             height="1050"
             loading="lazy"
           />
-          <div className="discovery-copy">
+          <div className="discovery-copy" data-reveal>
             <p className="eyebrow">Natur. Neugier. Perspektiven.</p>
             <h2 id="discovery-title">
               Ein Wald voller
@@ -417,14 +457,6 @@ export function App() {
             </p>
             <TextLink href="#waldalltag">Unser Alltag im Wald</TextLink>
           </div>
-          <img
-            className="botanical"
-            src="/images/botanical.webp"
-            alt=""
-            width="250"
-            height="350"
-            loading="lazy"
-          />
         </section>
         <section
           className="day section-shell"
@@ -442,7 +474,7 @@ export function App() {
             </p>
           </div>
           <div className="day-grid">
-            <article>
+            <article data-reveal>
               <BotanicalIcon variant={3} />
               <h3>Ankommen & dazugehören</h3>
               <p>
@@ -450,7 +482,7 @@ export function App() {
                 Kindern Sicherheit – und Raum, ganz sie selbst zu sein.
               </p>
             </article>
-            <article>
+            <article data-reveal style={{ "--reveal-delay": "100ms" }}>
               <BotanicalIcon variant={4} />
               <h3>Entdecken & ausprobieren</h3>
               <p>
@@ -458,7 +490,7 @@ export function App() {
                 begleiten neugierige Fragen und lassen Platz für eigene Ideen.
               </p>
             </article>
-            <article>
+            <article data-reveal style={{ "--reveal-delay": "200ms" }}>
               <BotanicalIcon variant={5} />
               <h3>Gemeinsam wachsen</h3>
               <p>
@@ -468,6 +500,7 @@ export function App() {
             </article>
           </div>
         </section>
+        <WaldlingeFilm />
         <section
           className="original-moments section-shell"
           aria-labelledby="moments-title"
@@ -477,7 +510,7 @@ export function App() {
             <h2 id="moments-title">Mitten im echten Waldleben.</h2>
           </div>
           <div className="moments-grid">
-            <figure>
+            <figure data-reveal>
               <img
                 src="/images/waldlinge-werkeln.webp"
                 alt="Zwei Kinder probieren kleine Sägen an einem Baumstamm aus"
@@ -487,7 +520,7 @@ export function App() {
               />
               <figcaption>Mit den eigenen Händen entdecken.</figcaption>
             </figure>
-            <figure>
+            <figure data-reveal style={{ "--reveal-delay": "120ms" }}>
               <img
                 src="/images/waldlinge-bollerwagen.webp"
                 alt="Eine Erwachsene und Kinder mit einem Bollerwagen auf einem grünen Waldweg"
@@ -525,11 +558,37 @@ export function App() {
                 ihre Stärken ein. Gemeinsam mit dem pädagogischen Team gestalten
                 wir einen Ort, an dem alle dazugehören.
               </p>
+              <p>
+                Wertschätzung und gewaltfreie Kommunikation prägen unser
+                Miteinander. Eltern sind im pädagogischen Alltag ausdrücklich
+                willkommen und unterstützen das Team mit ihren Möglichkeiten.
+              </p>
               <TextLink href="https://waldlinge.org/die-geschichte-der-waldlinge/">
                 Unsere Geschichte lesen
               </TextLink>
             </div>
           </div>
+        </section>
+        <section
+          className="story section-shell"
+          aria-labelledby="story-title"
+          data-reveal
+        >
+          <p className="eyebrow">Eine Idee, die Wurzeln geschlagen hat</p>
+          <h2 id="story-title">
+            Es braucht ein Dorf.
+            <br />
+            Und manchmal einen Wald.
+          </h2>
+          <p>
+            Aus dem Wunsch nach einer fürsorglichen Kindheit entstand ein
+            gemeinsames Projekt. Jenni Klein und weitere Familien entwickelten
+            die Idee eines Kindergartens, in dem Kinder, Eltern und pädagogische
+            Fachkräfte zusammengehören.
+          </p>
+          <TextLink href="https://waldlinge.org/die-geschichte-der-waldlinge/">
+            Jenni erzählt unsere Geschichte
+          </TextLink>
         </section>
         <section
           className="parents section-shell"
@@ -580,6 +639,26 @@ export function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+        <section
+          className="forest-playgroup section-shell"
+          aria-labelledby="playgroup-title"
+          data-reveal
+        >
+          <div>
+            <p className="eyebrow">Für kleine und große Waldneugierige</p>
+            <h2 id="playgroup-title">Erst mal Waldluft schnuppern.</h2>
+          </div>
+          <div>
+            <p>
+              Gemeinsam draußen sein und die Natur entdecken: Jenni organisiert
+              eine Eltern-Kind-Waldspielgruppe. Informationen zu aktuellen
+              Treffen bekommt ihr direkt bei ihr.
+            </p>
+            <TextLink href="mailto:jenni@waldlinge.org">
+              Zur Waldspielgruppe anfragen
+            </TextLink>
           </div>
         </section>
         <section
@@ -659,6 +738,15 @@ export function App() {
               <a href="mailto:info@waldlinge.org">info@waldlinge.org</a>
               <p className="footer-subheading">Teil des Teams werden</p>
               <a href="mailto:personal@waldlinge.org">personal@waldlinge.org</a>
+              <p className="footer-subheading">
+                Waldhandy · pädagogisches Team
+              </p>
+              <a href="tel:+4915733809336">0157 33809336</a>
+              <p className="footer-subheading">
+                <a href="https://waldlinge.org/kontakt/">
+                  Alle Kontaktmöglichkeiten
+                </a>
+              </p>
             </div>
             <div>
               <h2>Gemeinsam möglich machen</h2>

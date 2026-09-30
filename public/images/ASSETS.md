@@ -19,3 +19,10 @@ Die folgenden Originalfotos stammen aus der Galerie auf https://waldlinge.org/we
 - `artgerecht-logo.webp`: aktuelle offizielle Logodatei https://www.artgerecht-projekt.de/wp-content/themes/artgerechtproject/media/2020_ARTgerecht_Logo_final.png. Diese Gestaltung unterscheidet sich von der älteren, ins Gruppenfoto eingebauten Version.
 
 Der Hero bleibt auf Nutzerwunsch vorerst das generierte Konzeptmotiv. `forest-discovery.webp` ist nicht mehr auf der Seite eingebunden. Die Beschriftungen zu Kooperation und Schulung wurden aus dem bisherigen Startseitenbild übernommen; sie behaupten keine Zertifizierung.
+
+## Adobe Illustrationen vom 30. September 2026
+
+- `waldreise-firefly-original.png`: erste Adobe-Firefly-Stilprobe, ausdrücklich vom Nutzer für den Main-Page-Entwurf ausgewählt. Unveränderte Illustration eines lichten Birkenwalds mit entdeckenden Kindern. Konzeptillustration, keine Abbildung des tatsächlichen Kindergartens. Adobe-Ausgabe: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:1105da92-c6a6-4bad-a1e2-f118eff824e1. Lokal gespeichert; Produktionsseite ruft Adobe nicht auf.
+- `adobe-values/nature.png`, `pace.png`, `community.png`, `shelter.png`, `discovery.png`, `growth.png`: sechs individuell mit Adobe Firefly generierte und über Adobe freigestellte Icons. Motive: Lupe mit Blatt, Schnecke, zugewandte Figuren, Dach mit Herz, Ast mit Schaukel und zwei Pflanzen. Transparentes PNG, jeweils 1024 × 1024. Keine handgezeichneten SVG-Ersatzillustrationen.
+
+Alle in diesem Entwurf neu erstellten Grafiken stammen ausschließlich von Adobe. Das bestehende Hero-Konzeptfoto wurde auf ausdrücklichen Projektwunsch erhalten. Für den ersten Entwurf wird die hochauflösende Originalillustration lokal und verzögert geladen; kleinere Ausgabevarianten sind eine spätere Performance-Verfeinerung.

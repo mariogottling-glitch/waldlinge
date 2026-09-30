@@ -1,0 +1,578 @@
+/* A quiet editorial frame around the existing photographic opening. */
+:root {
+  --gold: #dac184;
+  --sage: #e7ecdf;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #24483b14;
+}
+.header-inner {
+  min-height: 96px;
+}
+.brand img {
+  width: 68px;
+  height: 68px;
+}
+.brand-name {
+  font-size: 32px;
+}
+.brand-subtitle {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+.reading-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #6c886b;
+  transform: scaleX(var(--reading-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+.hero {
+  min-height: 620px;
+}
+.hero-inner {
+  padding-top: 108px;
+}
+.hero h1 {
+  font-size: clamp(46px, 5.15vw, 74px);
+  max-width: 900px;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 56px;
+  right: max(32px, calc((100vw - 1186px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.partners {
+  padding-block: 38px 50px;
+}
+.partners img {
+  opacity: 0.88;
+}
+.waldreise {
+  position: relative;
+  height: 240vh;
+  min-height: 1700px;
+  background: #f6f3eb;
+  --journey-progress: 0;
+}
+.journey-sticky {
+  position: sticky;
+  top: 96px;
+  height: calc(100svh - 96px);
+  min-height: 620px;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 34px 28px;
+}
+.journey-heading {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.journey-heading h2 {
+  font-size: clamp(32px, 3.6vw, 50px);
+}
+.journey-heading > p:last-child {
+  margin-top: 16px;
+  font-size: 18px;
+}
+.journey-scene {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+.journey-art {
+  width: 100%;
+  height: auto;
+  max-height: 54svh;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  opacity: calc(0.64 + var(--journey-progress) * 0.36);
+  transform: translateY(calc((1 - var(--journey-progress)) * 28px));
+  transition: opacity 0.25s ease-out;
+}
+.journey-narrative {
+  position: absolute;
+  left: 7%;
+  top: 15%;
+  width: 34%;
+  max-width: 355px;
+}
+.journey-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #5f795d;
+  margin-bottom: 18px;
+}
+.journey-label > span {
+  margin-right: 12px;
+}
+.journey-chapters {
+  display: grid;
+}
+.journey-chapter {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s,
+    transform 0.6s,
+    visibility 0.6s;
+}
+.journey-chapter.is-current {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.journey-chapter h3 {
+  font-size: clamp(25px, 2.6vw, 35px);
+  line-height: 1.2;
+}
+.journey-chapter p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin-top: 20px;
+}
+.journey-steps {
+  display: flex;
+  gap: 18px;
+  margin-block: 25px 18px;
+}
+.journey-steps a {
+  font-size: 13px;
+  color: #536e54;
+  text-decoration: none;
+  border-bottom: 2px solid #b6c2ad;
+  min-height: 44px;
+  padding: 10px 4px;
+}
+.journey-steps a.is-current {
+  color: var(--forest);
+  border-color: var(--forest);
+}
+.journey-steps span {
+  display: none;
+}
+.journey-narrative .text-link {
+  font-size: 15px;
+  gap: 10px;
+}
+.journey-scroll {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  color: #637762;
+  margin-top: 20px;
+}
+.journey-markers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.journey-markers span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  scroll-margin-top: 0;
+}
+#reise-01 {
+  top: 0;
+}
+#reise-02 {
+  top: calc((100% - 100svh) * 0.45);
+}
+#reise-03 {
+  top: calc((100% - 100svh) * 0.82);
+}
+.journey-mobile-copy {
+  display: none;
+}
+.values {
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+.location-line {
+  margin-top: 0;
+  margin-bottom: 38px;
+}
+.values-grid {
+  gap: 65px;
+  margin-top: 52px;
+}
+.values-grid p,
+.day-grid p {
+  line-height: 1.6;
+}
+.value-botanical {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+.about-kindergarten,
+.forest-playgroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  padding-block: 85px;
+  border-top: 1px solid var(--line);
+}
+.about-kindergarten p + p {
+  margin-top: 22px;
+}
+.about-kindergarten .text-link,
+.forest-playgroup .text-link {
+  margin-top: 26px;
+}
+.about-kindergarten p:not(.eyebrow),
+.forest-playgroup p:not(.eyebrow) {
+  font-size: 19px;
+  line-height: 1.65;
+}
+.discovery {
+  border-radius: 0;
+}
+.discovery-photo {
+  border-radius: 0;
+}
+.day {
+  padding-block: 100px 85px;
+}
+.day-grid article {
+  border: 0;
+}
+.film {
+  padding-top: 20px;
+}
+.film-frame {
+  border-radius: 12px;
+}
+.film-poster::after {
+  background: #173b3120;
+}
+.film-caption {
+  padding: 12px 18px;
+  background: #173b31ed;
+  left: 22px;
+  right: auto;
+  bottom: 22px;
+  border-radius: 5px;
+  font-size: 21px;
+}
+.original-moments {
+  padding-bottom: 100px;
+}
+.moments-grid img {
+  border-radius: 8px;
+}
+.community {
+  padding-block: 95px;
+}
+.community-inner > div:last-child p {
+  font-size: 19px;
+  line-height: 1.65;
+}
+.story {
+  text-align: center;
+  padding-block: 100px 70px;
+  max-width: 900px;
+}
+.story > p:not(.eyebrow) {
+  max-width: 660px;
+  margin: 28px auto;
+  font-size: 20px;
+  line-height: 1.65;
+}
+.parents {
+  padding-top: 60px;
+}
+.forest-playgroup {
+  padding-block: 65px 90px;
+}
+.forest-playgroup h2 {
+  font-size: 36px;
+}
+.join {
+  padding-block: 88px;
+}
+.button {
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.motion-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.85s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion-ready [data-reveal].is-visible,
+.motion-ready [data-reveal]:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 701px) and (max-width: 1050px) {
+  .journey-sticky {
+    min-height: 590px;
+  }
+  .journey-narrative {
+    left: 7%;
+    top: 8%;
+    width: 35%;
+  }
+  .journey-chapter h3 {
+    font-size: 27px;
+  }
+  .journey-chapter p {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .journey-steps {
+    margin-block: 14px 5px;
+  }
+  .about-kindergarten,
+  .forest-playgroup {
+    gap: 45px;
+  }
+}
+@media (max-width: 959px) {
+  .site-header {
+    position: sticky;
+  }
+  .hero {
+    min-height: 0;
+  }
+  .hero-inner {
+    padding-top: 45px;
+  }
+  .hero-scroll {
+    display: none;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 54px);
+  }
+}
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 95px;
+  }
+  .header-inner {
+    min-height: 80px;
+  }
+  .brand img {
+    width: 54px;
+    height: 54px;
+  }
+  .brand-name {
+    font-size: 28px;
+  }
+  .brand-subtitle {
+    font-size: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 8vw, 48px);
+  }
+  .hero-inner {
+    padding-top: 36px;
+    padding-bottom: 32px;
+  }
+  .hero-picture {
+    height: 290px;
+  }
+  .partners {
+    padding-block: 30px 34px;
+  }
+  .waldreise {
+    height: auto;
+    min-height: 0;
+    padding-block: 42px 20px;
+  }
+  .journey-sticky {
+    position: static;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+  .journey-heading h2 {
+    font-size: 33px;
+  }
+  .journey-heading > p:last-child {
+    font-size: 17px;
+  }
+  .journey-scene {
+    padding-inline: 10px;
+    margin-top: 25px;
+  }
+  .journey-art {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+  .journey-narrative,
+  .journey-scroll,
+  .journey-markers {
+    display: none;
+  }
+  .journey-mobile-copy {
+    display: grid;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 34px;
+  }
+  .journey-mobile-copy article {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .journey-mobile-copy h3 {
+    font-size: 26px;
+  }
+  .journey-mobile-copy p:last-child {
+    margin-top: 14px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .values {
+    padding-block: 50px;
+  }
+  .values-grid {
+    gap: 35px;
+    margin-top: 30px;
+  }
+  .values-grid article {
+    padding-top: 25px;
+  }
+  .value-botanical {
+    width: 135px;
+    height: 135px;
+  }
+  .about-kindergarten,
+  .forest-playgroup {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-block: 48px;
+    margin-inline: 0;
+  }
+  .about-kindergarten h2,
+  .forest-playgroup h2 {
+    font-size: 32px;
+  }
+  .about-kindergarten p:not(.eyebrow),
+  .forest-playgroup p:not(.eyebrow) {
+    font-size: 18px;
+  }
+  .day {
+    padding-block: 55px 35px;
+  }
+  .day-grid {
+    gap: 25px;
+  }
+  .day-grid p {
+    font-size: 18px;
+  }
+  .film-caption {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 9px;
+    font-size: 17px;
+  }
+  .film-caption > span {
+    font-size: 12px;
+  }
+  .film-play {
+    top: 35%;
+  }
+  .film-frame {
+    min-height: 190px;
+  }
+  .community {
+    padding-block: 50px;
+  }
+  .community-inner > div:last-child p {
+    font-size: 18px;
+  }
+  .story {
+    padding-block: 60px 35px;
+  }
+  .story > p:not(.eyebrow) {
+    font-size: 18px;
+  }
+  .original-moments {
+    padding-bottom: 55px;
+  }
+  .parents {
+    padding-block: 40px 55px;
+  }
+  .join {
+    padding-block: 55px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .waldreise {
+    height: auto;
+    min-height: 0;
+    padding-block: 50px;
+  }
+  .journey-sticky {
+    position: static;
+    height: auto;
+    min-height: 0;
+  }
+  .journey-art {
+    opacity: 1;
+    transform: none;
+  }
+  .journey-narrative,
+  .journey-scroll,
+  .journey-markers {
+    display: none;
+  }
+  .journey-mobile-copy {
+    display: grid;
+    gap: 30px;
+    max-width: 800px;
+    text-align: center;
+  }
+  .journey-mobile-copy p:last-child {
+    margin-top: 15px;
+  }
+  .motion-ready [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .button:hover {
+    transform: none;
+  }
+}

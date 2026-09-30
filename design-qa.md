@@ -1,71 +1,50 @@
-# Design QA – Waldlinge
+# Waldlinge Main Page Design QA
+
+Stand: 30. September 2026.
+
+## Vergleichsgrundlage
+
+Der Nutzer hat die erste Adobe-Firefly-Waldillustration für einen neuen funktionierenden Main-Page-Entwurf gewählt. Sie ist ein Bildmotiv, kein vollständiges Website-Mockup. Der Seitenrahmen baut auf dem bereits freigegebenen Desktopziel auf; die neue Waldreise und zusätzliche Originalinhalte sind beauftragte Erweiterungen. Ein pixelgleicher Nachbau einer vollständigen neuen Seitenvorlage wird deshalb nicht behauptet.
+
+- Visuelle Stilquelle: `public/images/waldreise-firefly-original.png`, 2688 × 1536 Pixel.
+- Bestehende Layoutbasis: `design/waldlinge-verfeinert-desktop.png`, 1122 × 1402 Pixel.
+- Gerenderter Desktop-Einstieg: `design/qa-waldreise/desktop-1440.jpg`.
+- Gerenderte Waldreise: `design/qa-waldreise/journey-01-1440.jpg` und `journey-03-1440.jpg`.
+- Mobile Ansichten: `design/qa-waldreise/mobile-390.jpg` und `journey-mobile-320.jpg`.
+- Browser: Codex In-app Browser. Desktop 1440 × 900 CSS-Pixel; Mobil 390 × 844 und 320 × 800 CSS-Pixel. Browser-Screenshots sind JPEG in Viewportgröße. Die Stilquelle wird proportional als vollständiges Bild mit object-fit contain angezeigt, nicht auf eine Website-Viewportgröße verzerrt.
+
+Die Originalillustration und die Desktopaufnahme der Waldreise wurden gemeinsam in einem Vergleichseingang geöffnet. Farben, Figuren, Komposition und Bildgrenzen bleiben erhalten. Die geringere Deckkraft im ersten Kapitel und volle Wirkung im letzten Kapitel sind beabsichtigte Animation. Der vollständige Einstieg und die beiden mobilen Ansichten wurden zusätzlich im Browser visuell geprüft. Ein engerer Detailausschnitt war für die gut lesbaren Überschriften, Konturen und Kapiteltexte nicht nötig.
+
+## Prüfergebnis der Gestaltung
+
+- Typografie: bestehende lokal eingebundene Lora und Source Sans 3, klarer Abstand zwischen Überschriften und Lesetext, keine abgeschnittenen Texte in den geprüften Breiten.
+- Abstand und Rhythmus: großzügiger fotografischer Einstieg, getrennte Originallogos, ruhig gehaltene Waldreise, danach Werte, Ortsinformationen, Alltag, Film, Originalfotos, Gemeinschaft, Geschichte, FAQ und Kontakt. Mobil Text vor dem Hero-Bild und konsistent mittige Ausrichtung.
+- Farben: warmes Creme, Waldgrün, gedämpftes Gold und Salbei. Die ausgewählte erste Waldillustration wurde nicht erneut umgefärbt.
+- Bildqualität: Originalfotos und Originallogos bleiben erhalten. Die erste Adobe-Illustration wird vollständig in ihrem Seitenverhältnis angezeigt. Sechs neue transparente Adobe-Icons ersetzen die früheren handgezeichneten SVG-Illustrationen. Es gibt keine fehlenden Bilder in den geprüften Browserzuständen.
+- Inhalt: Quellen und Übernahme sind in `design/Inhalte-Mainpage.md` dokumentiert. Unbestätigte Betriebszeiten, Kapazität, Gebühren und Personalzahlen bleiben aus öffentlichen Texten heraus. Direkte Kontaktwege und Links auf die ausführlichen Originalseiten sind vorhanden.
+
+## Prüfhistorie
+
+1. P2: Die erste Waldreise-Fassung hatte bei 1440 × 900 einen zu hohen Bildbereich, wodurch der untere Szenenabschluss am Viewportrand lag. Korrektur: Bildhöhe von maximal 62svh auf 54svh begrenzt. Danach wurden Anfangs- und Schlusskapitel erneut aufgenommen; Überschrift, Illustration, Kapiteltext und Weiterführung passen in die Szene.
+2. P2: Kapitelanker lagen zu weit im Scrollabschnitt und konnten das letzte Kapitel nahe dem Auslaufen der gehaltenen Szene öffnen. Korrektur: Positionen anhand der tatsächlichen Scrollstrecke statt fester Abschnittsprozente. Ergebnis: Kapitel 03 wurde per Link erreicht und zeigte „Dazugehören“ mit Fortschritt 0,729, während die Szene noch vollständig sichtbar blieb.
+
+Keine verbleibenden P0/P1/P2-Befunde im geprüften Entwurf.
+
+## Interaktionen und technische Prüfung
+
+- Breiten 320, 375, 390, 700, 768, 1024 und 1440: keine horizontalen Überläufe; keine fehlerhaft geladenen Bilddateien.
+- Mobiles Menü öffnen, Link zu Für Eltern, Menü schließt nach Navigation.
+- FAQ zur Anmeldung öffnen: Antwort und Kita-Navigator-Link sichtbar.
+- Filmvorschau öffnen: Zustimmungsansicht sichtbar, kein YouTube-iframe vorhanden. Escape schließt und führt den Fokus zurück zum Vorschauknopf. Die bestehende Zustimmungsbestätigung erzeugt erst danach den Frame; das tatsächliche externe Video wurde in dieser Prüfung nicht abgespielt.
+- Desktop: Startseitenlink, Waldreise-Link, Kapitel 03 und Weiterführung zum Kindergarten getestet.
+- Browserprotokoll: keine Fehlermeldungen; normale Entwicklungsservermeldungen.
+- Produktionsbuild erfolgreich. Vier vorhandene Sites-Tests erfolgreich; erwartete Ausgaben unter dist/client, dist/server und dist/.openai vorhanden.
+
+Reduzierte Bewegung ist in CSS und JavaScript berücksichtigt: keine gehaltene Scrollsequenz, vollständiges statisches Motiv und alle Kapitel im Seitenfluss. Die Betriebssystempräferenz wurde im Browser nicht aktiv umgeschaltet; diese Variante wurde am Code geprüft, nicht als separat gerenderter Zustand verifiziert. Kein Versandbackend oder neues Kontaktformular wurde eingerichtet.
+
+## Späterer Feinschliff
+
+- P3: Die unveränderte erste Adobe-Illustration ist etwa 8 MB groß und wird verzögert geladen. Für Veröffentlichung sind kleinere Adobe-Ausgaben und Messungen auf langsameren Verbindungen sinnvoll. Der Entwurf wird derzeit lokal geprüft; eine Performancefreigabe für Produktion wird nicht behauptet.
+- Die Waldreise verwendet in diesem ersten Entwurf das vollständige ausgewählte Bild mit Scrollfortschritt, sanfter vertikaler Bewegung und Kapitelübergängen. Eine echte Parallaxkomposition mit separat animierten Baum- und Pflanzenlagen erfordert weitere passende Adobe-Assets und ist noch nicht Bestandteil dieses Entwurfs.
 
 final result: passed
-
-## Ziel und Nachweise
-
-- Quelle: `design/waldlinge-verfeinert-desktop.png` (1122 × 1402 px); entspricht dem zusätzlich vom Nutzer angehängten Entwurf, ohne dessen Editorleiste.
-- Umsetzung: http://127.0.0.1:4173/, Startseite, helles Theme, Menü und FAQ geschlossen.
-- Desktop: Browserviewport 1440 × 1800 CSS-Pixel, devicePixelRatio 1; das Browserwerkzeug liefert 1425 × 1781 Bildpixel. Vergleich beider Darstellungen proportional auf maximal 720 × 900 Pixel normalisiert, ohne Strecken. Der schmale Scrollbalken ist Browserinfrastruktur.
-- Gesamtvergleich: `design/qa/comparison-desktop.jpg`, Quelle links / Implementierung rechts.
-- Fokussierter Vergleich für Logo, Schrift und Aktionen: `design/qa/comparison-hero.jpg`.
-- Browserbelege: `design/qa/desktop-final.png`, `desktop-full.png`, `mobile-390.png`, `mobile-320.png`, `tablet-768.png`.
-- Mobil: 390 × 844 bzw. 320 × 844 CSS-Pixel. Die generierte Mobilvorschau ist eine Anordnungsreferenz, keine pixelgenaue Vorlage; ihre zu breiten Seitenränder wurden gemäß Design.md korrigiert.
-
-## Befunde und Korrekturen
-
-1. **P2, behoben:** Bei 320 Pixeln erzeugte `body { min-width: 320px }` zusammen mit dem Windows-Scrollbalken einen 15-Pixel-Überlauf. Mindestbreite entfernt. Nachprüfung: Clientbreite und Scrollbreite beide 305 Pixel; Screenshot `mobile-320.png` zeigt vollständige Navigation und Buttons.
-2. **P2, behoben:** Im Tablet-Hero lag die helle Schrift stellenweise vor hellem Waldlicht. Für 701–959 Pixel steht der Text jetzt auf Creme oberhalb des Fotos. Der erneut erfasste Screenshot `tablet-768.png` bestätigt sichere Lesbarkeit und die richtige Bildfolge.
-3. **P3, verbessert:** Heroabschluss im ersten Desktopstand zu flach/asymmetrisch. Dezente beidseitige Rundung ergänzt; nach Änderung im Gesamt- und Detailvergleich geprüft.
-
-## Fünf Gestaltungsebenen
-
-- **Schrift:** Lokal geladene Lora Variable und Source Sans 3 Variable im Browser bestätigt. Überschriften, Text und Handlungsangebote haben die vorgesehene Hierarchie. Die echte Schrift hat leicht andere Proportionen als die generierten Buchstaben; Desktopüberschriften wirken geringfügig kompakter. Kein abgeschnittener Text.
-- **Abstände/Layout:** Heller Header, großer Fotoeinstieg, ruhiger Wertebereich, organischer Bild-/Textabschnitt stimmen strukturell überein. Unterhalb des Entwurfsausschnitts werden die vereinbarten Inhalte zu Alltag, Gemeinschaft, Elternfragen und Kontakt fortgesetzt. Mobil einspaltig und mit großen Bedienflächen.
-- **Farben:** Creme, Waldgrün, Salbei und Ocker folgen dem freigegebenen System. Goldene Buttons tragen dunkle Schrift. Tablet-/Mobiltext liegt auf einer ruhigen, deckenden Fläche.
-- **Bilder:** Original-Logo statt generierter Nachzeichnung; individuell erzeugte Wald- und Zapfenmotive mit passenden Blickrichtungen und Farben. Motivdetails unterscheiden sich naturgemäß vom Konzeptbild. WebP-Optimierung und separater mobiler Ausschnitt; botanisches Rasterasset statt selbstgezeichneter Ersatzillustration. Alle Bilder erfolgreich geladen.
-- **Inhalte:** Leitidee und Inhalte des Entwurfs umgesetzt. Keine erfundenen Öffnungszeiten, freien Plätze, Bewertungen oder Teamzahlen. Kontakt und Kita-Navigator erreichbar. Vor Livegang bleiben redaktionelle Bestätigung und Bildfreigabe erforderlich.
-
-## Funktionale Prüfung
-
-- Mobilmenü öffnen, Escape schließen und Fokus zurück zum Menübutton: bestanden.
-- Menüpunkt „Für Eltern“ führt zu `#eltern`, schließt Menü und setzt Fokus auf den Abschnitt: bestanden.
-- FAQ Anmeldung per Klick öffnen und per Enter schließen, `aria-expanded` und Sichtbarkeit synchron: bestanden.
-- Alle internen Sprungziele vorhanden; keine leeren Handlungsangebote.
-- Externe Anmeldung als externer Link mit Hinweis auf neuen Tab, E-Mail-Kontakt ohne vorgetäuschten Versand.
-- Breiten 320, 375, 390, 700, 768, 959, 960, 1024, 1440 geprüft. Dekoratives Blatt ragt absichtlich in den geclippten Abschnittsrand; kein Seitenscroll durch dieses Asset.
-- Browserkonsole bei der Prüfung ohne Fehler; Schriften und alle Bildassets geladen.
-- Produktionsbuild bestanden. Vier Worker-/Packaging-Tests bestanden.
-
-## Grenzen und spätere Verfeinerung
-
-- Kein vollständiges WCAG-Audit, kein physischer iOS-/Android-Gerätetest und noch kein eigenständiger Test bei 200 Prozent Browserzoom. Die bisherigen Prüfungen erfolgten im Chromium-basierten In-App-Browser.
-- Fotomotive sind generierte Konzeptbilder. Vor Veröffentlichung Umgang damit festlegen oder echte freigegebene Bilder einsetzen.
-- Impressum, Datenschutz und die ausführliche Geschichte sind derzeit auf der bestehenden Website verlinkt. Beim Domainwechsel müssen diese Ziele erhalten oder migriert werden.
-- Optionaler P3-Feinschliff: finale Originalfotos, exakte typografische Größenabstimmung mit dem Verein.
-
-## Abschluss
-
-- [x] Quelle und Browserdarstellung gemeinsam visuell verglichen.
-- [x] Erkannte P2-Probleme behoben und erneut erfasst.
-- [x] Wesentliche Interaktionen und schmale Darstellung geprüft.
-- [x] Keine offenen P0/P1/P2-Befunde im geprüften Umfang.
-
-## Ergänzung: Vereinsfilm (23.09.2026)
-
-- Offizieller Film nach dem Wertebereich, lokales Vorschaubild und ausdrückliche Aktivierung vor dem YouTube-iframe.
-- Aktivieren, Schließen und Fokus-Rückgabe im Browser geprüft. Vor Aktivierung ist kein iframe vorhanden.
-- Breiten 320, 390, 768 und 1440 px: kein horizontaler Überlauf. Mobile Videokarte visuell geprüft.
-- Einschränkung: YouTube-nocookie liefert HTTP 200, der iframe bleibt im integrierten Browser jedoch leer. Tatsächliche eingebettete Wiedergabe muss in einem normalen Browser bzw. auf dem Zielhosting geprüft werden. Direkter YouTube-Link bleibt verfügbar.
-- Produktionsbuild und alle vier Sites-Tests erfolgreich.
-
-## Verfeinerung der Video-Zustimmung
-- Dauerhaften Absatz entfernt; integrierte Zustimmungsansicht nach Klick auf Film ansehen.
-- Bei 320 px visuell geprüft, kein Überlauf. Escape gibt Fokus zurück. Vor Zustimmung 0 iframes, danach 1; Schließen entfernt den Player.
-
-
-## Originalfotos und Logos (29.09.2026)
-- Hero unverändert. Originalfotos: Baumwurzel im Entdeckerbereich; Werkeln und Bollerwagen als ruhige Fotostrecke ohne Bildbeschnitt.
-- Original-Partnerlogos direkt unter dem Hero. Auf kleinen Smartphones untereinander für lesbare Wortmarken.
-- Desktop-Fotostrecke und mobile Logos visuell geprüft. Produktionsbuild und vier Sites-Tests erfolgreich.
-
