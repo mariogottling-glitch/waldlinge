@@ -1,5 +1,11 @@
 # Waldlinge Main Page Design QA
 
+## Aktueller Status nach Nutzerkorrektur
+
+Die nachfolgenden älteren Screenshot-Befunde gelten für den vorherigen Entwurf. Auf ausdrücklichen Nutzerwunsch wurde die angehängte Aquarell-Scrollsektion entfernt und die Homepage insgesamt neu komponiert. Der Einstieg trennt Text und das erhaltene Hero-Bild, Ortsvorstellung steht vor den Werten, neue Konzeptfotos sind in drei abwechselnde Alltagskapitel integriert statt in einer zusätzlichen Galerie. Fotografie, individuelle Icons, Film, Originaleinblicke und Elterninformationen bilden die durchgehende Seitenabfolge. `src/neuentwurf.css` enthält die neue Gesamtgestaltung.
+
+Produktionsbuild und Sites-Paket erfolgreich; vier vorhandene Sites-Tests bestehen. Der lokale Server antwortet mit HTTP 200. Responsive Regeln für 320–1440px sind implementiert, aber dieser Gesamtentwurf wurde noch nicht visuell im Browser geprüft: Die zuletzt versuchte Browseröffnung wurde von der Browser-Sicherheitsprüfung blockiert. Die früheren Screenshots dürfen deshalb nicht als Nachweis für den neuen Aufbau verwendet werden. Aktueller Design-QA-Status: visuelle Prüfung ausstehend, keine finale Gestaltungsfreigabe.
+
 Stand: 30. September 2026.
 
 ## Vergleichsgrundlage

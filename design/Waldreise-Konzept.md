@@ -1,6 +1,8 @@
 # Waldlinge Konzept und Master Prompt für die neue Homepage
 
-Stand: 30. September 2026. Konzeptvorschlag vor dem ersten neuen Entwurf.
+Stand: 30. September 2026. Ursprünglicher Konzeptvorschlag; korrigierte Umsetzungsrichtung siehe folgenden Hinweis.
+
+**Korrektur des Nutzers:** Gewünscht ist eine vollständig neue Homepage auf Grundlage dieses Konzepts, keine zusätzliche Aquarellsektion auf dem bisherigen Layout. Die entsprechende Zusatzsektion wurde zurückgenommen. Fotografie und Illustrationen werden innerhalb der gesamten Seitenkomposition und ihrer inhaltlichen Kapitel kombiniert. Die früheren Vorgaben zu einer bloßen Erweiterung des alten Layouts sind damit überholt. Das vorhandene Hero-Bildmaterial bleibt erhalten.
 
 Dieses Dokument beschreibt eine hochwertige Homepage, die sich beim Scrollen zu einer einladenden Waldwelt entfaltet. Die Gestaltung soll Eltern neugierig machen, die Atmosphäre des Kindergartens vermitteln und ihnen klare Wege zum Kennenlernen und zur Anmeldung geben. Empfehlung: eine lichte, zusammenhängende Aquarellkulisse mit sorgfältig dosierter Bewegung, großzügiger Typografie und authentischen Alltagsfotos.
 

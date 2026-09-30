@@ -1,0 +1,406 @@
+/* Complete-page direction: spacious forest editorial, no appended watercolor scene. */
+:root {
+  --cream: #f6f4ed;
+  --sage: #e3e8df;
+  --gold: #caaa70;
+  --forest: #203f33;
+  --ink: #203f33;
+}
+.section-shell {
+  max-width: 1240px;
+}
+.site-header {
+  background: var(--cream);
+}
+.header-inner {
+  max-width: 1370px;
+  min-height: 94px;
+}
+.brand-name {
+  font-size: 30px;
+}
+.brand-subtitle {
+  font-size: 12px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  max-width: 1370px;
+  margin: 32px auto 0;
+  padding: 28px 32px 55px;
+  gap: 50px;
+  min-height: 0;
+  border-radius: 0;
+  overflow: visible;
+  color: var(--ink);
+}
+.hero-inner {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 0;
+  margin: 0;
+}
+.hero-copy {
+  max-width: 590px;
+}
+.hero-picture {
+  position: relative;
+  inset: auto;
+  z-index: auto;
+  grid-column: 2;
+  grid-row: 1;
+}
+.hero-picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 48% 48% 4px 4px / 25% 25% 4px 4px;
+}
+.hero::before,
+.hero::after {
+  display: none;
+}
+.hero h1 {
+  font-size: clamp(38px, 4.5vw, 66px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  text-shadow: none;
+}
+.hero p {
+  color: var(--body);
+  font-size: 21px;
+  line-height: 1.6;
+  text-shadow: none;
+  margin-top: 25px;
+}
+.hero .text-link {
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 16px;
+}
+.mobile-eyebrow {
+  display: block;
+  font: 600 11px/1.5 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #667861;
+  margin-bottom: 24px;
+}
+.hero-actions {
+  flex-wrap: wrap;
+  gap: 18px 25px;
+  margin-top: 30px;
+}
+.button {
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 14px 25px;
+}
+.hero-scroll {
+  display: none;
+}
+.partners {
+  max-width: 1176px;
+  padding-block: 25px 35px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.partners p {
+  font-size: 13px;
+}
+.partners img {
+  max-height: 48px;
+  object-fit: contain;
+}
+.about-kindergarten {
+  padding-block: 95px 75px;
+  border-top: 0;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 95px;
+}
+.about-kindergarten h2 {
+  font-size: clamp(32px, 3.3vw, 46px);
+}
+.about-kindergarten p:not(.eyebrow) {
+  font-size: 18px;
+}
+.values {
+  background: var(--sage);
+  max-width: none;
+  padding: 70px max(32px, calc((100% - 1176px) / 2)) 80px;
+}
+.location-line {
+  display: none;
+}
+.values-grid {
+  gap: 55px;
+  margin-top: 35px;
+}
+.value-botanical {
+  width: 115px;
+  height: 115px;
+}
+.values-grid h3 {
+  font-size: 25px;
+}
+.values-grid p {
+  font-size: 18px;
+}
+.discovery {
+  max-width: 1240px;
+  margin: 90px auto 0;
+  background: transparent;
+  gap: 70px;
+  min-height: 0;
+  padding-inline: 32px;
+  overflow: visible;
+}
+.discovery-photo {
+  height: auto;
+  max-height: none;
+  border-radius: 5px;
+  object-fit: contain;
+}
+.discovery-copy {
+  padding: 0;
+}
+.discovery-copy p:not(.eyebrow) {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.day {
+  padding-block: 95px 85px;
+}
+.day-grid {
+  display: block;
+  margin-top: 60px;
+}
+.day-grid article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 85px;
+  align-items: center;
+  text-align: left;
+  border: 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+.chapter-photo {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.day-grid article:first-child .chapter-photo {
+  max-width: 330px;
+  margin-inline: auto;
+}
+.day-grid article:nth-child(even) .chapter-photo {
+  grid-column: 2;
+}
+.day-grid article .value-botanical {
+  width: 84px;
+  height: 84px;
+  margin: 0;
+  grid-column: 2;
+}
+.day-grid article:nth-child(even) .value-botanical,
+.day-grid article:nth-child(even) h3,
+.day-grid article:nth-child(even) p {
+  grid-column: 1;
+}
+.day-grid h3 {
+  grid-column: 2;
+  font-size: 34px;
+}
+.day-grid p {
+  grid-column: 2;
+  font-size: 19px;
+  line-height: 1.65;
+  align-self: start;
+  margin-top: 0;
+}
+.concept-photo-note {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.film {
+  padding-top: 65px;
+  padding-bottom: 70px;
+  background: var(--sage);
+  max-width: none;
+  padding-inline: max(32px, calc((100% - 1176px) / 2));
+}
+.film-frame {
+  max-width: 1000px;
+  margin-inline: auto;
+  border-radius: 5px;
+}
+.film-details {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.original-moments {
+  padding-block: 90px;
+}
+.moments-grid {
+  gap: 45px;
+}
+.moments-grid img {
+  border-radius: 5px;
+}
+.community {
+  padding-block: 95px;
+}
+.community-inner {
+  grid-template-columns: 1fr 1.15fr;
+}
+.community-inner > div:last-child p {
+  font-size: 18px;
+}
+.story {
+  padding-block: 80px;
+}
+.parents {
+  border-top: 1px solid var(--line);
+  padding-block: 80px;
+}
+.forest-playgroup {
+  background: var(--sage);
+  max-width: none;
+  padding: 60px max(32px, calc((100% - 1176px) / 2));
+  border: 0;
+}
+.join {
+  background: var(--cream);
+  padding-block: 90px;
+}
+.join h2 {
+  max-width: 740px;
+  margin-inline: auto;
+}
+@media (max-width: 959px) {
+  .hero {
+    gap: 30px;
+    padding-top: 10px;
+  }
+  .hero-inner {
+    padding: 0;
+  }
+  .hero h1 {
+    font-size: 39px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .hero .desktop-break {
+    display: none;
+  }
+  .about-kindergarten,
+  .discovery {
+    gap: 40px;
+  }
+  .day-grid article {
+    gap: 12px 35px;
+  }
+}
+@media (max-width: 700px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 28px 24px 40px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .hero-inner {
+    width: 100%;
+  }
+  .hero-picture {
+    order: 2;
+    width: 100%;
+    height: auto;
+  }
+  .hero-picture img {
+    height: auto;
+    border-radius: 5px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 8.5vw, 48px);
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .mobile-eyebrow {
+    margin-bottom: 19px;
+  }
+  .partners {
+    margin-inline: 24px;
+    padding-block: 25px;
+  }
+  .about-kindergarten {
+    padding-block: 55px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-inline: auto;
+  }
+  .values {
+    padding: 50px 24px;
+  }
+  .values-grid {
+    gap: 25px;
+  }
+  .discovery {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    gap: 30px;
+    padding-inline: 24px;
+  }
+  .discovery-copy {
+    padding: 0;
+  }
+  .day {
+    padding-block: 55px;
+  }
+  .day-grid {
+    margin-top: 35px;
+  }
+  .day-grid article {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .day-grid article .value-botanical {
+    margin-top: 6px;
+  }
+  .day-grid h3 {
+    font-size: 29px;
+  }
+  .day-grid p {
+    font-size: 18px;
+  }
+  .day-grid article:first-child .chapter-photo {
+    max-width: 300px;
+  }
+  .film {
+    padding: 50px 24px;
+  }
+  .original-moments,
+  .community,
+  .story,
+  .parents,
+  .join {
+    padding-block: 55px;
+  }
+  .forest-playgroup {
+    padding: 50px 24px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BotanicalIcon } from "./BotanicalIcon";
-import { Waldreise, usePageMotion } from "./Waldreise";
+import { usePageMotion } from "./Waldreise";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -324,9 +324,9 @@ export function App() {
                 Waldkindergarten in Bornheim
               </span>
               <h1 id="hero-title">
-                Draußen wachsen.
+                Kindheit braucht
                 <br />
-                Gemeinsam geborgen.
+                Raum zum Wachsen.
               </h1>
               <p>
                 Raum zum Entdecken. Zeit zum Wachsen.
@@ -343,7 +343,7 @@ export function App() {
               </div>
             </div>
           </div>
-          <a className="hero-scroll" href="#waldreise">
+          <a className="hero-scroll" href="#kindergarten">
             Unseren Wald entdecken <ArrowRight size={18} aria-hidden="true" />
           </a>
         </section>
@@ -370,7 +370,37 @@ export function App() {
             />
           </div>
         </section>
-        <Waldreise />
+        <section
+          className="about-kindergarten section-shell"
+          id="ort"
+          aria-labelledby="about-title"
+          data-reveal
+        >
+          <div>
+            <p className="eyebrow">Waldlinge Bornheim e.V.</p>
+            <h2 id="about-title">
+              Draußen zu Hause.
+              <br />
+              Mitten in Bornheim.
+            </h2>
+          </div>
+          <div>
+            <p>
+              Seit Januar 2020 gibt es die Waldlinge: einen aus Elterninitiative
+              gegründeten Waldkindergarten für Kinder ab drei Jahren bis zum
+              Schuleintritt.
+            </p>
+            <p>
+              Unser Gruppenbauwagen steht auf dem Gelände des SSV Merten. Von
+              dort geht es in den angrenzenden Wald – zum Spielen, Forschen und
+              Erleben. Unser pädagogisches Team begleitet die Kinder
+              bedürfnisorientiert, individuell und auf Augenhöhe.
+            </p>
+            <TextLink href="https://waldlinge.org/wer-wir-sind/">
+              Mehr über die Waldlinge
+            </TextLink>
+          </div>
+        </section>
         <section
           className="values section-shell"
           id="kindergarten"
@@ -398,36 +428,6 @@ export function App() {
                 <p>{text}</p>
               </article>
             ))}
-          </div>
-        </section>
-        <section
-          className="about-kindergarten section-shell"
-          aria-labelledby="about-title"
-          data-reveal
-        >
-          <div>
-            <p className="eyebrow">Waldlinge Bornheim e.V.</p>
-            <h2 id="about-title">
-              Draußen zu Hause.
-              <br />
-              Mitten in Bornheim.
-            </h2>
-          </div>
-          <div>
-            <p>
-              Seit Januar 2020 gibt es die Waldlinge: einen aus Elterninitiative
-              gegründeten Waldkindergarten für Kinder ab drei Jahren bis zum
-              Schuleintritt.
-            </p>
-            <p>
-              Unser Gruppenbauwagen steht auf dem Gelände des SSV Merten. Von
-              dort geht es in den angrenzenden Wald – zum Spielen, Forschen und
-              Erleben. Unser pädagogisches Team begleitet die Kinder
-              bedürfnisorientiert, individuell und auf Augenhöhe.
-            </p>
-            <TextLink href="https://waldlinge.org/wer-wir-sind/">
-              Mehr über die Waldlinge
-            </TextLink>
           </div>
         </section>
         <section
@@ -499,58 +499,9 @@ export function App() {
               </p>
             </article>
           </div>
-        </section>
-        <section
-          className="nature-moments section-shell"
-          id="entdeckungen"
-          aria-labelledby="nature-moments-title"
-        >
-          <div className="nature-moments-heading" data-reveal>
-            <p className="eyebrow">Kindheit mit allen Sinnen</p>
-            <h2 id="nature-moments-title">
-              Kleine Dinge.
-              <br /> Große Entdeckungen.
-            </h2>
-            <p>Staunen. Matschen. Miteinander sein.</p>
-          </div>
-          <div className="nature-moments-grid">
-            <figure data-reveal>
-              <img
-                src="/images/adobe-photos/fern.png"
-                alt="KI-generiertes Konzeptbild: Ein Kind zeigt einen Farnwedel im sommergrünen Wald"
-                width="960"
-                height="1234"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Die Welt steckt voller Wunder.</figcaption>
-            </figure>
-            <figure data-reveal style={{ "--reveal-delay": "100ms" }}>
-              <img
-                src="/images/adobe-photos/mud.png"
-                alt="KI-generiertes Konzeptbild: Kinderhände mischen Erde und Blätter in einer Matschküche"
-                width="1200"
-                height="933"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Ideen brauchen manchmal Matsch.</figcaption>
-            </figure>
-            <figure data-reveal style={{ "--reveal-delay": "200ms" }}>
-              <img
-                src="/images/adobe-photos/circle.png"
-                alt="KI-generiertes Konzeptbild: Fünf Kinder halten sich auf einer grünen Waldlichtung an den Händen"
-                width="1200"
-                height="933"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Zusammen wächst das Vertrauen.</figcaption>
-            </figure>
-          </div>
           <p className="concept-photo-note">
-            KI-generierte Konzeptbilder · Echte Einblicke bei den Waldlingen
-            findet ihr im Film und in den Fotos darunter.
+            Die drei Kapitelbilder sind KI-generierte Bildideen. Echte
+            Waldlinge-Einblicke zeigen der Film und die folgenden Fotos.
           </p>
         </section>
         <WaldlingeFilm />
@@ -761,9 +712,9 @@ export function App() {
                 Waldlinge
               </a>
               <p>
-                Draußen wachsen.
+                Kindheit braucht
                 <br />
-                Gemeinsam geborgen.
+                Raum zum Wachsen.
               </p>
             </div>
             <div>
