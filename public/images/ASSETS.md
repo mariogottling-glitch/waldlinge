@@ -36,3 +36,19 @@ Gemeinsamer Generierungsstil: zeitgemäße, zurückhaltende redaktionelle Fotogr
 - `adobe-photos/fern.png`: neugieriges Kind zeigt einen scharf fokussierten Farnwedel, Gesicht bewusst in weicher Unschärfe; 960 × 1234. Original: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:4f3535c9-2f51-4eb3-a95b-893df09bab94. Adobe-Verkleinerung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:1d4a3bbb-d1c0-4ed9-a786-b757bc5cc5c3.
 - `adobe-photos/mud.png`: zwei Paar Kinderhände mit Erde, Blättern und Emailschüsseln an einer hölzernen Matschküche; 1200 × 933. Original: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d22f5b90-3724-49cf-bcfa-b81366fc8a77. Adobe-Verkleinerung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:a3f5104d-2749-45a2-af8c-15a4f3b97069.
 - `adobe-photos/circle.png`: fünf Kinder halten sich in einer sommerlichen Waldlichtung an den Händen; 1200 × 933. Original: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:b0ded27b-b1d7-4e95-aadf-0324ca590bdf. Adobe-Verkleinerung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:6e247d79-9b0f-47f1-b7a6-bea503c97d48.
+
+## Neue Waldwelt – erster Neustart-Entwurf
+
+Die vorstehenden Hero- und Konzeptfotografie-Einträge dokumentieren frühere Entwürfe. Der vollständige Neustart verwendet als fotografische Einblicke ausschließlich die drei vorhandenen Originalfotos und das lokale Filmvorschaubild. Die KI-Fotos sind weiterhin gespeichert, werden aber in diesem neuen Entwurf nicht angezeigt.
+
+Alle neuen Illustrationen sind mit Adobe Firefly erzeugt, mit Adobe freigestellt und lokal gespeichert. Keine externen Adobe-Aufrufe im Websitebetrieb. Vollständig sichtbare eigene Konzeptmotive; sie bilden keinen konkreten Wald oder tatsächliche Kinder des Kindergartens ab.
+
+| Lokale Datei | Abmessungen | Herkunft und Bearbeitung |
+| --- | --- | --- |
+| `adobe-forest/forest.png` | 1111 × 1082 | Neue lichte Waldkomposition mit zwei kleinen Rückenfiguren. Firefly-Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:3f7f9c23-f061-4e2a-81ba-f0e189b424fa. Adobe-Freistellung und Entfernung überschüssigen transparenten Außenraums mit Abstand zum vollständigen Motiv. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:1934d565-38b2-40de-96fd-1f0ea77beb35. |
+| `adobe-forest/birches.png` | 896 × 1168 | Drei vollständige Birken. Generierung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:f5f068a6-67bc-490d-a3eb-9ac11a2ca432. Die zunächst gelblichen Kronen wurden ausschließlich mit Adobe ins Sommergrün korrigiert, anschließend freigestellt. Finale Ausgabe https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d98c8f23-e6ef-4099-858b-6e8da376336c. |
+| `adobe-forest/ferns.png` | 1152 × 896 | Vollständiges Farn- und Moosmotiv mit zwei Steinen. Generierung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d9ffecf3-6ba0-4d2f-9fb2-d6f937b06b34. Adobe-Freistellung https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:12ff71e9-a215-48e5-89ec-35c442a55ea5. |
+
+Die drei neuen PNGs zusammen belegen 2.64 MB (dezimal). Die vorhandenen sechs Adobe-Icons werden wiederverwendet. Es wurden drei neue Motive generiert und eine generative Farbkorrektur vorgenommen; keine zusätzlichen Varianten oder KI-Fotos für diesen Entwurf. Alle finalen Motive wurden über Adobe-Vorschauen visuell auf vollständige Figuren, Pflanzen und Baumkronen kontrolliert.
+
+Die Filmvorschau verwendet lokal das hochauflösende Originalfoto `waldlinge-bollerwagen.webp` als Titelbild. Es ist kein Filmstandbild. Das frühere 480-Pixel-YouTube-Vorschaubild bleibt gespeichert; ein höher aufgelöstes originales YouTube-Vorschaubild war nicht verfügbar. Der Film selbst und die Zustimmungslogik bleiben unverändert.

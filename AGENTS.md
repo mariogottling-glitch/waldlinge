@@ -50,5 +50,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Bestätigte Bewegungsrichtung
 
 - Nutzer bestätigt das Prinzip von Every Last Drop und ergänzt https://www.mindrobotics.com/ sowie https://numa.uprock.pro/ als maßgebliche Referenzen. Gewünscht sind mit dem Scrollen aufgebaute und wandernde Szenen über die gesamte Homepage, in einem familienfreundlichen Waldkindergartenstil.
-- Aktueller Auftrag ist Stil- und Technikanalyse sowie ein hochwertiges Gesamt-Konzept, noch keine weitere Bildergenerierung oder Änderung am Websiteentwurf. Neues Konzept und Master-Prompt: `design/Waldlinge-Neustart-Konzept.md`; Referenzaufnahmen: `design/scroll-references/`.
+- In dieser Konzeptphase war der Auftrag zunächst Stil- und Technikanalyse ohne weitere Bildproduktion. Die anschließende Umsetzungsfreigabe steht unten. Konzept und Master-Prompt: `design/Waldlinge-Neustart-Konzept.md`; Referenzaufnahmen: `design/scroll-references/`.
 - Leitidee: „Ein Wald, der mit euch wächst.“ Zusammenhängende lichte Waldwelt, wiederkehrender Weg, kontrolliert bewegliche Illustrationslagen, wenige Rückenfiguren und ruhige lesbare Informationsbereiche. Keine zusätzliche dekorative Scrollsektion als Ersatz für den Neuentwurf.
+
+## Freigabe des ersten Neustart-Entwurfs
+
+- Nutzer beauftragt nun ausdrücklich die Umsetzung des bestätigten Neustart-Konzepts. Die Beschränkung auf Analyse und Konzept ist damit aufgehoben. Einen vollständig neuen ersten funktionierenden Entwurf bauen und lokal zeigen; den Archivstand erhalten.
+- Neue Bildproduktion bleibt ausschließlich Adobe. Erster Entwurf nutzt drei eigene freigestellte Adobe-Motive (lichter Wald mit zwei Rückenfiguren, Birken, Farne) und die vorhandene Adobe-Iconfamilie. Originalfotos, Originallogos und der offizielle Vereinsfilm ergänzen die Illustrationen.
