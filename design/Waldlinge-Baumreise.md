@@ -56,3 +56,9 @@ Die Kindergartenbeschreibung und geprüfte Fakten stehen zusammen auf einer zur�
 Zusätzliche Naturgrafiken: Adobe-Firefly-Körper- und Flügellayer aus dem bisherigen Vogel sowie ein neuer Eichenzweig und Schmetterling. Das freigestellte Flügelmotiv wird als Vorder- und Hinterflügel an zwei Schulterpunkten bewegt. Nur die Flügel drehen im Flügelschlag, der Körper bleibt als eigene Ebene stabil. Kronen und Farne haben getrennte Ebenen für Scrollbewegung und Wind, um konkurrierende Transformationen zu vermeiden.
 
 Responsive Bewegungslogik gilt ausdrücklich auch unter 960px. Eine stets aktive Basisbedingung verhindert, dass GSAP bei gleichzeitig falscher Desktop- und Reduced-Motion-Bedingung die mobile Animation überspringt. Die ruhige Ansicht erhält alle Grafiken und Inhalte.
+
+## Weiterer Feinschliff: Vordergrund und Hintergrund
+
+Die Vogellage gehört jetzt zur zusammenhängenden Waldkulisse, zwischen Wolken und Bäumen. Sein Start liegt hinter dem linken Stamm; die Flugbahn geht über die vollständige Browserbreite und endet hinter dem rechten Baum. Kein Überblenden auf freier Fläche. Der Scrollbereich reicht vom Eintritt der Kindergartenvorstellung bis zu deren oberem Viertel; eine geklammerte Startposition sorgt auf kleinen Bildschirmen für einen verdeckten Start bei Scrollstand null. Sein Höhenanker wird anhand des tatsächlichen Abschnitts nachgemessen, wenn sich das Layout ändert.
+
+Die Eichenzweige wachsen von maximal 285 auf 420px, auf 390px breiten Smartphones von 140 auf rund 191px. Transparente Blattkanten rahmen die vorhandenen Inhaltsflächen. Eine einzige neue freigestellte Adobe-Wolkengruppe ergänzt drei weit auseinander liegende Hintergrundstellen. Unterschiedliche Größe und Deckkraft sowie langsame Zyklen von 18 bis 24 Sekunden halten den Hintergrund zurückhaltend. Inhalte, Scrollstrecke, Filmzustimmung und Elterninfos werden nicht erweitert.

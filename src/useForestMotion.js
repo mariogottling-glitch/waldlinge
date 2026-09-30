@@ -139,40 +139,50 @@ export function useForestMotion(root, reduceMotion = false) {
             { y: 0, duration: 0.37, ease: "sine.inOut" },
             0.27,
           );
-        watchLoop(flap, welcome, "top 92%", "65% 25%");
+        watchLoop(flap, welcome, "clamp(top 90%)", "top 28%");
         const bird = gsap.timeline({
           defaults: { ease: "none" },
           scrollTrigger: {
             trigger: welcome,
-            start: "top 92%",
-            end: "65% 25%",
+            start: "clamp(top 90%)",
+            end: "top 28%",
             scrub: true,
             invalidateOnRefresh: true,
           },
         });
-        bird
-          .fromTo(
-            scope(".journey-bird"),
+        bird.fromTo(
+          scope(".journey-bird"),
+          {
+            x: () => -scope(".journey-bird")[0].clientWidth * 0.85,
+            y: -8,
+            rotation: 8,
+            opacity: 1,
+          },
+          {
+            x: () =>
+              scope(".bird-flight")[0].clientWidth +
+              scope(".journey-bird")[0].clientWidth * 0.25,
+            y: -92,
+            rotation: -12,
+            duration: 1,
+          },
+          0,
+        );
+        scope("[data-cloud]").forEach((cloud, index) => {
+          const drift = gsap.fromTo(
+            cloud.querySelector("img"),
+            { x: -12 },
             {
-              x: () => -welcome.clientWidth * 0.3,
-              y: -8,
-              rotation: 8,
-              opacity: 0,
+              x: 18,
+              duration: 18 + index * 3,
+              ease: "sine.inOut",
+              repeat: -1,
+              yoyo: true,
+              paused: true,
             },
-            { opacity: 1, duration: 0.12 },
-            0,
-          )
-          .to(
-            scope(".journey-bird"),
-            {
-              x: () => welcome.clientWidth * 0.65,
-              y: -92,
-              rotation: -12,
-              duration: 1,
-            },
-            0,
-          )
-          .to(scope(".journey-bird"), { opacity: 0, duration: 0.15 }, 0.85);
+          );
+          watchLoop(drift, cloud);
+        });
         scope("[data-ambient]").forEach((item, index) => {
           const foliage = item.querySelector("img");
           const wind = gsap.fromTo(

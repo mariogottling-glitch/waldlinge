@@ -71,3 +71,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Der Nutzer wünscht beim Vogel einen echten Flügelschlag, nicht nur ein verschobenes Standbild. Der Vogel besteht aus eigenen Adobe-Körper- und Flügelebenen; Flügelbewegung läuft unabhängig vom Scrollfortschritt.
 - Die Waldwelt soll entlang der Reise sichtbar leben: sanft bewegte Eichenzweige und Farne, kleine flatternde Schmetterlinge. Lesetexte bleiben ruhig. Bewegungen pausieren außerhalb ihres sichtbaren Abschnitts und bei verborgenem Browser-Tab; Bewegungsreduktion erhält die vollständige statische Gestaltung.
 - Frei stehende Zusatztexte aufräumen: kurze inhaltliche Abschnittsbezeichnungen, gebündelte Kindergarteninfos und Werte, zusammengehörige Gemeinschafts- und Elterninformationen. Wichtige Originalinhalte erhalten, poetische Wiederholungen reduzieren.
+
+## Feinschliff: Flugbahn, Blattgröße und Wolken
+
+- Der Vogel soll hinter dem linken Baum hervorkommen und über die gesamte Bildbreite fliegen. Die Baumgrafiken liegen tatsächlich vor seiner Fluglage; kein bloßes Einblenden im freien Inhaltsbereich. Der bestehende Flügelschlag bleibt erhalten.
+- Die gelegentlich eingeblendeten bzw. bewegten Eichenzweige deutlich größer zeigen. Sie rahmen die Inhaltsgruppen ein; Text und Bedienelemente bleiben lesbar.
+- Hier und da ganz zarte Wolken im Hintergrund ergänzen, um den freien Flächen mehr Tiefe zu geben. Adobe-Illustration mit weichen creme- und salbeifarbenen Schatten, sparsame Platzierung und langsame Bewegung.
+- Bestehende Gestaltung weiter verfeinern; kein erneuter Layoutwechsel und keine zusätzlichen Textsektionen.

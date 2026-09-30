@@ -69,12 +69,26 @@ function Link({ href, children, external = false, ...props }) {
 function ForestWorld() {
   const frame = useRef(null);
   const [segments, setSegments] = useState(24);
+  const [birdTop, setBirdTop] = useState(840);
   useEffect(() => {
     const node = frame.current;
     if (!node) return;
     // Alternate the same Adobe bark passage vertically so every joint meets
     // its matching edge. The scene itself never repeats.
     const measure = () => {
+      const welcome = node.parentElement.querySelector("#kindergarten");
+      if (welcome) {
+        const inset = window.matchMedia("(max-width: 700px)").matches
+          ? -15
+          : 30;
+        setBirdTop(
+          Math.round(
+            welcome.getBoundingClientRect().top -
+              node.getBoundingClientRect().top +
+              inset,
+          ),
+        );
+      }
       const trunk = node.querySelector(".tree-trunk");
       const tile = node.querySelector(".trunk-segment");
       if (!trunk || !tile) return;
@@ -87,6 +101,24 @@ function ForestWorld() {
   }, []);
   return (
     <div ref={frame} className="forest-frame" aria-hidden="true">
+      {["entry", "clearing", "distance"].map((place) => (
+        <div
+          key={place}
+          className={`forest-cloud forest-cloud--${place}`}
+          data-cloud
+        >
+          <img
+            src="/images/adobe-life/clouds.png"
+            width="1000"
+            height="571"
+            alt=""
+            loading={place === "entry" ? "eager" : "lazy"}
+          />
+        </div>
+      ))}
+      <div className="bird-flight" style={{ top: birdTop }}>
+        <LivingBird />
+      </div>
       {["left", "right"].map((side) => (
         <div key={side} className={`edge-tree edge-tree--${side}`}>
           <div className="tree-trunk">
@@ -479,7 +511,6 @@ export function ForestHome() {
             tabIndex="-1"
             aria-labelledby="welcome-title"
           >
-            <LivingBird />
             <div className="section-heading" data-reveal>
               <p className="eyebrow">Unser Kindergarten</p>
               <h2 id="welcome-title">

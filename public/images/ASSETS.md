@@ -83,3 +83,8 @@ Alle vier folgenden PNG-Dateien wurden ausschließlich mit Adobe erstellt bzw. b
 Vogelreferenz: [bestehender Adobe-Vogel](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:048760f0-3fec-4d5e-827d-81ac8f54aed8).
 
 Finale Adobe-Ausgaben: [Körper](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:59b36218-25b9-46da-9ee0-ac6bf5d91eff), [Flügel](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:dc3ff74d-99f9-4575-bb77-cdc3bc6d164a), [Eichenzweig](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:dd2a4d11-1d45-4c08-8928-63a0ea722069), [Schmetterling](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:43f14ce7-4f3a-4b97-a2e4-812dfccd0fc2).
+
+## Zarte Wolken für den Feinschliff, 1. Oktober 2026
+
+- `adobe-life/clouds.png`: neue Adobe-Firefly-Wolkengruppe, 1000 × 571px. Vollständiges freigestelltes Sommermotiv mit weichen creme-, perlgrauen und salbeifarbenen Schatten. Ausschließlich mit Adobe generiert, freigestellt und verkleinert. Die vorhandene Waldgestaltung erhält drei sparsame Hintergrundlagen mit unterschiedlicher Größe und geringer Deckkraft.
+- [Firefly-Ausgabe](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:71837472-59a9-46fc-8580-ab6ff246e4c1), [Adobe-Freistellung](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:db3bcbe5-19e9-479e-a886-a62d9bda1b0f), [finale Website-Ausgabe](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:a8f0b059-8645-4cf2-93f2-19008f87f6e6).
