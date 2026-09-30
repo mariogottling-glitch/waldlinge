@@ -39,3 +39,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Korrektur: vollständiger Neuentwurf
 
 - Nutzer wollte keine zusätzliche Aquarellsektion auf der bisherigen Seite. Diese Sektion und die eigenständige KI-Fotogalerie entfallen. Die gesamte Homepage wird als zusammenhängender neuer Entwurf gestaltet: heller typografischer Einstieg mit separat platziertem bestehendem Hero-Foto, Ortsvorstellung, Werte, fotografische Entdeckungskapitel, Film, echte Einblicke und Elterninformationen. Neue KI-Fotos werden in die inhaltlichen Kapitel integriert. Keine aquarellartige Hintergrundfärbung als angehängter Effekt. Bestehende Kontakt- und Inhaltsregeln bleiben gültig.
+
+## Neustart nach Archivierung
+
+- Die aktuelle Homepage ist auf ausdrücklichen Nutzerwunsch unter Commit `aa9bf99` gesichert: lokales ZIP `design/archive/waldlinge-vor-neustart-2026-09-30.zip` mit allen versionierten Dateien sowie Archivbranch `codex/archive-waldlinge-2026-09-30`. Der Archivstand soll erhalten bleiben.
+- Neuer Auftrag: vollständig von vorne beginnen, neues Raster und eine neue Version. Die Seite soll überwiegend aus sanften Illustrationen zu Wald, Erforschen und Abenteuer bestehen. Kinder nur sparsam andeuten, meist von hinten und ohne sichtbare Gesichter. Hochwertige räumliche Scrollbewegung und sich zunehmend aufbauende Szenen sind zentrale Gestaltungsziele.
+- Frühere Festlegungen zum alten Raster, zur fotografischen Dominanz oder zum Beibehalten des alten Hero auf der neuen Version sind keine verbindliche Vorlage für diesen Neustart. Inhaltsrichtigkeit, Originallogos, Filmzustimmung, mobile Bedienbarkeit und ausschließlich Adobe für neue Bilder bleiben gültig.
+- Vor weiterer Bildproduktion drei Scrollreferenzen vergleichen: Firewatch (gestaffelte Waldkulisse), Every Last Drop (scrollgesteuerter Szenenaufbau) und The Boat (illustrierte Erzählung mit bewegten Ebenen). Zuerst die gewünschte Bewegungsrichtung vom Nutzer auswählen lassen; bis dahin keine weiteren Bildgenerierungscredits einsetzen und den archivierten Entwurf nicht umbauen.
