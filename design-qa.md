@@ -48,3 +48,16 @@ Reduzierte Bewegung ist in CSS und JavaScript berücksichtigt: keine gehaltene S
 - Die Waldreise verwendet in diesem ersten Entwurf das vollständige ausgewählte Bild mit Scrollfortschritt, sanfter vertikaler Bewegung und Kapitelübergängen. Eine echte Parallaxkomposition mit separat animierten Baum- und Pflanzenlagen erfordert weitere passende Adobe-Assets und ist noch nicht Bestandteil dieses Entwurfs.
 
 final result: passed
+
+## Ergänzung: Pinterest-Konzeptfotos
+
+Am 30.09.2026 wurde die Nutzer-Pinnwand „Waldlinge Homepage“ mit 21 Pins im Browser angesehen. Drei Adobe-Firefly-Motive greifen fotografische Stimmung und Themen auf: Farnwedel zeigen, gemeinsam an einer Matschküche arbeiten und ein Kinderkreis. Gedämpfte Grün- und Cremetöne, natürliche Texturen und weiches Waldlicht passen zur vorhandenen Illustration. Die neue Bildreihe steht zwischen den illustrierten Alltagswerten und dem offiziellen Film. Hero, Originalfotos, Logos und bestehende Inhalte bleiben erhalten.
+
+- Desktopansicht: `design/qa-waldreise/pinterest-photos-desktop-1440.jpg`, 1440 × 1000. Drei großzügige, unten ausgerichtete Fotografien mit kurzen Bildunterschriften.
+- Mobile Ansicht: `design/qa-waldreise/pinterest-photos-mobile-390.jpg`, 390 × 844. Fotos untereinander, Texte und Bildunterschriften mittig.
+- Browserprüfung bei 320, 390, 700, 768, 1024 und 1440 Pixeln: keine horizontalen Überläufe, alle drei Fotos geladen; Seitenverhältnisse der Originale bleiben erhalten. Es gibt keinen zusätzlichen CSS-Beschnitt.
+- Adobe-Verkleinerungen wurden vor Einbindung visuell geprüft. Ein sichtbarer Hinweis und Alternativtexte kennzeichnen die synthetischen Konzeptbilder. Sie dokumentieren keine tatsächlichen Waldlinge-Kinder.
+- Neue Fotos nutzen denselben bestehenden Reveal-Mechanismus und werden verzögert geladen. Reduzierte Bewegung bleibt durch die bestehende CSS-Regel berücksichtigt.
+- Produktionsbuild inklusive Sites-Ausgaben erfolgreich. Die drei neuen PNGs benötigen zusammen rund 5,1 MB; eine abschließende Performancefreigabe für Veröffentlichung ist weiterhin offen.
+
+Keine neuen P0/P1/P2-Befunde in dieser Erweiterung.

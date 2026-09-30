@@ -26,6 +26,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Neue Konzeptphase vom 30. September 2026
 
+- Pinterest-Pinnwand https://de.pinterest.com/glttgling/waldlinge-homepage/ (geteilt als https://pin.it/1inhi2h8v) ist eine zusätzliche fotografische Stilreferenz. Gewünscht ist eine Mischung aus Illustration und realistisch wirkenden Fotos. Referenzmotive: neugierige Kinder auf Augenhöhe, Farn und Naturfundstücke, Matschküche und gemeinsames Spielen. Neue Adobe-Firefly-Fotos mit gedämpftem Sommergrün und weichem natürlichem Waldlicht ergänzen die Originalaufnahmen; sie sind ausdrücklich als Konzeptbilder zu kennzeichnen und zeigen keine tatsächlichen Waldlinge-Kinder. Pinterest-Fotos werden nicht übernommen oder identisch nachgebaut.
+
 - Zunächst Master-Prompt und Konzept ausarbeiten, bevor ein neuer visueller Entwurf beginnt. Das Konzept ist eine Erweiterungsrichtung, keine Freigabe zum Ersetzen des bisher genehmigten Layouts oder Hero-Bildes.
 - Gewünschte Wirkung: hochwertige, einladende Homepage mit sanften Naturfarben, Vertrauen und einer beim Scrollen zunehmend entstehenden Waldwelt. Themen: Kinder, Entdeckung, Entwicklung, Abenteuer und Geborgenheit.
 - Neue Grafiken und Bilder in diesem Projekt ausschließlich mit dem Adobe-Plugin erstellen oder bearbeiten. Keine andere Bildgenerierung als Ersatz. Bestehende Originalfotos und Originallogos bleiben gültige Quellen.

@@ -500,6 +500,59 @@ export function App() {
             </article>
           </div>
         </section>
+        <section
+          className="nature-moments section-shell"
+          id="entdeckungen"
+          aria-labelledby="nature-moments-title"
+        >
+          <div className="nature-moments-heading" data-reveal>
+            <p className="eyebrow">Kindheit mit allen Sinnen</p>
+            <h2 id="nature-moments-title">
+              Kleine Dinge.
+              <br /> Große Entdeckungen.
+            </h2>
+            <p>Staunen. Matschen. Miteinander sein.</p>
+          </div>
+          <div className="nature-moments-grid">
+            <figure data-reveal>
+              <img
+                src="/images/adobe-photos/fern.png"
+                alt="KI-generiertes Konzeptbild: Ein Kind zeigt einen Farnwedel im sommergrünen Wald"
+                width="960"
+                height="1234"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Die Welt steckt voller Wunder.</figcaption>
+            </figure>
+            <figure data-reveal style={{ "--reveal-delay": "100ms" }}>
+              <img
+                src="/images/adobe-photos/mud.png"
+                alt="KI-generiertes Konzeptbild: Kinderhände mischen Erde und Blätter in einer Matschküche"
+                width="1200"
+                height="933"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Ideen brauchen manchmal Matsch.</figcaption>
+            </figure>
+            <figure data-reveal style={{ "--reveal-delay": "200ms" }}>
+              <img
+                src="/images/adobe-photos/circle.png"
+                alt="KI-generiertes Konzeptbild: Fünf Kinder halten sich auf einer grünen Waldlichtung an den Händen"
+                width="1200"
+                height="933"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Zusammen wächst das Vertrauen.</figcaption>
+            </figure>
+          </div>
+          <p className="concept-photo-note">
+            KI-generierte Konzeptbilder · Echte Einblicke bei den Waldlingen
+            findet ihr im Film und in den Fotos darunter.
+          </p>
+        </section>
         <WaldlingeFilm />
         <section
           className="original-moments section-shell"
