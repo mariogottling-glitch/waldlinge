@@ -92,6 +92,8 @@ Bildlagen werden passend zur sichtbaren Größe exportiert, komprimiert und erst
 
 ## Bildproduktion ausschließlich mit Adobe
 
+Nach der ersten Adobe-Stilprobe präzisiert der Nutzer die Bildrichtung: sommerliche Salbei-, Eukalyptus- und Waldgrüntöne, deutlich weniger Gelb-Braun und weiterhin gedämpfte Sättigung. Die Illustration wird reduzierter und zeitgemäßer, mit vereinfachten Formen, selektiven organischen Konturen und sehr zurückhaltender Aquarelltextur. Eine nostalgische Kinderbuchwirkung ist nicht gewünscht. Alle neuen Grafiken sind vollständig sichtbare, mittig platzierbare, freigestellte Motive auf echtem transparentem Hintergrund. Rundum bleibt Abstand; Baumkronen, Figuren, Pflanzen und Bodenformen werden niemals am Dateirand abgeschnitten. Diese Präzisierung hat Vorrang vor früheren Angaben zu flächigen Waldkulissen und stärkerem Ocker. Für Scrollszenen werden künftig vollständige freigestellte Motivgruppen zusammengesetzt.
+
 Alle neu erstellten oder bearbeiteten Bilder und Grafiken entstehen ausschließlich über das Adobe-Plugin. Die Einschränkung gilt auch für Konzeptmockups, Icons, freigestellte Pflanzen und Bildvarianten. Vor einer Produktion werden die verfügbaren Adobe-Funktionen und deren Ausgabeformate geprüft. Eine Generierung allein garantiert keine konsistenten Figuren, transparenzfähigen Ebenen oder perfekte Komposition; Ergebnisse werden deshalb visuell geprüft und mit Adobe nachbearbeitet.
 
 Bestehende Originalfotos und Originallogos werden als Quellen erhalten. Neue generierte Fotos wären ausdrücklich Konzeptbilder und würden nicht als Dokumentation dieses Kindergartens ausgegeben. Für Vertrauensbereiche werden vorzugsweise die bestehenden realen Alltagsbilder verwendet. Das bisherige Hero-Bild bleibt vorerst erhalten.
