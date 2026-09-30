@@ -1,5 +1,7 @@
 # Waldlinge Konzept und Master Prompt für die neue Homepage
 
+Dieses Dokument beschreibt die frühere Konzeptphase. Maßgeblich für den bestätigten vollständigen Neustart ist jetzt [Waldlinge Neustart Konzept](D:/Arbeit/Codeyx/Waldlinge/design/Waldlinge-Neustart-Konzept.md), basierend auf der aktuellen Analyse von Mind Robotics und Numa.
+
 Stand: 30. September 2026. Ursprünglicher Konzeptvorschlag; korrigierte Umsetzungsrichtung siehe folgenden Hinweis.
 
 **Korrektur des Nutzers:** Gewünscht ist eine vollständig neue Homepage auf Grundlage dieses Konzepts, keine zusätzliche Aquarellsektion auf dem bisherigen Layout. Die entsprechende Zusatzsektion wurde zurückgenommen. Fotografie und Illustrationen werden innerhalb der gesamten Seitenkomposition und ihrer inhaltlichen Kapitel kombiniert. Die früheren Vorgaben zu einer bloßen Erweiterung des alten Layouts sind damit überholt. Das vorhandene Hero-Bildmaterial bleibt erhalten.
