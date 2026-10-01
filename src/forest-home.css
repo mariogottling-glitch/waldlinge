@@ -457,9 +457,11 @@ p {
 .chapter--hero {
   min-height: min(810px, calc(100svh - 84px));
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-block: 120px 105px;
+  gap: 38px;
+  padding-block: 86px 70px;
   text-align: center;
 }
 .hero-copy {
@@ -553,29 +555,45 @@ p {
   font-size: 14px;
 }
 .partners {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 75px;
-  border-top: 1px solid var(--line);
-  padding-top: 28px;
+  width: min(680px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 28px;
+  border: 1px solid #d6dbce99;
+  border-radius: 22px;
+  background: #ffffff70;
+  padding: 20px 24px;
 }
 .partners > div {
+  min-width: 0;
   text-align: center;
 }
+.partners > div + div {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+}
 .partners p {
-  font-size: 11px;
-  color: #687661;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #5b6d56;
   margin-bottom: 12px;
 }
+.partner-mark {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .partners img {
-  height: 44px;
-  width: 195px;
+  height: auto;
+  max-height: 76px;
+  width: 218px;
   object-fit: contain;
   margin-inline: auto;
 }
 .partners > div:last-child img {
-  width: 180px;
+  width: 238px;
 }
 .journey-bird {
   position: absolute;
@@ -1167,6 +1185,30 @@ summary:focus-visible {
   outline: 2px solid #7b6033;
   outline-offset: 5px;
 }
+@media (min-width: 960px) and (max-height: 800px) {
+  .chapter--hero {
+    min-height: calc(100svh - 84px);
+    padding-block: 34px 48px;
+    gap: 24px;
+  }
+  .chapter--hero h1 {
+    font-size: clamp(64px, 5.7vw, 82px);
+  }
+  .hero-intro {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-block: 20px 24px;
+  }
+  .hero-shortcuts {
+    margin-top: 16px;
+  }
+  .partners {
+    padding-block: 16px;
+  }
+  .partners p {
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 1100px) {
   .squirrel-track {
     width: 115px;
@@ -1281,7 +1323,7 @@ summary:focus-visible {
   }
   .chapter--hero {
     min-height: 680px;
-    padding-block: 100px 80px;
+    padding-block: 80px 65px;
   }
   h1 {
     font-size: clamp(52px, 7.5vw, 78px);
@@ -1321,9 +1363,6 @@ summary:focus-visible {
   }
   .moment > img {
     aspect-ratio: 3/5;
-  }
-  .partners {
-    gap: 40px;
   }
   .parents {
     grid-template-columns: 1fr;
@@ -1515,7 +1554,8 @@ summary:focus-visible {
     text-align: center;
   }
   .chapter--hero {
-    padding-block: 115px 65px;
+    padding-block: 112px 55px;
+    gap: 24px;
     min-height: 620px;
   }
   .hero-copy {
@@ -1575,17 +1615,31 @@ summary:focus-visible {
     left: 0;
   }
   .partners {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    padding-top: 22px;
+    width: min(420px, 100%);
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 18px;
+  }
+  .partners > div + div {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
   }
   .partners p {
-    font-size: 10px;
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  .partner-mark {
+    height: 60px;
   }
   .partners img {
-    width: 190px;
-    height: 43px;
+    width: 177px;
+    max-height: 60px;
+  }
+  .partners > div:last-child img {
+    width: 210px;
   }
   .chapter--adventure {
     padding-block: 45px;

@@ -546,6 +546,33 @@ export function ForestHome() {
                 <a href="#eltern">Eure Fragen</a>
               </div>
             </div>
+            <div
+              className="partners"
+              aria-label="Zusammenarbeit und pädagogische Impulse"
+            >
+              <div>
+                <p>Wir arbeiten zusammen mit</p>
+                <div className="partner-mark">
+                  <img
+                    src="/images/wildnisschule-logo.webp"
+                    alt="Natur- und Wildnisschule Teutoburger Wald"
+                    width="700"
+                    height="237"
+                  />
+                </div>
+              </div>
+              <div>
+                <p>Geschult von Nicola Schmidt vom</p>
+                <div className="partner-mark">
+                  <img
+                    src="/images/artgerecht-logo.webp"
+                    alt="artgerecht-Projekt"
+                    width="800"
+                    height="179"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="hero-bottom" aria-hidden="true">
               <ArrowDown size={18} aria-hidden="true" />
             </div>
@@ -593,31 +620,6 @@ export function ForestHome() {
               <Link href="https://waldlinge.org/wer-wir-sind/">
                 Mehr über unsere Haltung
               </Link>
-            </div>
-            <div
-              className="partners"
-              aria-label="Zusammenarbeit und pädagogische Impulse"
-            >
-              <div>
-                <p>Wir arbeiten zusammen mit</p>
-                <img
-                  src="/images/wildnisschule-logo.webp"
-                  alt="Natur- und Wildnisschule Teutoburger Wald"
-                  width="700"
-                  height="237"
-                  loading="lazy"
-                />
-              </div>
-              <div>
-                <p>Geschult von Nicola Schmidt vom</p>
-                <img
-                  src="/images/artgerecht-logo.webp"
-                  alt="artgerecht-Projekt"
-                  width="800"
-                  height="179"
-                  loading="lazy"
-                />
-              </div>
             </div>
           </section>
 

@@ -84,3 +84,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Nutzer wünscht ein Eichhörnchen, das mit dem Scrollen den Baumstamm hinunterklettert und die Reise begleitet. Ein verschobenes Standbild ist ausdrücklich nicht ausreichend.
 - Am rechten Stamm eine eigene Adobe-Illustration aus Körper, Schwanz und vier getrennt beweglichen Pfoten einsetzen. Gegenläufiges Nachgreifen, leichte Körperbewegung und Schwanzbalance ergeben den Kletterrhythmus. Die Griffphase folgt der Scrollstrecke; Anhalten hält die Pose, Zurückscrollen kehrt die Bewegung um. Beim Footer erreicht es die Wurzeln.
 - Als zurückhaltendes, nicht bedienbares Naturdetail außerhalb des Lesebereichs umsetzen. Mobile Größe anpassen; reduzierte Bewegung erhält eine vollständige statische Figur am oberen Stamm. Bestehendes Layout und Inhalte bleiben erhalten.
+
+## Partnerlogos im Hero
+
+- Natur- und Wildnisschule Teutoburger Wald sowie artgerecht sollen deutlich präsenter und elegant direkt im Hero erscheinen. Die beiden Originaldateien größer, unverändert und mit ihren bestehenden Einordnungen zeigen: Zusammenarbeit bzw. Schulung durch Nicola Schmidt.
+- Gemeinsame ruhige Fläche unter dem Einstieg, auf dem Desktop nebeneinander und bis 700px mittig untereinander. Die alte Logoreihe nach den Werten entfällt. Logos sofort laden und ihre Sichtbarkeit unabhängig von der Scrollblende des Hero-Textes erhalten.

@@ -1,0 +1,182 @@
+[
+  {
+    "height": 844,
+    "logoCount": 2,
+    "logos": [
+      {
+        "alt": "Natur- und Wildnisschule Teutoburger Wald",
+        "bottom": 706.6875,
+        "height": 59.921875,
+        "inHero": true,
+        "ready": true,
+        "top": 646.765625,
+        "width": 177,
+        "withinFirstViewport": true
+      },
+      {
+        "alt": "artgerecht-Projekt",
+        "bottom": 808.375,
+        "height": 45.40625,
+        "inHero": true,
+        "ready": true,
+        "top": 762.96875,
+        "width": 203,
+        "withinFirstViewport": true
+      }
+    ],
+    "oldSectionLogoCount": 0,
+    "overflow": false,
+    "scroll": 0,
+    "width": 320
+  },
+  {
+    "height": 844,
+    "logoCount": 2,
+    "logos": [
+      {
+        "alt": "Natur- und Wildnisschule Teutoburger Wald",
+        "bottom": 648.078125,
+        "height": 59.921875,
+        "inHero": true,
+        "ready": true,
+        "top": 588.15625,
+        "width": 177,
+        "withinFirstViewport": true
+      },
+      {
+        "alt": "artgerecht-Projekt",
+        "bottom": 750.546875,
+        "height": 46.984375,
+        "inHero": true,
+        "ready": true,
+        "top": 703.5625,
+        "width": 210,
+        "withinFirstViewport": true
+      }
+    ],
+    "oldSectionLogoCount": 0,
+    "overflow": false,
+    "scroll": 0,
+    "width": 390
+  },
+  {
+    "height": 900,
+    "logoCount": 2,
+    "logos": [
+      {
+        "alt": "Natur- und Wildnisschule Teutoburger Wald",
+        "bottom": 680.265625,
+        "height": 59.921875,
+        "inHero": true,
+        "ready": true,
+        "top": 620.34375,
+        "width": 177,
+        "withinFirstViewport": true
+      },
+      {
+        "alt": "artgerecht-Projekt",
+        "bottom": 782.734375,
+        "height": 46.984375,
+        "inHero": true,
+        "ready": true,
+        "top": 735.75,
+        "width": 210,
+        "withinFirstViewport": true
+      }
+    ],
+    "oldSectionLogoCount": 0,
+    "overflow": false,
+    "scroll": 0,
+    "width": 700
+  },
+  {
+    "height": 900,
+    "logoCount": 2,
+    "logos": [
+      {
+        "alt": "Natur- und Wildnisschule Teutoburger Wald",
+        "bottom": 760.0625,
+        "height": 73.796875,
+        "inHero": true,
+        "ready": true,
+        "top": 686.265625,
+        "width": 218,
+        "withinFirstViewport": true
+      },
+      {
+        "alt": "artgerecht-Projekt",
+        "bottom": 749.796875,
+        "height": 53.25,
+        "inHero": true,
+        "ready": true,
+        "top": 696.546875,
+        "width": 238,
+        "withinFirstViewport": true
+      }
+    ],
+    "oldSectionLogoCount": 0,
+    "overflow": false,
+    "scroll": 0,
+    "width": 960
+  },
+  {
+    "height": 720,
+    "logoCount": 2,
+    "logos": [
+      {
+        "alt": "Natur- und Wildnisschule Teutoburger Wald",
+        "bottom": 646.0625,
+        "height": 73.796875,
+        "inHero": true,
+        "ready": true,
+        "top": 572.265625,
+        "width": 218,
+        "withinFirstViewport": true
+      },
+      {
+        "alt": "artgerecht-Projekt",
+        "bottom": 635.796875,
+        "height": 53.25,
+        "inHero": true,
+        "ready": true,
+        "top": 582.546875,
+        "width": 238,
+        "withinFirstViewport": true
+      }
+    ],
+    "oldSectionLogoCount": 0,
+    "overflow": false,
+    "scroll": 0,
+    "width": 1280
+  },
+  {
+    "height": 900,
+    "logoCount": 2,
+    "logos": [
+      {
+        "alt": "Natur- und Wildnisschule Teutoburger Wald",
+        "bottom": 795.453125,
+        "height": 73.796875,
+        "inHero": true,
+        "ready": true,
+        "top": 721.65625,
+        "width": 218,
+        "withinFirstViewport": true
+      },
+      {
+        "alt": "artgerecht-Projekt",
+        "bottom": 785.1875,
+        "height": 53.25,
+        "inHero": true,
+        "ready": true,
+        "top": 731.9375,
+        "width": 238,
+        "withinFirstViewport": true
+      }
+    ],
+    "oldSectionLogoCount": 0,
+    "overflow": false,
+    "scroll": 0,
+    "width": 1440
+  }
+]
