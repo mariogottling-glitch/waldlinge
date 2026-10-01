@@ -101,3 +101,14 @@ Vier lokale transparente PNG-Lagen, ausschließlich Adobe Firefly und Adobe-Bear
 | `adobe-squirrel/hindleg.png` | 220 × 201px | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:8be09653-f7fc-4a82-afee-950aaccf3a48 |
 
 Körper-Generierung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:95634a89-a2b8-4ef2-b5a0-f9bc96eaf284. Adobe-Tail-Entfernung: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:2d9a1c32-0639-462b-96e9-16ae7afe02e9. Grundlage für die weiteren Lagen: https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:f2f9a6a9-e591-4657-bf32-b66120d16f00. Fehlgeschlagene Isolationsversuche und zu schlanke Körpervarianten wurden geprüft und verworfen; sie werden nicht in die Homepage eingebunden. Alle vier finalen Lagen wurden visuell geprüft.
+
+## Freundliche Eule am linken Stamm, 1. Oktober 2026
+
+Eine neue Adobe-Firefly-Generierung mit sanften Grau-, Creme- und Salbeitönen. Adobe-Freistellung, motivgerechter Zuschnitt und proportionale Verkleinerung; keine lokale Bildbearbeitung. Aus derselben Illustration wird der Kopf als eigene Lage mit Adobe ausgeschnitten. Die anfängliche automatische Kopferkennung beschnitt die obere Federkontur und wurde verworfen; der korrigierte Adobe-Zuschnitt erhält den vollständigen Kopf. Beide finalen PNGs wurden visuell geprüft. Die Website bewegt Kopf und Körper getrennt und lädt ausschließlich lokale Dateien.
+
+| Datei | Größe | Finale Adobe-Ausgabe |
+| --- | --- | --- |
+| `adobe-owl/body.png` | 320 × 505px, 210.513 Bytes | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:020fe9b1-683a-4e1f-9115-b10bd931fd21 |
+| `adobe-owl/head.png` | 260 × 202px, 87.942 Bytes | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:048ec53b-25fa-4ac4-9e43-527882cc99c3 |
+
+[Firefly-Original](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:4e2755a3-3d76-4a5c-8a97-47d67213d3f9), [Freistellung](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d13b94f1-de8f-440b-ac6b-624fc199157c), [vollständiger Motivzuschnitt](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:126adb3d-a218-4f39-8307-d77272828ded), [korrigierter Kopfzuschnitt](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:17be259f-3372-4eb7-9c9a-dafd8b847aea).

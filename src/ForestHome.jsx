@@ -70,6 +70,7 @@ function ForestWorld() {
   const frame = useRef(null);
   const [segments, setSegments] = useState(24);
   const [birdTop, setBirdTop] = useState(840);
+  const [owlTop, setOwlTop] = useState(3900);
   useEffect(() => {
     const node = frame.current;
     if (!node) return;
@@ -86,6 +87,16 @@ function ForestWorld() {
             welcome.getBoundingClientRect().top -
               node.getBoundingClientRect().top +
               inset,
+          ),
+        );
+      }
+      const parents = node.parentElement.querySelector("#eltern");
+      if (parents) {
+        setOwlTop(
+          Math.round(
+            parents.getBoundingClientRect().top -
+              node.getBoundingClientRect().top +
+              (window.matchMedia("(max-width: 700px)").matches ? 20 : 100),
           ),
         );
       }
@@ -118,6 +129,28 @@ function ForestWorld() {
       ))}
       <div className="bird-flight" style={{ top: birdTop }}>
         <LivingBird />
+      </div>
+      <div className="owl-perch" style={{ top: owlTop }}>
+        <div className="owl-peek">
+          <div className="owl-anatomy">
+            <img
+              className="owl-body"
+              src="/images/adobe-owl/body.png"
+              width="320"
+              height="505"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              className="owl-head"
+              src="/images/adobe-owl/head.png"
+              width="260"
+              height="202"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
       {["left", "right"].map((side) => (
         <div key={side} className={`edge-tree edge-tree--${side}`}>

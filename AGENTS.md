@@ -89,3 +89,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Natur- und Wildnisschule Teutoburger Wald sowie artgerecht sollen deutlich präsenter und elegant direkt im Hero erscheinen. Die beiden Originaldateien größer, unverändert und mit ihren bestehenden Einordnungen zeigen: Zusammenarbeit bzw. Schulung durch Nicola Schmidt.
 - Gemeinsame ruhige Fläche unter dem Einstieg, auf dem Desktop nebeneinander und bis 700px mittig untereinander. Die alte Logoreihe nach den Werten entfällt. Logos sofort laden und ihre Sichtbarkeit unabhängig von der Scrollblende des Hero-Textes erhalten.
+
+## Eule hinter dem linken Stamm
+
+- Beim Übergang vom Film zu den Elterninformationen schaut eine freundliche Eule beim Scrollen hinter dem linken Baumstamm hervor. Tatsächliche Verdeckung durch den vorderen Baum, keine freie Einblendung und keine zusätzliche Inhaltssektion.
+- Eigene freigestellte Adobe-Illustration in sanften Grau-, Creme- und Salbeitönen. Separater Kopf für eine kleine neugierige Neigung; die Scrollbewegung lässt sich zurückverfolgen. Mobile Darstellung klein am Rand, Inhalte und Bedienflächen frei halten. Bei Bewegungsreduktion bleibt eine ruhige hervorschauende Pose erhalten.

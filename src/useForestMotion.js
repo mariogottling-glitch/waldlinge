@@ -168,6 +168,55 @@ export function useForestMotion(root, reduceMotion = false) {
           },
           0,
         );
+        const parents = scope(".parents")[0];
+        const owl = scope(".owl-peek")[0];
+        // The owl lives below the foreground trunk: its reveal is a physical
+        // peek, not a fade. Scrolling back retraces the same curious lean.
+        const peek = gsap.timeline({
+          scrollTrigger: {
+            trigger: parents,
+            start: "top 85%",
+            end: "bottom 25%",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+        peek
+          .fromTo(
+            owl,
+            { x: () => -owl.clientWidth - 40 },
+            { x: 0, duration: 0.3, ease: "power2.out" },
+            0,
+          )
+          .fromTo(
+            scope(".owl-anatomy"),
+            { rotation: 0 },
+            { rotation: 12, duration: 0.3, ease: "sine.out" },
+            0,
+          )
+          .to(owl, { x: 0, duration: 0.45 }, 0.3)
+          .to(
+            owl,
+            {
+              x: () => -owl.clientWidth - 40,
+              duration: 0.25,
+              ease: "sine.inOut",
+            },
+            0.75,
+          );
+        const owlCuriosity = gsap.fromTo(
+          scope(".owl-head"),
+          { rotation: -3 },
+          {
+            rotation: 4,
+            duration: 2.6,
+            repeat: -1,
+            yoyo: true,
+            paused: true,
+            ease: "sine.inOut",
+          },
+        );
+        watchLoop(owlCuriosity, parents, "top 70%", "bottom 25%");
         const squirrelTrack = scope(".squirrel-track")[0];
         const squirrel = scope(".squirrel-companion")[0];
         // A real articulated gait: opposite paws alternate their reach.

@@ -300,6 +300,35 @@ p + p {
   overflow: clip;
   pointer-events: none;
 }
+.owl-perch {
+  position: absolute;
+  left: 24px;
+  width: 120px;
+  z-index: 1;
+}
+.owl-peek {
+  width: 100%;
+}
+.owl-anatomy {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 320 / 505;
+  transform: rotate(12deg);
+  transform-origin: 48% 92%;
+}
+.owl-body {
+  width: 100%;
+  clip-path: inset(37% 0 0);
+}
+.owl-head {
+  position: absolute;
+  width: 81%;
+  max-width: none;
+  left: 9%;
+  top: 1%;
+  transform-origin: 50% 85%;
+  mask-image: linear-gradient(#000 0% 94%, transparent);
+}
 .squirrel-track {
   position: absolute;
   top: 480px;
@@ -1210,6 +1239,10 @@ summary:focus-visible {
   }
 }
 @media (max-width: 1100px) {
+  .owl-perch {
+    width: 82px;
+    left: -5px;
+  }
   .squirrel-track {
     width: 115px;
   }
@@ -1251,6 +1284,9 @@ summary:focus-visible {
   }
 }
 @media (max-width: 959px) {
+  .owl-perch {
+    left: -9px;
+  }
   .squirrel-track {
     top: 410px;
     width: 95px;
@@ -1376,6 +1412,10 @@ summary:focus-visible {
   }
 }
 @media (max-width: 700px) {
+  .owl-perch {
+    width: 62px;
+    left: -12px;
+  }
   .squirrel-track {
     top: 405px;
     bottom: 105px;
