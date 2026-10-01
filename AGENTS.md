@@ -99,3 +99,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Nutzer wünscht etwas mehr Atmosphäre: wenige schwebende Pollen und kleine sanfte Lichtpunkte. Natürlich und sparsam, ohne übertriebene Märchenwaldwirkung. Bestehendes Layout und ruhige Leseflächen erhalten.
 - Adobe-Samenstaub als kleine transparente Motive in unterschiedlichen Größen und Tiefen. Langsames unregelmäßiges Schweben und weiches Schimmern; keine Sterne, grellen Glühpunkte oder hektisches Funkeln. Mobil weniger und kleinere Partikel. Bewegung pausiert bei verborgenem Tab und bleibt bei Bewegungsreduktion statisch.
+
+## Fotografie als Teil der Waldreise, 1. Oktober 2026
+
+- Neue Pinterest-Referenz https://pin.it/4w7QcGQIE führt zur Pinnwand https://de.pinterest.com/glttgling/waldlinge-homepage/. Motive, Inhalt und Stimmung sind Referenzen: neugierige Kinder, Naturfundstücke, Farn, Baumspiel, Matschküche und weiches sommerliches Waldlicht. Keine Pinterest-Fotos übernehmen oder identisch nachbauen.
+- Die Homepage soll durch fotografische Einblicke weniger nach einem ausschließlich illustrierten Kinderbuch aussehen. Bestehende Waldrahmen, Tiere, Atmosphäre, Inhalte und Scrollbewegungen erhalten; keine zusätzliche Fotogalerie oder neue Textsektion anhängen.
+- Drei neue, ausschließlich mit Adobe Firefly erzeugte Fotografien integrieren: Kinder von hinten auf einem Waldweg in der Kindergartenvorstellung, Hände mit Zapfen und Moos als kleines Detail im Waldalltag, gemeinsames Spielen an einer Matschküche bei der Gemeinschaft. Gedämpftes Sommergrün, natürliche Haut- und Materialtexturen, ungestellte Momente auf Kinderhöhe.
+- Alle neuen Fotos sichtbar als KI-Konzeptfoto kennzeichnen und einmal erklären, dass sie keine tatsächlichen Waldlinge-Kinder zeigen. Originalaufnahmen bleiben sichtbar und separat gekennzeichnet. Fotografische Motive vollständig in ihrem Seitenverhältnis zeigen, keine Gesichter als Werbeporträts.
+- Layoutinspiration: Behance-Projekt „Kindergarten. Kids Website. UX/UI Design“ von Valeriia Lytvyn, große ruhige Fotografien im illustrierten Rahmen. Keine fremden Website-Assets oder deren bunte Farbpalette übernehmen. Art Direction und Prompts: design/Waldlinge-Fotografie.md.

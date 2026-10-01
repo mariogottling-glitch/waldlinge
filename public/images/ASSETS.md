@@ -118,3 +118,15 @@ Eine neue Adobe-Firefly-Generierung mit sanften Grau-, Creme- und Salbeitönen. 
 `adobe-atmosphere/pollen.png`: 96 × 110px, 19.580 Bytes. Eine einzelne neue Adobe-Firefly-Illustration eines feinen, wolligen Weidensamens in Creme und gedämpftem Salbei. Ausschließlich Adobe-Freistellung, motivgerechter Zuschnitt und proportionale Verkleinerung. Der vollständige transparente Samen bildet sehr kleine Pollen und sparsame weich schimmernde Lichtpunkte in der Waldkulisse; die Website übernimmt nur Darstellung und Bewegung. Keine zusätzliche generierte Szene oder Variantenserie. Finale Ausgabe visuell geprüft, ausschließlich lokal geladen.
 
 [Firefly-Original](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:69cb5db2-6427-4d3a-864f-d16e47b082f7), [Freistellung](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:0c89d768-04de-4226-8e4e-6becdc59077d), [Motivzuschnitt](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:e8b487a0-b651-4d24-b876-db5e3b2aa963), [finale Website-Datei](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:381c93fe-e706-45b0-bcbc-48722a4d01fc).
+
+## Fotografische Waldmomente, 1. Oktober 2026
+
+Drei neue Motive, jeweils eine Adobe-Firefly-Generierung mit 2.4MP und Quality Prompt Reasoner. Ausschließlich proportionale Adobe-Verkleinerung, kein lokales Retuschieren oder Zuschneiden. Originale und finale Ausgaben visuell geprüft. Alle Fotos werden auf der Website aus lokalen PNG-Dateien geladen, mit intrinsischen Abmessungen und Lazy Loading. Keine externen Adobe-Anfragen im Webseitenbetrieb.
+
+| Datei | Abmessungen / Dateigröße | Firefly-Original | Finale Adobe-Ausgabe |
+| --- | --- | --- | --- |
+| `adobe-photography/woodland-path.png` | 1120 × 871px / 1.572.360 Bytes | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:ac7eacc2-cef8-4b85-aa78-669529419c35 | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:061ba908-9a2a-4f69-93fc-8402d517e52c |
+| `adobe-photography/nature-find.png` | 720 × 926px / 798.483 Bytes | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:7d9f1140-575a-4cf5-a630-1ebf6b429966 | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:e726a327-cf9b-4ade-b9ce-cfc33bbfdb52 |
+| `adobe-photography/mud-kitchen.png` | 1100 × 856px / 1.424.341 Bytes | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:fd7864c6-6a4f-4948-8ee1-fab5a39316fb | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:6e0c6a3c-cb58-43cd-a32c-a4eb37b30537 |
+
+Die KI-Konzeptfotos zeigen beispielhafte Waldmomente, keine tatsächlichen Waldlinge-Kinder oder Orte. Sichtbare Kennzeichnung unter jedem Bild und eine gemeinsame Erklärung beim ersten Foto. Originalaufnahmen bleiben separat sichtbar. Motive, Art Direction, Prompts und Recherche: `design/Waldlinge-Fotografie.md`; Pinterest- und Behance-Werke wurden nicht als Website-Assets übernommen.

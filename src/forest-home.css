@@ -769,6 +769,22 @@ p {
   bottom: 35px;
   width: 52px;
 }
+.welcome-story {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+.welcome-intro .section-heading {
+  text-align: left;
+}
+.welcome-intro h2 {
+  font-size: clamp(35px, 3.6vw, 52px);
+}
+.together-copy h2 {
+  font-size: clamp(32px, 3.2vw, 46px);
+}
 .welcome-note {
   width: min(740px, 100%);
   padding: 18px 28px;
@@ -776,6 +792,52 @@ p {
   background: #dbe3d544;
   border: 1px solid #cbd5c280;
   border-radius: 24px;
+}
+.welcome-story .welcome-note {
+  margin-top: 24px;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: left;
+}
+.welcome-story .forest-facts {
+  justify-content: flex-start;
+  gap: 9px 18px;
+}
+.welcome-story .forest-facts span + span {
+  padding-left: 0;
+  border: 0;
+}
+.concept-photo {
+  width: 100%;
+}
+.photo-window {
+  overflow: hidden;
+  border-radius: 64px 8px 64px 8px;
+}
+.photo-window > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.concept-photo figcaption {
+  font-size: 13px;
+  color: #53694b;
+}
+.photo-provenance {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  line-height: 1.5;
+  color: #64715d;
+  margin-top: 4px;
+}
+.concept-note {
+  max-width: 420px;
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #64715d;
 }
 .welcome-note > p {
   max-width: 650px;
@@ -813,11 +875,33 @@ p {
   position: relative;
   padding-bottom: 45px;
 }
-.clearing-visual figure > img {
+.clearing-original {
+  width: 92%;
+}
+.clearing-original > img {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
   border-radius: 44% 44% 3px 3px;
+}
+.clearing-original figcaption {
+  max-width: 60%;
+}
+.discovery-photo {
+  position: absolute;
+  width: 43%;
+  right: -2%;
+  bottom: 10px;
+  padding: 6px;
+  border-radius: 30px 6px 30px 6px;
+  background: var(--paper);
+}
+.discovery-photo .photo-window {
+  border-radius: 25px 3px 25px 3px;
+}
+.discovery-photo figcaption {
+  font-size: 11px;
+  margin: 8px 4px 1px;
 }
 figcaption {
   color: #66765e;
@@ -827,9 +911,9 @@ figcaption {
 }
 .photo-fern {
   position: absolute;
-  width: 55%;
-  right: -17%;
-  bottom: -7px;
+  width: 36%;
+  left: -12%;
+  bottom: 125px;
   pointer-events: none;
   transform-origin: 50% 85%;
 }
@@ -892,8 +976,8 @@ details[open] > summary > svg {
 .together {
   position: relative;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 85px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 45px;
   align-items: center;
   padding: 32px 38px;
   margin-block: 10px 30px;
@@ -935,6 +1019,34 @@ details[open] > summary > svg {
   aspect-ratio: 4/5;
   object-fit: cover;
   border-radius: 3px 3px 43% 43%;
+}
+.community-photos {
+  min-width: 0;
+}
+.community-photos .photo-window {
+  border-radius: 8px 56px 8px 56px;
+}
+.moment--original {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: none;
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #c8d2be;
+}
+.moment--original > img {
+  aspect-ratio: auto;
+  height: auto;
+  border-radius: 24px 4px 24px 4px;
+}
+.moment--original figcaption {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--forest);
 }
 .film {
   padding-block: 55px 75px;
@@ -1390,6 +1502,16 @@ summary:focus-visible {
   .section-shell {
     width: calc(100% - 150px);
   }
+  .welcome-story {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  .welcome-photo {
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
   .chapter--hero {
     min-height: 680px;
     padding-block: 80px 65px;
@@ -1420,7 +1542,7 @@ summary:focus-visible {
     margin-inline: auto;
     padding-bottom: 30px;
   }
-  .clearing-visual figure > img {
+  .clearing-original > img {
     aspect-ratio: 5/4;
   }
   .chapter-copy {
@@ -1428,10 +1550,14 @@ summary:focus-visible {
     margin-inline: auto;
   }
   .together {
-    gap: 35px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 600px;
   }
-  .moment > img {
-    aspect-ratio: 3/5;
+  .community-photos {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
   }
   .parents {
     grid-template-columns: 1fr;
@@ -1458,8 +1584,8 @@ summary:focus-visible {
   .squirrel-track {
     top: 405px;
     bottom: 105px;
-    width: 65px;
-    right: -3px;
+    width: 40px;
+    right: -10px;
   }
   .squirrel-companion {
     top: clamp(165px, 30svh, 240px);
@@ -1658,6 +1784,24 @@ summary:focus-visible {
     padding-block: 45px 50px;
     gap: 25px;
   }
+  .welcome-intro .section-heading,
+  .welcome-story .welcome-note {
+    text-align: center;
+  }
+  .welcome-intro h2,
+  .together-copy h2 {
+    font-size: clamp(32px, 8.2vw, 47px);
+  }
+  .welcome-story .forest-facts {
+    align-items: center;
+  }
+  .photo-window {
+    border-radius: 40px 6px 40px 6px;
+  }
+  .concept-note {
+    margin-inline: auto;
+    font-size: 10px;
+  }
   .forest-facts {
     gap: 8px;
     font-size: 11px;
@@ -1728,7 +1872,7 @@ summary:focus-visible {
     width: 90%;
     padding-bottom: 30px;
   }
-  .clearing-visual figure > img {
+  .clearing-original > img {
     aspect-ratio: 1/1;
   }
   figcaption {
@@ -1736,9 +1880,22 @@ summary:focus-visible {
     font-size: 10px;
   }
   .photo-fern {
-    width: 49%;
-    right: -9%;
-    bottom: -5px;
+    width: 34%;
+    left: -12%;
+    bottom: 95px;
+  }
+  .discovery-photo {
+    width: 44%;
+    right: -3%;
+    bottom: -4px;
+    padding: 4px;
+  }
+  .discovery-photo figcaption {
+    font-size: 10px;
+    margin-inline: 0;
+  }
+  .discovery-photo .photo-provenance {
+    font-size: 9px;
   }
   .journey-loupe {
     width: 95px;
@@ -1792,13 +1949,18 @@ summary:focus-visible {
   .community-detail p {
     font-size: 16px;
   }
-  .moment {
-    width: 75%;
-    max-width: 260px;
+  .moment--original {
+    grid-template-columns: 72px 1fr;
+    width: 100%;
+    max-width: 360px;
     margin-inline: auto;
+    gap: 12px;
   }
-  .moment > img {
-    aspect-ratio: 1/1;
+  .moment--original figcaption {
+    font-size: 14px;
+  }
+  .community-photos .photo-window {
+    border-radius: 6px 38px 6px 38px;
   }
   .film {
     padding-block: 40px 45px;

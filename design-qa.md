@@ -1,69 +1,46 @@
-# Waldlinge Main Page Design QA
+# Designprüfung · fotografische Waldmomente
 
-## Aktueller Status nach Nutzerkorrektur
-
-Die nachfolgenden älteren Screenshot-Befunde gelten für den vorherigen Entwurf. Auf ausdrücklichen Nutzerwunsch wurde die angehängte Aquarell-Scrollsektion entfernt und die Homepage insgesamt neu komponiert. Der Einstieg trennt Text und das erhaltene Hero-Bild, Ortsvorstellung steht vor den Werten, neue Konzeptfotos sind in drei abwechselnde Alltagskapitel integriert statt in einer zusätzlichen Galerie. Fotografie, individuelle Icons, Film, Originaleinblicke und Elterninformationen bilden die durchgehende Seitenabfolge. `src/neuentwurf.css` enthält die neue Gesamtgestaltung.
-
-Produktionsbuild und Sites-Paket erfolgreich; vier vorhandene Sites-Tests bestehen. Der lokale Server antwortet mit HTTP 200. Responsive Regeln für 320–1440px sind implementiert, aber dieser Gesamtentwurf wurde noch nicht visuell im Browser geprüft: Die zuletzt versuchte Browseröffnung wurde von der Browser-Sicherheitsprüfung blockiert. Die früheren Screenshots dürfen deshalb nicht als Nachweis für den neuen Aufbau verwendet werden. Aktueller Design-QA-Status: visuelle Prüfung ausstehend, keine finale Gestaltungsfreigabe.
-
-Stand: 30. September 2026.
+Stand: 1. Oktober 2026. Abgeschlossene Sicht- und Funktionsprüfung des Fotoentwurfs.
 
 ## Vergleichsgrundlage
 
-Der Nutzer hat die erste Adobe-Firefly-Waldillustration für einen neuen funktionierenden Main-Page-Entwurf gewählt. Sie ist ein Bildmotiv, kein vollständiges Website-Mockup. Der Seitenrahmen baut auf dem bereits freigegebenen Desktopziel auf; die neue Waldreise und zusätzliche Originalinhalte sind beauftragte Erweiterungen. Ein pixelgleicher Nachbau einer vollständigen neuen Seitenvorlage wird deshalb nicht behauptet.
+Quelle: bestehender freigegebener Waldreise-Entwurf, vor den Fotoänderungen aufgenommen: `design/photo-references/source-welcome-1440.jpg` und `source-alltag-1440.jpg`. Ergänzende Art Direction: `design/Waldlinge-Fotografie.md`, Pinterest- und Behance-Aufnahmen in demselben Ordner. Keine exakte Nachbildung eines fremden Designs.
 
-- Visuelle Stilquelle: `public/images/waldreise-firefly-original.png`, 2688 × 1536 Pixel.
-- Bestehende Layoutbasis: `design/waldlinge-verfeinert-desktop.png`, 1122 × 1402 Pixel.
-- Gerenderter Desktop-Einstieg: `design/qa-waldreise/desktop-1440.jpg`.
-- Gerenderte Waldreise: `design/qa-waldreise/journey-01-1440.jpg` und `journey-03-1440.jpg`.
-- Mobile Ansichten: `design/qa-waldreise/mobile-390.jpg` und `journey-mobile-320.jpg`.
-- Browser: Codex In-app Browser. Desktop 1440 × 900 CSS-Pixel; Mobil 390 × 844 und 320 × 800 CSS-Pixel. Browser-Screenshots sind JPEG in Viewportgröße. Die Stilquelle wird proportional als vollständiges Bild mit object-fit contain angezeigt, nicht auf eine Website-Viewportgröße verzerrt.
+Implementierung: `http://localhost:4173/`, Screenshots `implementation-welcome-1440.jpg`, `implementation-alltag-1440.jpg`, `implementation-community-1440.jpg`, `implementation-welcome-390.jpg` im Referenzordner.
 
-Die Originalillustration und die Desktopaufnahme der Waldreise wurden gemeinsam in einem Vergleichseingang geöffnet. Farben, Figuren, Komposition und Bildgrenzen bleiben erhalten. Die geringere Deckkraft im ersten Kapitel und volle Wirkung im letzten Kapitel sind beabsichtigte Animation. Der vollständige Einstieg und die beiden mobilen Ansichten wurden zusätzlich im Browser visuell geprüft. Ein engerer Detailausschnitt war für die gut lesbaren Überschriften, Konturen und Kapiteltexte nicht nötig.
+Finale Nachweise: `implementation-final-welcome-1440.jpg`, `implementation-alltag-fixed-1440.jpg`, `implementation-community-fixed-1440.jpg`, `implementation-welcome-fixed-390.jpg`, `implementation-alltag-390.jpg`, `implementation-community-390.jpg`, `implementation-welcome-320.jpg`, `implementation-welcome-700.jpg` und `implementation-welcome-960.jpg`.
 
-## Prüfergebnis der Gestaltung
+Desktop: 1440 × 900 CSS-Pixel, Screenshot 1440 × 900 Pixel, DPR 1. Quelle und Umsetzung in einem gemeinsamen Bildeingang geöffnet, gleiche Ankerzustände `#kindergarten` bzw. `#alltag`. Mobile: 390 × 844 CSS-Pixel und Bildpixel, DPR 1, zusätzliche Umbruchprüfung. Keine Dichtenormalisierung erforderlich. Animierte Tierposen unterscheiden sich zeitabhängig und sind keine Layoutabweichung.
 
-- Typografie: bestehende lokal eingebundene Lora und Source Sans 3, klarer Abstand zwischen Überschriften und Lesetext, keine abgeschnittenen Texte in den geprüften Breiten.
-- Abstand und Rhythmus: großzügiger fotografischer Einstieg, getrennte Originallogos, ruhig gehaltene Waldreise, danach Werte, Ortsinformationen, Alltag, Film, Originalfotos, Gemeinschaft, Geschichte, FAQ und Kontakt. Mobil Text vor dem Hero-Bild und konsistent mittige Ausrichtung.
-- Farben: warmes Creme, Waldgrün, gedämpftes Gold und Salbei. Die ausgewählte erste Waldillustration wurde nicht erneut umgefärbt.
-- Bildqualität: Originalfotos und Originallogos bleiben erhalten. Die erste Adobe-Illustration wird vollständig in ihrem Seitenverhältnis angezeigt. Sechs neue transparente Adobe-Icons ersetzen die früheren handgezeichneten SVG-Illustrationen. Es gibt keine fehlenden Bilder in den geprüften Browserzuständen.
-- Inhalt: Quellen und Übernahme sind in `design/Inhalte-Mainpage.md` dokumentiert. Unbestätigte Betriebszeiten, Kapazität, Gebühren und Personalzahlen bleiben aus öffentlichen Texten heraus. Direkte Kontaktwege und Links auf die ausführlichen Originalseiten sind vorhanden.
+Beabsichtigte Änderungen: Kindergartenvorstellung als Text-Foto-Raster; größere fotografische Präsenz; ein kleines Naturfund-Detail; Matschküche plus kompakte Originalaufnahme. Dies folgt dem aktuellen Auftrag. Waldrahmen, Inhaltsreihenfolge, Schriften, Grundfarben, Logos und Funktionen bleiben die Vergleichsgrundlage.
 
-## Prüfhistorie
+## Befunde und Iterationen
 
-1. P2: Die erste Waldreise-Fassung hatte bei 1440 × 900 einen zu hohen Bildbereich, wodurch der untere Szenenabschluss am Viewportrand lag. Korrektur: Bildhöhe von maximal 62svh auf 54svh begrenzt. Danach wurden Anfangs- und Schlusskapitel erneut aufgenommen; Überschrift, Illustration, Kapiteltext und Weiterführung passen in die Szene.
-2. P2: Kapitelanker lagen zu weit im Scrollabschnitt und konnten das letzte Kapitel nahe dem Auslaufen der gehaltenen Szene öffnen. Korrektur: Positionen anhand der tatsächlichen Scrollstrecke statt fester Abschnittsprozente. Ergebnis: Kapitel 03 wurde per Link erreicht und zeigte „Dazugehören“ mit Fortschritt 0,729, während die Szene noch vollständig sichtbar blieb.
+1. [P2] Farn verdeckte einen Teil der Originalbildunterschrift im Waldalltag. Quelle: freie Unterschrift in `source-alltag-1440.jpg`; erste Umsetzung: `implementation-alltag-1440.jpg`. Fix: Farn innerhalb der unteren Bildzone positionieren, `.photo-fern` mit größerem Bodenabstand. Nachher: `implementation-alltag-fixed-1440.jpg`, Schrift und Herkunftshinweis wieder frei.
+2. [P2, behoben] Eichhörnchen ragte auf 390px in die Vorstellungszeile. Beleg: `implementation-welcome-390.jpg`. Fix: auf kleinen Displays kleiner und weiter am rechten Stamm platzieren, keine Verringerung der Lesetextbreite. Nachher: `implementation-welcome-fixed-390.jpg`, Tier nur am Stamm, alle Zeilen frei.
+3. [P2, behoben] Gemeinschaftstitel brach bei 1440px ungünstig in drei Zeilen, während das zusätzliche Foto mehr Platz benötigt. Beleg: `implementation-community-1440.jpg`. Fix: nur diese Überschrift auf maximal 46px begrenzen; Schriftfamilie und Hierarchie erhalten. Nachher: `implementation-community-fixed-1440.jpg`, ausgewogener zweizeiliger Titel neben vollständiger fotografischer Handlung.
 
-Keine verbleibenden P0/P1/P2-Befunde im geprüften Entwurf.
+Zweiter Vergleich: Quelle und korrigierter Waldalltag sowie mobile Vorher-/Nachher-Aufnahmen und Gemeinschaftsaufnahmen jeweils zusammen in einem Bildeingang geöffnet. Keine neuen P0/P1/P2-Befunde. Zusätzlich Pinterest-Motivboard, Behance-Fotoaufteilung und finaler Kindergartenbereich zusammen angesehen: Motivfamilien und fotografische Präsenz nachvollziehbar übertragen, Farbpalette und eigene Kompositionen eigenständig.
 
-## Interaktionen und technische Prüfung
+## Pflichtflächen
 
-- Breiten 320, 375, 390, 700, 768, 1024 und 1440: keine horizontalen Überläufe; keine fehlerhaft geladenen Bilddateien.
-- Mobiles Menü öffnen, Link zu Für Eltern, Menü schließt nach Navigation.
-- FAQ zur Anmeldung öffnen: Antwort und Kita-Navigator-Link sichtbar.
-- Filmvorschau öffnen: Zustimmungsansicht sichtbar, kein YouTube-iframe vorhanden. Escape schließt und führt den Fokus zurück zum Vorschauknopf. Die bestehende Zustimmungsbestätigung erzeugt erst danach den Frame; das tatsächliche externe Video wurde in dieser Prüfung nicht abgespielt.
-- Desktop: Startseitenlink, Waldreise-Link, Kapitel 03 und Weiterführung zum Kindergarten getestet.
-- Browserprotokoll: keine Fehlermeldungen; normale Entwicklungsservermeldungen.
-- Produktionsbuild erfolgreich. Vier vorhandene Sites-Tests erfolgreich; erwartete Ausgaben unter dist/client, dist/server und dist/.openai vorhanden.
+- Typografie: Lora für Überschriften, Source Sans 3 für Lesetext, keine neuen Schriften; tatsächliche Browser-Schriftfamilien geprüft. Originalcopy erhalten. Die kleineren Titel im neuen Raster sind absichtlich angepasst. Neue Bildtexte und Herkunftslabels frei lesbar. Bei 320px erwarteter zweizeiliger Umbruch von „Weniger vorgeben“, ohne Abschneiden oder Überlauf.
+- Abstände und Raster: fotografische Ergänzung in bestehenden Abschnitten, keine zusätzliche Galerie. Neue Bildrundungen sind organisch und rechteckig; Fotoformate bleiben unbeschnitten. Mobile Reihenfolge Text vor Foto, mittige Ausrichtung.
+- Farben: bestehendes Creme, Wald- und Salbeigrün erhalten. Firefly-Fotos sommerlich, natürliche Grüntöne und gedämpfte Kleidung. Keine zusätzliche bunte oder herbstliche Fläche.
+- Bildqualität: Adobe-Originale und proportionale Endfassungen visuell geprüft; Kinderhandlungen, Hände, Zapfen und Matschküche plausibel, keine Logos oder Fremdassets. Originalaufnahmen separat sichtbar. Neue PNGs lokal geladen, keine CSS/SVG-Ersatzkunst.
+- Inhalt: bestätigte Fakten, Kontakt, Anmeldung und Film erhalten. Jedes neue Foto als KI-Konzeptfoto gekennzeichnet; einmal ausdrücklich keine tatsächlichen Waldlinge-Kinder. Keine neuen Betriebszahlen oder Aussagen aus den generierten Szenen.
 
-Reduzierte Bewegung ist in CSS und JavaScript berücksichtigt: keine gehaltene Scrollsequenz, vollständiges statisches Motiv und alle Kapitel im Seitenfluss. Die Betriebssystempräferenz wurde im Browser nicht aktiv umgeschaltet; diese Variante wurde am Code geprüft, nicht als separat gerenderter Zustand verifiziert. Kein Versandbackend oder neues Kontaktformular wurde eingerichtet.
+Fokussierte Prüfung: Die Abschnittsaufnahmen sind bereits gezielte Inhaltsansichten ohne Browserrahmen. Der kleine Fotoeinsatz und beide Herkunftslabels werden in der 390px-Waldalltagaufnahme gesondert sichtbar; alle drei Adobe-Originale und proportionale Endausgaben wurden zusätzlich in Bildvorschauen geprüft. Weitere Ausschnitte sind für diese klaren, wenig dichten Komponenten nicht erforderlich.
 
-## Späterer Feinschliff
+## Umsetzungskontrolle
 
-- P3: Die unveränderte erste Adobe-Illustration ist etwa 8 MB groß und wird verzögert geladen. Für Veröffentlichung sind kleinere Adobe-Ausgaben und Messungen auf langsameren Verbindungen sinnvoll. Der Entwurf wird derzeit lokal geprüft; eine Performancefreigabe für Produktion wird nicht behauptet.
-- Die Waldreise verwendet in diesem ersten Entwurf das vollständige ausgewählte Bild mit Scrollfortschritt, sanfter vertikaler Bewegung und Kapitelübergängen. Eine echte Parallaxkomposition mit separat animierten Baum- und Pflanzenlagen erfordert weitere passende Adobe-Assets und ist noch nicht Bestandteil dieses Entwurfs.
+- Desktop- und Mobile-Aufnahmen nach allen Korrekturen erneut verglichen; keine offenen P0/P1/P2-Befunde.
+- 320, 390, 700, 960 und 1440px geprüft. Kein horizontaler Dokumentüberlauf und keine abgeschnittenen Texte. Alle neuen Fotoseitenverhältnisse entsprechen ihren Originalen (Differenz unter 0.0001).
+- Waldalltag-Aufklappbereich und FAQ geöffnet und geschlossen. Film war vom früheren Besuch noch geöffnet; zunächst geschlossen, dann die Zustimmungsansicht getestet: kein YouTube-iframe vor Bestätigung, Escape stellt die lokale Vorschau wieder her. Kein Video wurde für diese Prüfung neu gestartet.
+- Bewegungsreduktion ein-/ausgeschaltet: alle Fotogruppen vollständig sichtbar (Deckkraft 1); normale Bewegung anschließend wiederhergestellt. Bildhöhen werden von bestehender Waldrahmen- und Scrollmessung übernommen.
+- Browserkonsole: keine Warnungen oder Fehler. Alle drei neuen Fotos geladen, lokale URLs und Lazy Loading geprüft.
+- Finaler Build, Formatierung und vier bestehende Sites-Prüfungen erfolgreich. Erforderliche Ausgabe: `dist/client/index.html`, `dist/server/index.js`, `dist/.openai/hosting.json`. Hostingdateien und Testquellen unverändert.
+
+Restliche Grenzen: Keine Messung einer langsamen Mobilfunkverbindung und keine neue Prüfung sämtlicher externer Ziele. Die neuen lokalen PNGs umfassen insgesamt ca. 3.8 MB und werden erst in Sichtnähe geladen. Dies ist ein erster fotografischer Konzeptentwurf; spätere freigegebene Originalfotografie kann die markierten KI-Bilder ersetzen.
 
 final result: passed
-
-## Ergänzung: Pinterest-Konzeptfotos
-
-Am 30.09.2026 wurde die Nutzer-Pinnwand „Waldlinge Homepage“ mit 21 Pins im Browser angesehen. Drei Adobe-Firefly-Motive greifen fotografische Stimmung und Themen auf: Farnwedel zeigen, gemeinsam an einer Matschküche arbeiten und ein Kinderkreis. Gedämpfte Grün- und Cremetöne, natürliche Texturen und weiches Waldlicht passen zur vorhandenen Illustration. Die neue Bildreihe steht zwischen den illustrierten Alltagswerten und dem offiziellen Film. Hero, Originalfotos, Logos und bestehende Inhalte bleiben erhalten.
-
-- Desktopansicht: `design/qa-waldreise/pinterest-photos-desktop-1440.jpg`, 1440 × 1000. Drei großzügige, unten ausgerichtete Fotografien mit kurzen Bildunterschriften.
-- Mobile Ansicht: `design/qa-waldreise/pinterest-photos-mobile-390.jpg`, 390 × 844. Fotos untereinander, Texte und Bildunterschriften mittig.
-- Browserprüfung bei 320, 390, 700, 768, 1024 und 1440 Pixeln: keine horizontalen Überläufe, alle drei Fotos geladen; Seitenverhältnisse der Originale bleiben erhalten. Es gibt keinen zusätzlichen CSS-Beschnitt.
-- Adobe-Verkleinerungen wurden vor Einbindung visuell geprüft. Ein sichtbarer Hinweis und Alternativtexte kennzeichnen die synthetischen Konzeptbilder. Sie dokumentieren keine tatsächlichen Waldlinge-Kinder.
-- Neue Fotos nutzen denselben bestehenden Reveal-Mechanismus und werden verzögert geladen. Reduzierte Bewegung bleibt durch die bestehende CSS-Regel berücksichtigt.
-- Produktionsbuild inklusive Sites-Ausgaben erfolgreich. Die drei neuen PNGs benötigen zusammen rund 5,1 MB; eine abschließende Performancefreigabe für Veröffentlichung ist weiterhin offen.
-
-Keine neuen P0/P1/P2-Befunde in dieser Erweiterung.

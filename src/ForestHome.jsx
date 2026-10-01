@@ -85,6 +85,27 @@ function Link({ href, children, external = false, ...props }) {
   );
 }
 
+function ConceptPhoto({ src, width, height, alt, title, className = "" }) {
+  return (
+    <figure className={`concept-photo ${className}`}>
+      <div className="photo-window">
+        <img
+          src={src}
+          width={width}
+          height={height}
+          alt={`KI-Konzeptfoto: ${alt}`}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        {title}
+        <span className="photo-provenance">KI-Konzeptfoto</span>
+      </figcaption>
+    </figure>
+  );
+}
+
 function ForestWorld() {
   const frame = useRef(null);
   const [segments, setSegments] = useState(24);
@@ -670,27 +691,44 @@ export function ForestHome() {
             tabIndex="-1"
             aria-labelledby="welcome-title"
           >
-            <div className="section-heading" data-reveal>
-              <p className="eyebrow">Unser Kindergarten</p>
-              <h2 id="welcome-title">
-                Weniger vorgeben.
-                <br />
-                <em>Mehr entdecken.</em>
-              </h2>
-            </div>
-            <div className="welcome-note">
-              <p>
-                Wir sind die Waldlinge: ein bedürfnisorientierter
-                Waldkindergarten aus Elterninitiative. Jeden Tag draußen. Immer
-                auf Augenhöhe.
-              </p>
-              <div
-                className="forest-facts"
-                aria-label="Die Waldlinge auf einen Blick"
-              >
-                <span>3 Jahre bis Schuleintritt</span>
-                <span>Seit Januar 2020</span>
-                <span>Bornheim-Merten</span>
+            <div className="welcome-story">
+              <div className="welcome-intro" data-reveal>
+                <div className="section-heading">
+                  <p className="eyebrow">Unser Kindergarten</p>
+                  <h2 id="welcome-title">
+                    Weniger vorgeben.
+                    <br />
+                    <em>Mehr entdecken.</em>
+                  </h2>
+                </div>
+                <div className="welcome-note">
+                  <p>
+                    Wir sind die Waldlinge: ein bedürfnisorientierter
+                    Waldkindergarten aus Elterninitiative. Jeden Tag draußen.
+                    Immer auf Augenhöhe.
+                  </p>
+                  <div
+                    className="forest-facts"
+                    aria-label="Die Waldlinge auf einen Blick"
+                  >
+                    <span>3 Jahre bis Schuleintritt</span>
+                    <span>Seit Januar 2020</span>
+                    <span>Bornheim-Merten</span>
+                  </div>
+                </div>
+              </div>
+              <div className="welcome-photo" data-photo-reveal>
+                <ConceptPhoto
+                  src="/images/adobe-photography/woodland-path.png"
+                  width="1120"
+                  height="871"
+                  alt="Drei Kinder gehen mit kleinen Rucksäcken von hinten gesehen einen lichten Waldweg entlang"
+                  title="Gemeinsam auf Entdeckung."
+                />
+                <p className="concept-note">
+                  Unsere KI-Konzeptfotos zeigen beispielhafte Waldmomente, keine
+                  tatsächlichen Waldlinge-Kinder.
+                </p>
               </div>
             </div>
             <div className="values-panel">
@@ -716,7 +754,7 @@ export function ForestHome() {
             aria-labelledby="adventure-title"
           >
             <div className="clearing-visual" data-photo-reveal>
-              <figure>
+              <figure className="clearing-original">
                 <img
                   src="/images/waldlinge-baumwurzel.webp"
                   width="1400"
@@ -726,8 +764,19 @@ export function ForestHome() {
                 />
                 <figcaption>
                   Vom Bauwagen am SSV Merten geht es hinaus in den Wald.
+                  <span className="photo-provenance">
+                    Originalaufnahme · Waldlinge
+                  </span>
                 </figcaption>
               </figure>
+              <ConceptPhoto
+                className="discovery-photo"
+                src="/images/adobe-photography/nature-find.png"
+                width="720"
+                height="926"
+                alt="Kleine Hände halten einen Zapfen und Moos über grünem Farn"
+                title="Ein Fund. Viele Fragen."
+              />
               <img
                 className="photo-fern"
                 src="/images/adobe-forest/ferns.png"
@@ -809,16 +858,30 @@ export function ForestHome() {
                 </Link>
               </details>
             </div>
-            <figure className="moment" data-photo-reveal>
-              <img
-                src="/images/waldlinge-werkeln.webp"
-                alt="Zwei Kinder probieren kleine Sägen an einem Baumstamm aus"
-                width="800"
-                height="1200"
-                loading="lazy"
+            <div className="community-photos" data-photo-reveal>
+              <ConceptPhoto
+                src="/images/adobe-photography/mud-kitchen.png"
+                width="1100"
+                height="856"
+                alt="Zwei Kinder rühren mit Stöcken und Blättern an einer hölzernen Matschküche im Wald"
+                title="Zusammen wird mehr daraus."
               />
-              <figcaption>Gemeinsam anpacken, gemeinsam wachsen.</figcaption>
-            </figure>
+              <figure className="moment moment--original">
+                <img
+                  src="/images/waldlinge-werkeln.webp"
+                  alt="Zwei Waldlinge-Kinder probieren kleine Sägen an einem Baumstamm aus"
+                  width="800"
+                  height="1200"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Gemeinsam anpacken, gemeinsam wachsen.
+                  <span className="photo-provenance">
+                    Originalaufnahme · Waldlinge
+                  </span>
+                </figcaption>
+              </figure>
+            </div>
           </section>
 
           <WaldlingeFilm />
