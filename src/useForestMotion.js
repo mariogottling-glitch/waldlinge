@@ -15,10 +15,11 @@ export function useForestMotion(root, reduceMotion = false) {
       {
         base: "(min-width: 0px)",
         desktop: "(min-width: 960px)",
+        compact: "(max-width: 700px)",
         reduce: "(prefers-reduced-motion: reduce)",
       },
       (context) => {
-        const { desktop, reduce } = context.conditions;
+        const { desktop, compact, reduce } = context.conditions;
         if (reduce || reduceMotion) return;
         const scope = gsap.utils.selector(node);
         const hero = scope(".chapter--hero")[0];
@@ -53,6 +54,58 @@ export function useForestMotion(root, reduceMotion = false) {
           });
         };
         document.addEventListener("visibilitychange", syncLoops);
+        // One quiet air layer accompanies the entire forest. Wind and scroll
+        // use separate wrappers, so neither overwrites the other's movement.
+        const airBreeze = gsap.timeline({ paused: true });
+        scope(".air-particle").forEach((particle, index) => {
+          if (compact && index >= 8) return;
+          const direction = index % 2 ? -1 : 1;
+          const opacity = Number(particle.dataset.airOpacity);
+          const distance = compact ? 10 : 19;
+          airBreeze
+            .fromTo(
+              particle.querySelector(".air-drift"),
+              {
+                x: -distance * direction,
+                y: index % 3 ? -14 : 12,
+                rotation: -12 * direction,
+              },
+              {
+                x: distance * direction,
+                y: index % 3 ? 18 : -20,
+                rotation: 24 * direction,
+                duration: 9 + (index % 5) * 2.3,
+                ease: "sine.inOut",
+                repeat: -1,
+                yoyo: true,
+              },
+              0,
+            )
+            .fromTo(
+              particle.querySelector("img"),
+              { opacity },
+              {
+                opacity: opacity * 0.62,
+                duration: 6.4 + (index % 4) * 1.7,
+                ease: "sine.inOut",
+                repeat: -1,
+                yoyo: true,
+              },
+              0,
+            );
+        });
+        airBreeze.time(10);
+        watchLoop(airBreeze, node);
+        gsap.to(scope(".forest-air-depth"), {
+          y: -26,
+          ease: "none",
+          scrollTrigger: {
+            trigger: node,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        });
         gsap.to(scope(".reading-progress"), {
           scaleX: 1,
           ease: "none",

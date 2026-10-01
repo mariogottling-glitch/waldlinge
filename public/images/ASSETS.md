@@ -112,3 +112,9 @@ Eine neue Adobe-Firefly-Generierung mit sanften Grau-, Creme- und Salbeitönen. 
 | `adobe-owl/head.png` | 260 × 202px, 87.942 Bytes | https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:048ec53b-25fa-4ac4-9e43-527882cc99c3 |
 
 [Firefly-Original](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:4e2755a3-3d76-4a5c-8a97-47d67213d3f9), [Freistellung](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:d13b94f1-de8f-440b-ac6b-624fc199157c), [vollständiger Motivzuschnitt](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:126adb3d-a218-4f39-8307-d77272828ded), [korrigierter Kopfzuschnitt](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:17be259f-3372-4eb7-9c9a-dafd8b847aea).
+
+## Schwebende Waldatmosphäre, 1. Oktober 2026
+
+`adobe-atmosphere/pollen.png`: 96 × 110px, 19.580 Bytes. Eine einzelne neue Adobe-Firefly-Illustration eines feinen, wolligen Weidensamens in Creme und gedämpftem Salbei. Ausschließlich Adobe-Freistellung, motivgerechter Zuschnitt und proportionale Verkleinerung. Der vollständige transparente Samen bildet sehr kleine Pollen und sparsame weich schimmernde Lichtpunkte in der Waldkulisse; die Website übernimmt nur Darstellung und Bewegung. Keine zusätzliche generierte Szene oder Variantenserie. Finale Ausgabe visuell geprüft, ausschließlich lokal geladen.
+
+[Firefly-Original](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:69cb5db2-6427-4d3a-864f-d16e47b082f7), [Freistellung](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:0c89d768-04de-4226-8e4e-6becdc59077d), [Motivzuschnitt](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:e8b487a0-b651-4d24-b876-db5e3b2aa963), [finale Website-Datei](https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:381c93fe-e706-45b0-bcbc-48722a4d01fc).

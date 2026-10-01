@@ -46,6 +46,25 @@ const steps = [
     "Wir hören einander zu, finden Lösungen und achten aufeinander. Gemeinschaft wächst in den kleinen Momenten.",
   ],
 ];
+// Sparse, stable positions keep the atmosphere consistent across rerenders.
+// The first eight also form the quieter mobile composition.
+const airParticles = [
+  [8, 21, 22, 0.72, false],
+  [91, 54, 16, 0.66, false],
+  [15, 60, 9, 0.48, false],
+  [82, 83, 18, 0.62, false],
+  [47, 8, 7, 0.36, false],
+  [57, 88, 10, 0.4, false],
+  [18, 38, 10, 0.62, true],
+  [77, 64, 9, 0.58, true],
+  [22, 13, 6, 0.4, false],
+  [29, 82, 8, 0.4, false],
+  [72, 27, 8, 0.44, false],
+  [87, 13, 17, 0.66, false],
+  [43, 55, 7, 0.4, true],
+  [10, 83, 10, 0.5, false],
+  [95, 79, 7, 0.6, false],
+];
 
 function Link({ href, children, external = false, ...props }) {
   return (
@@ -112,6 +131,7 @@ function ForestWorld() {
   }, []);
   return (
     <div ref={frame} className="forest-frame" aria-hidden="true">
+      <ForestAtmosphere />
       {["entry", "clearing", "distance"].map((place) => (
         <div
           key={place}
@@ -213,6 +233,39 @@ function ForestWorld() {
           alt=""
           loading="lazy"
         />
+      </div>
+    </div>
+  );
+}
+
+function ForestAtmosphere() {
+  return (
+    <div className="forest-air-track">
+      <div className="forest-air">
+        <div className="forest-air-depth">
+          {airParticles.map(([x, y, size, opacity, glow], index) => (
+            <div
+              key={index}
+              className={`air-particle${glow ? " air-particle--glimmer" : ""}`}
+              style={{
+                left: `${x}%`,
+                top: `${y}%`,
+                "--grain-size": `${size}px`,
+                "--grain-opacity": opacity,
+              }}
+              data-air-opacity={opacity}
+            >
+              <div className="air-drift">
+                <img
+                  src="/images/adobe-atmosphere/pollen.png"
+                  width="96"
+                  height="110"
+                  alt=""
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

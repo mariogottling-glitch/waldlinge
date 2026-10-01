@@ -300,6 +300,35 @@ p + p {
   overflow: clip;
   pointer-events: none;
 }
+.forest-air-track {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.forest-air {
+  position: sticky;
+  top: 84px;
+  height: calc(100svh - 84px);
+}
+.forest-air-depth {
+  position: absolute;
+  inset: 0;
+}
+.air-particle {
+  position: absolute;
+  width: var(--grain-size);
+}
+.air-drift img {
+  width: 100%;
+  opacity: var(--grain-opacity);
+}
+.air-particle--glimmer img {
+  filter: brightness(1.12) drop-shadow(0 0 3px #b59b65a3)
+    drop-shadow(0 0 7px #d9cf9a66);
+}
+.motion-reduced .forest-air {
+  opacity: 0.55;
+}
 .owl-perch {
   position: absolute;
   left: 24px;
@@ -1284,6 +1313,10 @@ summary:focus-visible {
   }
 }
 @media (max-width: 959px) {
+  .forest-air {
+    top: 76px;
+    height: calc(100svh - 76px);
+  }
   .owl-perch {
     left: -9px;
   }
@@ -1412,6 +1445,12 @@ summary:focus-visible {
   }
 }
 @media (max-width: 700px) {
+  .air-particle {
+    width: calc(var(--grain-size) * 0.7);
+  }
+  .air-particle:nth-child(n + 9) {
+    display: none;
+  }
   .owl-perch {
     width: 62px;
     left: -12px;
@@ -1893,6 +1932,9 @@ summary:focus-visible {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .forest-air {
+    opacity: 0.55;
+  }
   .squirrel-companion {
     position: relative;
     top: 0;
